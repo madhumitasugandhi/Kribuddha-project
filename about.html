@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Kribuddha Wellness</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #fdfbf7;
+      color: #333;
+      overflow-x: hidden;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .section-title {
+      color: #a67c52;
+      font-weight: bold;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
+    .section-title::after {
+      content: "";
+      width: 60%;
+      height: 3px;
+      background: linear-gradient(to right, #a67c52, #e0c097);
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      border-radius: 5px;
+    }
+
+    /* Hero Banner */
+    .about-banner {
+      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('public/about.jpg') center/cover no-repeat fixed;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+    .about-banner h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    .about-banner p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    /* Mission & Vision */
+    .mv-card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      padding: 30px;
+      transition: all 0.4s ease;
+    }
+    .mv-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+    .mv-card img {
+      border-radius: 12px;
+      object-fit: cover;
+      max-height: 300px;
+    }
+
+    /* Philosophy */
+    .philosophy-card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      padding: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+    .philosophy-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+    .philosophy-card i {
+      font-size: 2rem;
+      color: #a67c52;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar load -->
+  <div id="navbar"></div>
+
+  <!-- Hero Banner -->
+  <section class="about-banner" data-aos="fade-in">
+    <div class="content position-relative">
+      <h1 data-aos="zoom-in">About Kribuddha</h1>
+      <p data-aos="fade-up" data-aos-delay="200">
+        A premium sanctuary of wellness, balance & inner strength
+      </p>
+    </div>
+  </section>
+
+  <!-- Introduction -->
+  <section id="intro" class="py-5" data-aos="fade-up">
+    <div class="container text-center">
+      <h2 class="section-title">Introduction</h2>
+      <p class="lead mt-4">
+        At <strong>Kribuddha Wellness Center</strong>, we believe wellness is the highest form of luxury—a life free from stress, pain, and imbalance. 
+      </p>
+      <p>
+        Our approach blends the timeless depth of yoga, meditation, and mindfulness with a premium, holistic touch, ensuring that every participant finds relief, renewal, and inner strength.
+      </p>
+      <p>
+        <strong>Kribuddha</strong> is not just a wellness center—it is an ultra-premium sanctuary of healing, harmony, and self-discovery.
+      </p>
+    </div>
+  </section>
+
+    <!-- Mission & Vision -->
+  <section class="py-5 bg-light" data-aos="fade-up">
+    <div class="container">
+
+      <!-- Mission -->
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-12 text-center mb-4" data-aos="fade-up">
+          <h2 class="section-title"> Mission</h2>
+        </div>
+        <div class="col-md-6 mb-4" data-aos="fade-right">
+          <p class="lead">
+            To guide individuals and communities towards a pain-free, balanced, and harmonious life 
+            through the timeless wisdom of yoga, meditation, and holistic wellness. 
+          </p>
+          <p>
+            We are committed to offering personalized consultations and exclusive team practices 
+            that bring visible transformation in body, mind, and spirit.
+          </p>
+        </div>
+        <div class="col-md-6 text-center" data-aos="fade-left">
+          <img src="public/mission.jpg" alt="Mission" class="img-fluid mission-img shadow-lg">
+        </div>
+      </div>
+
+      <!-- Vision -->
+      <div class="row align-items-center mt-5">
+        
+        <div class="col-lg-12 text-center mb-4" data-aos="fade-up">
+          <h2 class="section-title">
+             Vision</h2>
+        </div>
+        <div class="col-md-6 text-center" data-aos="fade-left">
+          <img src="public/vision.jpg" alt="Vision" class="img-fluid vision-img shadow-lg">
+        </div>
+        <div class="col-md-6 mb-4" data-aos="fade-right">
+          <p class="lead">
+            To be recognized as a global sanctuary of premium wellness, 
+            where people from all walks of life experience healing, inner peace, and elevated living.
+          </p>
+          <p>
+            Our vision is to make <strong>Kribuddha</strong> a symbol of fruitful transformation, 
+            blending spirituality with modern wellness needs—accessible anytime, anywhere.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Philosophy -->
+  <section class="py-5" data-aos="fade-up">
+    <div class="container">
+        <div class="col-lg-12 text-center mb-4" data-aos="fade-up">
+          <h2 class="section-title">
+             Philosophy</h2>
+          </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="philosophy-card h-100">
+            <i class="bi bi-heart"></i>
+            <h5>Wellness is luxury</h5>
+            <p>True richness comes from a healthy body, a calm mind, and a peaceful spirit.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="philosophy-card h-100">
+            <i class="bi bi-flower2"></i>
+            <h5>Every pain has a path</h5>
+            <p>Healing comes through mindful consultation, practice, and self-awareness.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="philosophy-card h-100">
+            <i class="bi bi-people"></i>
+            <h5>Together we grow</h5>
+            <p>Team yoga and group wellness create harmony for families, workplaces, and communities.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="philosophy-card h-100">
+            <i class="bi bi-sun"></i>
+            <h5>Spiritual yet practical</h5>
+            <p>Premium approach rooted in timeless truths, designed for modern life.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer load -->
+  <div id="footer"></div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Load navbar & footer -->
+  <script>
+    fetch("layout/navbar.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("navbar").innerHTML = data);
+
+    fetch("layout/footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer").innerHTML = data);
+  </script>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+      once: true
+    });
+  </script>
+</body>
+</html>
