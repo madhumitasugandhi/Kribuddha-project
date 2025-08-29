@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pricing - Kribuddha Wellness</title>
+
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+        <!-- Bootstrap Icons -->
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+        <!-- AOS CSS -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+        <style>
+    body {
+      background-color: #fdfbf7;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .section-title {
+      color: #a67c52;
+      font-weight: bold;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
+    .section-title::after {
+      content: "";
+      width: 60%;
+      height: 3px;
+      background: linear-gradient(to right, #a67c52, #e0c097);
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      border-radius: 5px;
+    }
+    /* Hero Banner */
+    .pricing-banner {
+      background: url('public/pricing-banner.jpg') center/cover no-repeat;
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+    .pricing-banner::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+    }
+    .pricing-banner .content {
+      position: relative;
+      z-index: 2;
+    }
+    /* Pricing Cards */
+    .pricing-card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 35px 25px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    .pricing-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+    }
+    .pricing-card h3 {
+      color: #a67c52;
+      font-weight: bold;
+    }
+    .pricing-card .price {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #333;
+      margin: 20px 0;
+    }
+    .highlight {
+      border: 2px solid #a67c52;
+      transform: scale(1.05);
+    }
+    /* Special Programs */
+    .special-program {
+      background: #fff;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: 0.3s;
+    }
+    .special-program:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    }
+    .special-program i {
+      font-size: 2.5rem;
+      color: #a67c52;
+      margin-bottom: 15px;
+    }
+    /* CTA */
+    .cta-section {
+      background: #a67c52;
+      color: #fff;
+      padding: 60px 20px;
+      border-radius: 20px;
+      text-align: center;
+    }
+  </style>
+    </head>
+    <body>
+
+        <!-- Navbar -->
+        <div id="navbar"></div>
+
+        <!-- Hero Banner -->
+        <section
+            class="pricing-banner d-flex align-items-center justify-content-center">
+            <div class="content">
+                <h1 class="fw-bold display-4" data-aos="zoom-in">Pricing &
+                    Packages</h1>
+                <p class="lead fst-italic" data-aos="fade-up"
+                    data-aos-delay="200">
+                    Invest in your health — flexible plans for every journey
+                </p>
+            </div>
+        </section>
+
+        <!-- Monthly Subscriptions Section -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">Kribuddha Monthly Wellness
+                        Subscriptions</h2>
+                </div>
+
+                <div class="row g-4 justify-content-center">
+
+                    <!-- Basic Plan -->
+                    <div class="col-md-3">
+                        <div class="pricing-card h-100" data-aos="fade-up">
+                            <h3>Basic Plan</h3>
+                            <p class="price">₹499 / month</p>
+                            <p class="fst-italic">For beginners or busy
+                                schedules</p>
+                            <ul class="list-unstyled">
+                                <li>✔ 5 Yoga Sessions</li>
+                                <li>✔ 1 Guided Meditation</li>
+                                <li>✔ Lifestyle Tips via WhatsApp</li>
+                            </ul>
+                            <a href="contact.html"
+                                class="btn btn-outline-dark mt-3">Get
+                                Started</a>
+                        </div>
+                    </div>
+
+                    <!-- Standard Plan -->
+                    <div class="col-md-3">
+                        <div class="pricing-card highlight h-100"
+                            data-aos="fade-up" data-aos-delay="150">
+                            <h3>Standard Plan </h3>
+                            <p class="price">₹999 / month</p>
+                            <p class="fst-italic">Most Popular Choice</p>
+                            <ul class="list-unstyled">
+                                <li>✔ 10 Yoga Sessions</li>
+                                <li>✔ 2 Guided Meditations</li>
+                                <li>✔ 1 Consultation (Pain/Stress)</li>
+                                <li>✔ Lifestyle & Diet Guidance</li>
+                            </ul>
+                            <a href="contact.html"
+                                class="btn btn-dark mt-3">Join Now</a>
+                        </div>
+                    </div>
+
+                    <!-- Premium Plan -->
+                    <div class="col-md-3">
+                        <div class="pricing-card h-100" data-aos="fade-up"
+                            data-aos-delay="300">
+                            <h3>Premium Plan</h3>
+                            <p class="price">₹1,999 / month</p>
+                            <p class="fst-italic">Complete Mind–Body–Spirit
+                                Care</p>
+                            <ul class="list-unstyled">
+                                <li>✔ 15 Yoga Sessions</li>
+                                <li>✔ 4 Guided Meditations</li>
+                                <li>✔ 2 Personal Consultations</li>
+                                <li>✔ 1 Team Yoga Session (monthly)</li>
+                                <li>✔ Personalized Lifestyle Roadmap</li>
+                            </ul>
+                            <a href="contact.html"
+                                class="btn btn-outline-dark mt-3">Get
+                                Started</a>
+                        </div>
+                    </div>
+
+                    <!-- Family Plan -->
+                    <div class="col-md-3">
+                        <div class="pricing-card h-100" data-aos="fade-up"
+                            data-aos-delay="450">
+                            <h3>Family Plan</h3>
+                            <p class="price">₹2,499 / month</p>
+                            <p class="fst-italic">Wellness for 2–4 Members</p>
+                            <ul class="list-unstyled">
+                                <li>✔ 12 Family Yoga Sessions</li>
+                                <li>✔ 2 Family Meditations</li>
+                                <li>✔ Lifestyle & Stress-Relief Guidance</li>
+                            </ul>
+                            <a href="contact.html"
+                                class="btn btn-outline-dark mt-3">Get
+                                Started</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Special Programs -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">Special Programs</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="special-program h-100" data-aos="fade-up">
+                            <i class="bi bi-emoji-smile"></i>
+                            <h5>Stress Relief Package</h5>
+                            <p>Targeted meditation & yoga sessions designed to
+                                dissolve anxiety and promote inner calm.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="special-program h-100" data-aos="fade-up"
+                            data-aos-delay="150">
+                            <i class="bi bi-briefcase"></i>
+                            <h5>Corporate Yoga</h5>
+                            <p>Workplace wellness programs crafted to enhance
+                                productivity, harmony, and employee health.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="special-program h-100" data-aos="fade-up"
+                            data-aos-delay="300">
+                            <i class="bi bi-sun"></i>
+                            <h5>Wellness Retreats</h5>
+                            <p>Exclusive retreats that blend yoga, mindfulness,
+                                and holistic healing in serene locations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section my-5" data-aos="zoom-in">
+            <div class="container">
+                <h2>Start Your Premium Wellness Journey</h2>
+                <p class="lead mb-4">Choose a plan that fits your lifestyle and
+                    transform with Kribuddha.</p>
+                <a href="contact.html" class="btn btn-light btn-lg">Book Now</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <div id="footer"></div>
+
+        <!-- Bootstrap JS -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Navbar & Footer load -->
+        <script>
+    fetch("layout/navbar.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("navbar").innerHTML = data);
+
+    fetch("layout/footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer").innerHTML = data);
+  </script>
+
+        <!-- AOS JS -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+    AOS.init({
+      duration: 1200,
+      once: true
+    });
+  </script>
+    </body>
+</html>
