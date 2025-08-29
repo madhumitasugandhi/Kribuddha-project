@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - Kribuddha Wellness</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #fdfbf7;
+      color: #333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow-x: hidden;
+    }
+    .section-title {
+      color: #a67c52;
+      font-weight: bold;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
+    .section-title::after {
+      content: "";
+      width: 60%;
+      height: 3px;
+      background: linear-gradient(to right, #a67c52, #e0c097);
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      border-radius: 5px;
+    }
+    /* Hero Banner */
+    .services-banner {
+      background: url('public/services-banner.jpg') center/cover no-repeat;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+    .services-banner::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.55);
+    }
+    .services-banner .content {
+      position: relative;
+      z-index: 2;
+    }
+    /* Services Cards */
+    .service-card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+    .service-card i {
+      font-size: 2.5rem;
+      color: #a67c52;
+      margin-bottom: 15px;
+    }
+    /* Pricing */
+    .pricing-card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    .pricing-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+    .pricing-card h3 {
+      color: #a67c52;
+    }
+    /* CTA */
+    .cta-section {
+      background: #a67c52;
+      color: #fff;
+      padding: 60px 20px;
+      border-radius: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div id="navbar"></div>
+
+  <!-- Hero Banner -->
+  <section class="services-banner d-flex align-items-center justify-content-center">
+    <div class="content">
+      <h1 class="fw-bold display-3" data-aos="zoom-in">Our Services</h1>
+      <p class="lead fst-italic" data-aos="fade-up" data-aos-delay="200">
+        Premium Yoga • Meditation • Mindfulness • Lifestyle Balance
+      </p>
+    </div>
+  </section>
+
+  <!-- Services Offered -->
+  <section class="py-5" data-aos="fade-up">
+    <div class="container">
+      <h2 class="section-title text-center mb-5"> Services Offered at Kribuddha Wellness Center</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card h-100">
+            <i class="bi bi-person-heart"></i>
+            <h5>Personalized Wellness Consultation</h5>
+            <p>Your unique pain, stress, and health concerns addressed with tailored solutions.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card h-100">
+            <i class="bi bi-yin-yang"></i>
+            <h5>Premium Yoga Sessions</h5>
+            <p>Experience yoga as a luxury journey—strength, flexibility, and inner calm in every pose.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card h-100">
+            <i class="bi bi-people"></i>
+            <h5>Team & Corporate Yoga</h5>
+            <p>Transform groups into mindful, energetic teams with powerful collective practices.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card h-100">
+            <i class="bi bi-stars"></i>
+            <h5>Guided Meditation & Mindfulness</h5>
+            <p>Release stress, embrace calm, and awaken mental clarity through deep inner silence.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card h-100">
+            <i class="bi bi-activity"></i>
+            <h5>Pain Management Programs</h5>
+            <p>Targeted yoga and therapies designed to ease back pain, stiffness, and chronic discomforts.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card h-100">
+            <i class="bi bi-laptop"></i>
+            <h5>Online Wellness Programs</h5>
+            <p>Premium wellness at your fingertips—flexible sessions for busy lifestyles worldwide.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mx-auto">
+          <div class="service-card h-100">
+            <i class="bi bi-heart-pulse"></i>
+            <h5>Lifestyle & Holistic Healing</h5>
+            <p>Integrating yoga, nutrition, and breathwork to create balance in everyday living.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Packages -->
+  <section class="py-5 bg-light" data-aos="fade-up">
+    <div class="container">
+      <h2 class="section-title text-center mb-5"> Packages & Pricing</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+          <div class="pricing-card">
+            <h3>Monthly</h3>
+            <p class="fs-4 fw-bold">₹4,999</p>
+            <p>Unlimited Yoga & Meditation Sessions<br>1 Consultation Included</p>
+            <a href="contact.html" class="btn btn-outline-dark mt-3">Get Started</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="pricing-card">
+            <h3>Quarterly</h3>
+            <p class="fs-4 fw-bold">₹12,999</p>
+            <p>All Monthly Benefits<br>+ 3 Personalized Consultations</p>
+            <a href="contact.html" class="btn btn-outline-dark mt-3">Get Started</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="pricing-card">
+            <h3>Yearly</h3>
+            <p class="fs-4 fw-bold">₹39,999</p>
+            <p>All Benefits + Priority Booking<br>Exclusive Wellness Retreat Access</p>
+            <a href="contact.html" class="btn btn-outline-dark mt-3">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-5" data-aos="fade-up">
+    <div class="container text-center">
+      <h2 class="section-title mb-4">🌿 Why Choose Kribuddha?</h2>
+      <p class="lead mb-4">Our USP lies in blending timeless yoga with modern premium wellness.</p>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="service-card h-100">
+            <h5>✨ Premium Experience</h5>
+            <p>Every session is crafted with healing, rejuvenation, and inner transformation in mind.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-card h-100">
+            <h5>🌸 Expert Guidance</h5>
+            <p>Led by <strong>Reetu Varma</strong> with deep expertise in yoga, meditation, and wellness practices.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-card h-100">
+            <h5>🌍 Global Access</h5>
+            <p>From local centers to online programs, Kribuddha is accessible anytime, anywhere.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section my-5" data-aos="zoom-in">
+    <div class="container">
+      <h2>Begin Your Wellness Journey Today</h2>
+      <p class="lead mb-4">Discover the Kribuddha way — balance, healing, and premium self-discovery.</p>
+      <a href="contact.html" class="btn btn-light btn-lg">Book a Session</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Navbar & Footer load -->
+  <script>
+    fetch("layout/navbar.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("navbar").innerHTML = data);
+
+    fetch("layout/footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer").innerHTML = data);
+  </script>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+      once: true
+    });
+  </script>
+</body>
+</html>
+
