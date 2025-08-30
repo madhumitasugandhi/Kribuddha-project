@@ -39,27 +39,75 @@
       border-radius: 5px;
     }
 
-    /* Hero Banner */
-    .about-banner {
-      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('public/about.jpg') center/cover no-repeat fixed;
-      min-height: 70vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      position: relative;
-    }
-    .about-banner h1 {
-      font-size: 3.5rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-    }
-    .about-banner p {
-      font-size: 1.3rem;
-      max-width: 700px;
-      margin: auto;
-    }
+    /* Hero Section */
+.hero-section {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Hero Background Image */
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5); /* dark overlay */
+    z-index: 0;
+}
+
+/* Hero Content */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+}
+
+/* Floating Watermark */
+@keyframes verticalFloat {
+    0%   { transform: translate(-50%, -55%); }
+    50%  { transform: translate(-50%, -45%); }
+    100% { transform: translate(-50%, -55%); }
+}
+
+.hero-watermark {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15vw;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(49, 15, 15, 0.25);
+    text-transform: uppercase;
+    white-space: nowrap;
+    z-index: 1;
+    pointer-events: none;
+    animation: verticalFloat 5s ease-in-out infinite;
+}
+
+/* Bottom Wave Divider */
+.custom-shape-divider-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 3;
+}
+.custom-shape-divider-bottom svg {
+    display: block;
+    width: 100%;
+    height: 100px;
+}
+
 
     /* Mission & Vision */
     .mv-card {
@@ -104,15 +152,31 @@
   <!-- Navbar load -->
   <div id="navbar"></div>
 
-  <!-- Hero Banner -->
-  <section class="about-banner" data-aos="fade-in">
-    <div class="content position-relative">
-      <h1 data-aos="zoom-in">About Kribuddha</h1>
-      <p data-aos="fade-up" data-aos-delay="200">
-        <i>A premium sanctuary of wellness, balance & inner strength</i>
-      </p>
+  <!-- Hero Section -->
+<section class="hero-section">
+    <img src="public/about.jpg" alt="background" class="hero-bg">
+
+    <div class="hero-content">
+        <h1 class="fw-bold display-4" data-aos="zoom-in">About Us</h1>
+        <p class="lead fst-italic" data-aos="fade-up" data-aos-delay="200">
+            Know our journey and philosophy
+        </p>
     </div>
-  </section>
+
+    <!-- Watermark -->
+    <div class="hero-watermark">ABOUT</div>
+
+    <!-- Bottom Wave -->
+    <div class="custom-shape-divider-bottom">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.13-30.13,172-41.86,
+    82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,
+    985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C86.29,
+    45.71,231.77,67.23,321.39,56.44Z" fill="#fff"></path>
+        </svg>
+    </div>
+</section>
+
 
   <!-- Introduction -->
   <section id="intro" class="py-5" data-aos="fade-up">
