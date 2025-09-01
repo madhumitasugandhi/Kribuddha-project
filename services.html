@@ -14,10 +14,10 @@
 
   <style>
     body {
-      background-color: #fdfbf7;
-      color: #333;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
       overflow-x: hidden;
+      background: url('public/services.jpg') center/cover no-repeat fixed;
     }
     .section-title {
       color: #a67c52;
@@ -36,28 +36,82 @@
       left: 0;
       border-radius: 5px;
     }
-    /* Hero Banner */
-    .services-banner {
-      background: url('public/services.jpg') center/cover no-repeat;
-      min-height: 70vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      position: relative;
+    /* Hero Section */
+.hero-section {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Hero Background Image */
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5); /* dark overlay for text contrast */
+    z-index: 0;
+}
+
+/* Hero Text Content */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+}
+
+/* Watermark Float Animation */
+@keyframes verticalFloat {
+    0% {
+        transform: translate(-50%, -55%);
     }
-    .services-banner::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.55);
+    50% {
+        transform: translate(-50%, -45%);
     }
-    .services-banner .content {
-      position: relative;
-      z-index: 2;
+    100% {
+        transform: translate(-50%, -55%);
     }
+}
+
+.hero-watermark {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15vw;
+    font-weight: 900;
+    font-family: 'Times New Roman', Times, serif;
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(49, 15, 15, 0.25);
+    text-transform: uppercase;
+    white-space: nowrap;
+    z-index: 1;
+    pointer-events: none;
+    animation: verticalFloat 5s ease-in-out infinite;
+}
+
+/* Wave Bottom Shape */
+.custom-shape-divider-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 3;
+}
+.custom-shape-divider-bottom svg {
+    display: block;
+    width: 100%;
+    height: 100px;
+}
+
     /* Services Cards */
     .service-card {
       background: #fff;
@@ -92,14 +146,26 @@
     .pricing-card h3 {
       color: #a67c52;
     }
-    /* CTA */
-    .cta-section {
-      background: #a67c52;
-      color: #fff;
-      padding: 60px 20px;
-      border-radius: 20px;
-      text-align: center;
-    }
+    /* CTA Section with transparent dark overlay */
+.cta-section {
+  background-color: rgba(70, 48, 34, 0.55); /* dark transparent overlay */
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section .btn-light {
+  color: #333;
+  background-color: #fff;
+  border: none;
+}
+
+.cta-section .btn-light:hover {
+  background-color: #e0c097;
+  color: #333;
+}
   </style>
 </head>
 <body>
@@ -107,19 +173,36 @@
   <!-- Navbar -->
   <div id="navbar"></div>
 
-  <!-- Hero Banner -->
-  <section class="services-banner d-flex align-items-center justify-content-center">
-    <div class="content">
-      <h1 class="fw-bold display-3" data-aos="zoom-in">Our Services</h1>
-      <p class="lead fst-italic" data-aos="fade-up" data-aos-delay="200">
-        Premium Yoga • Meditation • Mindfulness • Lifestyle Balance
-      </p>
+  <!-- Hero Section -->
+<section class="hero-section">
+    <img src="public/services.jpg" alt="background" class="hero-bg">
+
+    <div class="hero-content">
+        <h1 class="fw-bold display-4" data-aos="zoom-in">Our Wellness Program</h1>
+        <p class="lead fst-italic" data-aos="fade-up" data-aos-delay="200">
+            Premium Yoga • Meditation • Mindfulness • Lifestyle Balance
+        </p>
     </div>
-  </section>
+
+    <!-- Watermark -->
+    <div class="hero-watermark">SERVICES</div>
+
+    <!-- Bottom Wave -->
+    <div class="custom-shape-divider-bottom">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.13-30.13,172-41.86,
+    82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,
+    985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C86.29,
+    45.71,231.77,67.23,321.39,56.44Z" fill="#fff"></path>
+        </svg>
+    </div>
+</section>
+
 
   <!-- Services Offered -->
-  <section class="py-5" data-aos="fade-up">
-    <div class="container">
+   <div class=" bg-light">
+  <section class="py-5 servive-container" data-aos="fade-up">
+    <div class="container text-center">
       <h2 class="section-title text-center mb-5"> Services Offered at Kribuddha Wellness Center</h2>
       <div class="row g-4">
         <div class="col-md-6 col-lg-4">
@@ -176,8 +259,8 @@
   </section>
 
   <!-- Pricing Packages -->
-  <section class="py-5 bg-light" data-aos="fade-up">
-    <div class="container">
+  <section class="py-5" data-aos="fade-up">
+    <div class="container text-center">
       <h2 class="section-title text-center mb-5"> Packages & Pricing</h2>
       <div class="row g-4 justify-content-center">
         <div class="col-md-4">
@@ -211,12 +294,12 @@
   <!-- Why Choose Us -->
   <section class="py-5" data-aos="fade-up">
     <div class="container text-center">
-      <h2 class="section-title mb-4">🌿 Why Choose Kribuddha?</h2>
+      <h2 class="section-title mb-4"> Why Choose Kribuddha?</h2>
       <p class="lead mb-4">Our USP lies in blending timeless yoga with modern premium wellness.</p>
       <div class="row g-4">
         <div class="col-md-4">
           <div class="service-card h-100">
-            <h5>✨ Premium Experience</h5>
+            <h5>🌿 Premium Experience</h5>
             <p>Every session is crafted with healing, rejuvenation, and inner transformation in mind.</p>
           </div>
         </div>
@@ -235,15 +318,16 @@
       </div>
     </div>
   </section>
+  </div>
 
-  <!-- CTA -->
-  <section class="cta-section my-5" data-aos="zoom-in">
-    <div class="container">
-      <h2>Begin Your Wellness Journey Today</h2>
-      <p class="lead mb-4">Discover the Kribuddha way — balance, healing, and premium self-discovery.</p>
-      <a href="contact.html" class="btn btn-light btn-lg">Book a Session</a>
-    </div>
-  </section>
+ <!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Begin Your Wellness Journey Today</h2>
+    <p class="lead mb-4">Discover the Kribuddha way — balance, healing, and premium self-discovery.</p>
+    <a href="contact.html" class="btn btn-light btn-lg">Book a Session</a>
+  </div>
+</section>
 
   <!-- Footer -->
   <div id="footer"></div>
