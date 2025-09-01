@@ -2,259 +2,317 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog - Kribuddha Wellness</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Kribuddha Wellness</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 
-  <style>
-    /* Hero Section */
-    .hero-section {
-      position: relative;
-      min-height: 70vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      overflow: hidden;
-    }
+    <style>
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
 
-    .hero-bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: brightness(0.5);
-      z-index: 0;
-    }
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.5);
+            z-index: 0;
+        }
 
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      color: #fff;
-    }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+        }
 
-    @keyframes verticalFloat {
-      0% {
-        transform: translate(-50%, -55%);
-      }
+        @keyframes verticalFloat {
+            0% {
+                transform: translate(-50%, -55%);
+            }
 
-      50% {
-        transform: translate(-50%, -45%);
-      }
+            50% {
+                transform: translate(-50%, -45%);
+            }
 
-      100% {
-        transform: translate(-50%, -55%);
-      }
-    }
+            100% {
+                transform: translate(-50%, -55%);
+            }
+        }
 
-    .hero-watermark {
-      position: absolute;
-      top: 40%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 15vw;
-      font-family: 'Times New Roman', Times, serif;
-      font-weight: 900;
-      color: transparent;
-      -webkit-text-stroke: 2px rgba(49, 15, 15, 0.25);
-      text-transform: uppercase;
-      white-space: nowrap;
-      z-index: 1;
-      pointer-events: none;
-      animation: verticalFloat 5s ease-in-out infinite;
-    }
+        .hero-watermark {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 15vw;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 900;
+            color: transparent;
+            -webkit-text-stroke: 2px rgba(49, 15, 15, 0.25);
+            text-transform: uppercase;
+            white-space: nowrap;
+            z-index: 1;
+            pointer-events: none;
+            animation: verticalFloat 5s ease-in-out infinite;
+        }
 
-    .custom-shape-divider-bottom {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      overflow: hidden;
-      line-height: 0;
-      z-index: 3;
-    }
+        .custom-shape-divider-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            z-index: 3;
+        }
 
-    .custom-shape-divider-bottom svg {
-      display: block;
-      width: 100%;
-      height: 100px;
-    }
+        .custom-shape-divider-bottom svg {
+            display: block;
+            width: 100%;
+            height: 100px;
+        }
 
-    /* Section Title */
-    .section-title {
-      color: #a67c52;
-      font-weight: bold;
-      margin-bottom: 20px;
-      position: relative;
-      display: inline-block;
-    }
+        /* Section Title */
+        .section-title {
+            color: #a67c52;
+            font-weight: bold;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
 
-    .section-title::after {
-      content: "";
-      width: 60%;
-      height: 3px;
-      background: linear-gradient(to right, #a67c52, #e0c097);
-      position: absolute;
-      bottom: -8px;
-      left: 0;
-      border-radius: 5px;
-    }
+        .section-title::after {
+            content: "";
+            width: 60%;
+            height: 3px;
+            background: linear-gradient(to right, #a67c52, #e0c097);
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            border-radius: 5px;
+        }
 
-    /* Blog Cards */
-    .blog-card {
-      background: #fff;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      transition: transform .3s ease;
-    }
+        /* Blog Cards */
+        .blog-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform .3s ease;
+        }
 
-    .blog-card:hover {
-      transform: translateY(-8px);
-    }
+        .blog-card:hover {
+            transform: translateY(-8px);
+        }
 
-    .blog-card img {
-      width: 100%;
-      height: 280px;
-      object-fit: cover;
-    }
+        .blog-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
 
-    .blog-card-body {
-      padding: 20px;
-    }
+        .blog-card-body {
+            padding: 20px;
+        }
 
-    .blog-card-body h5 {
-      color: #2c3e50;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
+        .blog-card-body h5 {
+            color: #2c3e50;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
 
-    .blog-card-body p {
-      color: #555;
-      font-size: 0.95rem;
-    }
+        .blog-card-body p {
+            color: #555;
+            font-size: 0.95rem;
+        }
 
-    .read-more {
-      color: #a67c52;
-      text-decoration: none;
-      font-weight: 600;
-    }
+        .read-more {
+            color: #a67c52;
+            text-decoration: none;
+            font-weight: 600;
+        }
 
-    .read-more:hover {
-      text-decoration: underline;
-    }
-  </style>
+        .read-more:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
 <body>
 
-  <!-- Navbar load -->
-  <div id="navbar"></div>
+    <!-- Navbar load -->
+    <div id="navbar"></div>
 
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <img src="public/blogs/blog-banner.jpg" alt="background" class="hero-bg">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <img src="public/blogs/blog-banner.jpg" alt="background" class="hero-bg">
 
-    <div class="hero-content">
-      <h1 class="fw-bold display-4" data-aos="zoom-in">Our Blog</h1>
-      <p class="lead fst-italic" data-aos="fade-up" data-aos-delay="200">
-        Wellness • Yoga • Meditation • Lifestyle
-      </p>
-    </div>
+        <div class="hero-content">
+            <h1 class="fw-bold display-4" data-aos="zoom-in">Our Blog</h1>
+            <p class="lead fst-italic" data-aos="fade-up" data-aos-delay="200">
+                Wellness • Yoga • Meditation • Lifestyle
+            </p>
+        </div>
 
-    <!-- Watermark -->
-    <div class="hero-watermark">BLOGS</div>
+        <!-- Watermark -->
+        <div class="hero-watermark">BLOGS</div>
 
-    <!-- Bottom Wave -->
-    <div class="custom-shape-divider-bottom">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path
-          d="M321.39,56.44c58-10.79,114.13-30.13,172-41.86,
+        <!-- Bottom Wave -->
+        <div class="custom-shape-divider-bottom">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.13-30.13,172-41.86,
         82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,
         985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C86.29,
         45.71,231.77,67.23,321.39,56.44Z" fill="#fff"></path>
-      </svg>
-    </div>
-  </section>
+            </svg>
+        </div>
+    </section>
 
-  <!-- Blog Section -->
-  <section class="py-5">
-    <div class="container">
-      <h3 class="section-title text-center mb-5">Latest Articles</h3>
+    <!-- Blog Section -->
+    <section class="py-5">
+        <div class="container">
+            <h3 class="section-title text-center mb-5">Latest Articles</h3>
 
-      <div class="row g-4">
-       <!-- Blog Card 1 -->
-<div class="col-md-4" data-aos="fade-up">
-  <a href="/blog-details/blog-detail1.html" class="text-decoration-none">
-    <div class="blog-card">
-      <img src="public/blogs/blog1.jpg" alt="Yoga Guide">
-      <div class="blog-card-body">
-        <h5>Beginner’s Guide to Yoga</h5>
-        <p>Learn how to start your yoga journey with simple steps and mindful practices.</p>
-        <span class="read-more">Read More →</span>
-      </div>
-    </div>
-  </a>
-</div>
+            <div class="row g-4">
+                <!-- Blog Card 1 -->
+                <div class="col-md-4" data-aos="fade-up">
+                    <a href="/blog-detail/blog-detail1.html" class="text-decoration-none">
+                        <div class="blog-card">
+                            <img src="public/blogs/blog1.jpg" alt="Yoga Guide">
+                            <div class="blog-card-body">
+                                <h5>Yoga Poses for Hormonal Balance</h5>
+                                <p>Hormones control many processes in our body like mood, sleep, energy, and weight.
+                                </p>
+                                <span class="read-more">Read More →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
 
-<!-- Blog Card 2 -->
-<div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-  <a href="blog-detail2.html" class="text-decoration-none">
-    <div class="blog-card">
-      <img src="public/blogs/blog2.jpg" alt="Meditation">
-      <div class="blog-card-body">
-        <h5>Benefits of Daily Meditation</h5>
-        <p>Discover how meditation helps in improving focus, peace, and emotional balance.</p>
-        <span class="read-more">Read More →</span>
-      </div>
-    </div>
-  </a>
-</div>
+                <!-- Blog Card 2 -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <a href="/blog-detail/blog-detail2.html" class="text-decoration-none">
+                        <div class="blog-card">
+                            <img src="public/blogs/blog2.jpg" alt="Meditation">
+                            <div class="blog-card-body">
+                                <h5>Benefits of Online Yoga</h5>
+                                <p>Online yoga has made it easier than ever for busy professionals to stay fit, calm,
+                                    and focused.</p>
+                                <span class="read-more">Read More →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
 
-<!-- Blog Card 3 -->
-<div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
-  <a href="blog-detail3.html" class="text-decoration-none">
-    <div class="blog-card">
-      <img src="public/blogs/blog3.jpg" alt="Wellness Lifestyle">
-      <div class="blog-card-body">
-        <h5>Wellness Lifestyle Tips</h5>
-        <p>Adopt small but powerful lifestyle changes for a healthier and happier life.</p>
-        <span class="read-more">Read More →</span>
-      </div>
-    </div>
-  </a>
-</div>
+                <!-- Blog Card 3 -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <a href="blog-detail/blog-detail3.html" class="text-decoration-none">
+                        <div class="blog-card">
+                            <img src="public/blogs/blog3.jpg" alt="Wellness Lifestyle">
+                            <div class="blog-card-body">
+                                <h5>Understanding the 7 Chakras</h5>
+                                <p>Chakras are an important philosophy. The word chakra comes from Sanskrit, meaning
+                                    “wheel”.</p>
+                                <span class="read-more">Read More →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Blog Card 4 -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <a href="/blog-detail/blog-detail4.html" class="text-decoration-none">
+                        <div class="blog-card">
+                            <img src="public/blogs/blog4.jpg" alt="Meditation">
+                            <div class="blog-card-body">
+                                <h5>Yoga vs. Traditional Workouts</h5>
+                                <p>Losing weight is one of the most common fitness goals today. </p>
+                                <span class="read-more">Read More →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Blog Card 5 -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <a href="/blog-detail/blog-detail5.html" class="text-decoration-none">
+                        <div class="blog-card">
+                            <img src="public/blogs/blog5.jpg" alt="Meditation">
+                            <div class="blog-card-body">
+                                <h5>Morning Yoga Practice</h5>
+                                <p>Morning time is pure, quiet, and powerful. It is the best time to connect with
+                                    yourself.</p>
+                                <span class="read-more">Read More →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Blog Card 6 -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <a href="/blog-detail/blog-detail6.html" class="text-decoration-none">
+                        <div class="blog-card">
+                            <img src="public/blogs/blog6.jpg" alt="Meditation">
+                            <div class="blog-card-body">
+                                <h5>Benefits of Yoga Nidra</h5>
+                                <p>Yoga Nidra, also known as yogic sleep, is a guided meditation practice where you lie
+                                    down comfortably.</p>
+                                <span class="read-more">Read More →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Blog Card 7 -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <a href="/blog-detail/blog-detail7.html" class="text-decoration-none">
+                        <div class="blog-card">
+                            <img src="public/blogs/blog7.jpg" alt="Meditation">
+                            <div class="blog-card-body">
+                                <h5 class="fw-bold" style="color:#3a2e25;">Yoga for Back Pain Relief</h5>
+                                <p class="text-muted">
+                                    Learn simple yet powerful yoga postures to relieve chronic back pain and strengthen your spine naturally.
+                                </p>
+                                <span class="read-more">Read More →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
 
-      </div>
-    </div>
-  </section>
+            </div>
+        </div>
+    </section>
 
-  <!-- Footer load -->
-  <div id="footer"></div>
+    <!-- Footer load -->
+    <div id="footer"></div>
 
-  <!-- Load navbar & footer -->
-  <script>
-    fetch("layout/navbar.html")
-      .then(res => res.text())
-      .then(data => document.getElementById("navbar").innerHTML = data);
+    <!-- Load navbar & footer -->
+    <script>
+        fetch("layout/navbar.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("navbar").innerHTML = data);
 
-    fetch("layout/footer.html")
-      .then(res => res.text())
-      .then(data => document.getElementById("footer").innerHTML = data);
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1200,
-      once: true
-    });
-  </script>
+        fetch("layout/footer.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+            once: true
+        });
+    </script>
 </body>
 
 </html>
