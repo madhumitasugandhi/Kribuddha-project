@@ -11,94 +11,104 @@
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f8f9fa;
+      background: #fdfdfd;
+      color: #2c3e50;
     }
 
     /* Hero Section */
-        .hero-section {
-            position: relative;
-            min-height: 70vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            overflow: hidden;
-        }
+    .hero-section {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      background: #000;
+    }
 
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: brightness(0.5);
-            z-index: 0;
-        }
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.5);
+      z-index: 0;
+    }
 
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            color: #fff;
-        }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+    }
 
-        @keyframes verticalFloat {
-            0% {
-                transform: translate(-50%, -55%);
-            }
+    .hero-content h1 {
+      color: #f8f3ed;
+    }
 
-            50% {
-                transform: translate(-50%, -45%);
-            }
+    .hero-content p {
+      color: #e1d4c7;
+    }
 
-            100% {
-                transform: translate(-50%, -55%);
-            }
-        }
+    @keyframes verticalFloat {
+      0% {
+        transform: translate(-50%, -55%);
+      }
 
-        .hero-watermark {
-            position: absolute;
-            top: 40%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 15vw;
-            font-family: 'Times New Roman', Times, serif;
-            font-weight: 900;
-            color: transparent;
-            -webkit-text-stroke: 2px rgba(49, 15, 15, 0.25);
-            text-transform: uppercase;
-            white-space: nowrap;
-            z-index: 1;
-            pointer-events: none;
-            animation: verticalFloat 5s ease-in-out infinite;
-        }
+      50% {
+        transform: translate(-50%, -45%);
+      }
 
-        .custom-shape-divider-bottom {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            overflow: hidden;
-            line-height: 0;
-            z-index: 3;
-        }
+      100% {
+        transform: translate(-50%, -55%);
+      }
+    }
 
-        .custom-shape-divider-bottom svg {
-            display: block;
-            width: 100%;
-            height: 100px;
-        }
+    .hero-watermark {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 14vw;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: 900;
+      color: transparent;
+      -webkit-text-stroke: 2px rgba(255, 255, 255, 0.15);
+      text-transform: uppercase;
+      white-space: nowrap;
+      z-index: 1;
+      pointer-events: none;
+      animation: verticalFloat 5s ease-in-out infinite;
+    }
 
+    .custom-shape-divider-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      z-index: 3;
+    }
 
+    .custom-shape-divider-bottom svg {
+      display: block;
+      width: 100%;
+      height: 100px;
+    }
+
+    /* Trial Section */
     .trial-section {
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
-      padding: 60px 20px;
+      padding: 80px 20px;
       text-align: center;
     }
 
     .trial-section h2 {
-      font-size: 2rem;
+      font-size: 2.2rem;
       font-weight: 700;
       color: #2c3e50;
       margin-bottom: 20px;
@@ -107,18 +117,24 @@
     .trial-section p {
       color: #555;
       font-size: 1.1rem;
-      margin-bottom: 40px;
+      margin-bottom: 50px;
     }
 
     .card {
       border: none;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s;
+      border-radius: 14px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-8px);
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .card h5 {
+      color: #2c3e50;
     }
 
     .price {
@@ -127,92 +143,126 @@
       color: #a67c52;
     }
 
-    .btn-primary {
-      background-color: #a67c52;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 6px;
-      font-weight: 500;
+   .btn-primary {
+    background-color: #a67c52;
+    border: none;
+    border-radius: 10px;
+    font-weight: 500;
+    padding: 10px 20px;
+  }
+  .btn-primary:hover {
+    background-color: #8b623e;
+  }
+    /* CTA Section */
+    .cta-section {
+      background: #f8f3ed;
+      padding: 70px 20px;
     }
 
-    .btn-primary:hover {
-      background-color: #8b623e;
+    .cta-section h2 {
+      font-weight: 700;
+      color: #2c3e50;
+    }
+
+    .cta-section p {
+      font-size: 1.1rem;
+      margin-top: 15px;
+      color: #555;
+    }
+     .section-title {
+      color: #a67c52;
+      font-weight: bold;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
+    .section-title::after {
+      content: "";
+      width: 60%;
+      height: 3px;
+      background: linear-gradient(to right, #a67c52, #e0c097);
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      border-radius: 5px;
     }
   </style>
 </head>
 
 <body>
-    <!-- Navbar -->
+  <!-- Navbar -->
   <div id="navbar"></div>
 
   <!-- Hero Section -->
-    <section class="hero-section">
-        <img src="public/blogs/blog-banner.jpg" alt="background" class="hero-bg">
+  <section class="hero-section">
+    <img src="public/blogs/blog-banner.jpg" alt="background" class="hero-bg">
 
-        <div class="hero-content">
-            <h1 class="fw-bold display-4" data-aos="zoom-in">Start Your Free Trial</h1>
-            <p class="lead fst-italic" data-aos="fade-up" data-aos-delay="200">
-                Experience Yoga, Meditation & Wellness Sessions – Absolutely Free!
-            </p>
-        </div>
+    <div class="hero-content">
+      <h1 class="fw-bold display-4" data-aos="zoom-in">Start Your Free Trial</h1>
+      <p class="lead fst-italic" data-aos="fade-up" data-aos-delay="200">
+        Experience Yoga, Meditation & Wellness Sessions – Absolutely Free!
+      </p>
+    </div>
 
-        <!-- Watermark -->
-        <div class="hero-watermark">Free Trial</div>
+    <!-- Watermark -->
+    <div class="hero-watermark">Free Trial</div>
 
-        <!-- Bottom Wave -->
-        <div class="custom-shape-divider-bottom">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.13-30.13,172-41.86,
+    <!-- Bottom Wave -->
+    <div class="custom-shape-divider-bottom">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.13-30.13,172-41.86,
         82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,
         985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C86.29,
         45.71,231.77,67.23,321.39,56.44Z" fill="#fff"></path>
-            </svg>
-        </div>
-    </section>
+      </svg>
+    </div>
+  </section>
 
-  <!-- Free Trial Options -->
-  <section class="trial-section" data-aos="fade-up">
-    <h2>Choose Your Free Trial Plan</h2>
-    <p>Pick a plan below and begin your wellness journey with Kribuddha Wellness.</p>
+<!-- Free Trial Options -->
+<section class=" py-5 bg-light" data-aos="fade-up">
+  <div class="container text-center">
+    <h2 class="section-title mb-4">Choose Your Free Trial Plan</h2>
+    <p class="mb-5">Pick a plan below and begin your wellness journey with Kribuddha Wellness.</p>
 
-    <div class="row g-4">
-      <!-- Option 1 -->
-      <div class="col-md-4">
-        <div class="card p-4 h-100">
-          <h5 class="fw-bold">1-Day Free Trial</h5>
-          <p>Access all yoga and meditation sessions for one day.</p>
-          <p class="price">₹0</p>
-          <a href="#" class="btn btn-primary w-100">Start Now</a>
-        </div>
-      </div>
+    <div class="row g-4 justify-content-center">
 
       <!-- Option 2 -->
-      <div class="col-md-4">
-        <div class="card p-4 h-100">
-          <h5 class="fw-bold">7-Day Free Trial</h5>
+      <div class="col-md-5">
+        <div class="card p-5 h-100 shadow-lg border-0" style="border-radius: 15px;">
+          <h5 class="fw-bold text-dark">7-Day Free Trial</h5>
           <p>Enjoy one full week of guided yoga & mindfulness practices.</p>
-          <p class="price">₹0</p>
-          <a href="#" class="btn btn-primary w-100">Start Now</a>
+          <p class="price fs-4 fw-bold text-golden">₹200</p>
+          <a href="#" class="btn w-100" 
+             style="background: linear-gradient(45deg, #a67c52, #e0c097); color: #fff; border:none; border-radius: 10px;">
+             Start Now
+          </a>
         </div>
       </div>
 
       <!-- Option 3 -->
-      <div class="col-md-4">
-        <div class="card p-4 h-100">
-          <h5 class="fw-bold">14-Day Free Trial</h5>
+      <div class="col-md-5 ">
+        <div class="card p-5 h-100 shadow-lg border-0" style="border-radius: 15px;">
+          <h5 class="fw-bold text-dark">14-Day Free Trial</h5>
           <p>Two weeks of premium yoga sessions & wellness guidance.</p>
-          <p class="price">₹0</p>
-          <a href="#" class="btn btn-primary w-100">Start Now</a>
+          <p class="price fs-4 fw-bold text-golden">₹299</p>
+          <a href="#" class="btn w-100" 
+             style="background: linear-gradient(45deg, #a67c52, #e0c097); color: #fff; border:none; border-radius: 10px;">
+             Start Now
+          </a>
         </div>
       </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Call to Action -->
-  <section class="text-center p-5 bg-light" data-aos="fade-up">
-    <h2>Why Choose Kribuddha Wellness?</h2>
+  <section class=" text-center" data-aos="fade-up">
+    <h2 class="section-title">Why Choose Kribuddha Wellness?</h2>
     <p>✅ Certified Yoga Instructors &nbsp; | &nbsp; ✅ Flexible Online Sessions &nbsp; | &nbsp; ✅ Personal Guidance</p>
-    <a href="contact.html" class="btn btn-primary mt-3">Contact Us for More Info</a>
+    <p>Join thousands of members transforming their lives through Yoga, Meditation, and Mindful Living.</p>
+    <a href="contact.html" class="btn my-3" style="background: linear-gradient(45deg, #a67c52, #e0c097); color: #fff; border:none; border-radius: 10px;">Contact Us for More Info</a>
   </section>
 
   <!-- Footer load -->
