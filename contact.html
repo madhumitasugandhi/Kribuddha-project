@@ -133,6 +133,7 @@
             transform: translate(-50%, -50%);
             font-size: 15vw;
             font-weight: 900;
+            font-family: 'Times New Roman', Times, serif;
             color: transparent;
             -webkit-text-stroke: 2px rgba(49, 15, 15, 0.25);
             text-transform: uppercase;
@@ -217,70 +218,69 @@
     </section>
 
     <!-- Contact Info + Form -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row g-4 align-items-start">
+    <!-- Contact Info + Form -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4 align-items-start">
 
-                <!-- Contact Form -->
+      <!-- Contact Form -->
+      <div class="col-lg-4">
+        <h5>Send us email</h5>
+        <h3 class="section-title mb-4">Feel Free to Write</h3>
+        <form>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Your Name" required>
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control" placeholder="Your Email" required>
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Phone">
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
+          </div>
+          <div class="d-flex gap-2">
+            <button type="submit" class="btn btn-dark">Send Message</button>
+            <button type="reset" class="btn btn-outline-dark">Reset</button>
+          </div>
+        </form>
+      </div>
 
-                <div class="col-lg-6">
-                    <h5>Send us email</h5>
-                    <h3 class=" section-title">Feel Free to Write</h3>
-                    <form>
-                        <div class="row g-3">
-                            <div class="col-12">
-                                <input type="text" class="form-control" placeholder="Your Name" required>
-                            </div>
-                            <div class="col-12">
-                                <input type="email" class="form-control" placeholder="Your Email" required>
-                            </div>
-
-                            <div class="col-12">
-                                <input type="text" class="form-control" placeholder="Phone">
-                            </div>
-                            <div class="col-12">
-                                <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
-                            </div>
-                            <div class="col-12 d-flex gap-2">
-                                <button type="submit" class="btn btn-dark">Send Message</button>
-                                <button type="reset" class="btn btn-outline-dark">Reset</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-
-                <!-- Contact Info -->
-                 
-                <div class="col-lg-6">
-                    <h5>Need any help?</h5>
-                    <h3 class="section-title mb-4">Get in Touch</h3>
-                    <p>Have questions? Reach out anytime, we’d love to hear from you.</p>
-                    <div class="mb-3">
-                        <i class="bi bi-telephone-fill me-2"></i> <strong>Phone:</strong> 7777001185
-                    </div>
-                    <div class="mb-3">
-                        <i class="bi bi-envelope-fill me-2"></i> <strong>Email:</strong>
-                        <a href="mailto:kribuddhawellnesscenter@gmail.com">kribuddhawellnesscenter@gmail.com</a>
-                    </div>
-                    <div class="mb-3">
-                        <i class="bi bi-instagram me-2"></i> <strong>Instagram:</strong>
-                        <a href="https://www.instagram.com/kribuddhawellnesscenter"
-                            target="_blank">@kribuddhawellnesscenter</a>
-                    </div>
-                    <div class="mb-3">
-                        <i class="bi bi-geo-alt-fill me-2"></i> <strong>Address:</strong><br>
-                        Room No:308, Aishwarya Heaven,<br>Usarli Khurd, Navi Mumbai – 410221
-                    </div>
-                    <div class=" mt-4 qr-container">
-    <img src="public/QR.jpg" alt="WhatsApp QR" class="qr-img img-fluid">
-    <p class="small mt-2">Scan to chat on WhatsApp</p>
-</div>
-
-                </div>
-
-            </div>
+      <!-- Contact Info -->
+      <div class="col-lg-4">
+        <h5>Need any help?</h5>
+        <h3 class="section-title mb-4">Get in Touch</h3>
+        <p>Have questions? Reach out anytime, we’d love to hear from you.</p>
+        <div class="mb-3">
+          <i class="bi bi-telephone-fill me-2"></i> <strong>Phone:</strong> 7777001185
         </div>
-    </section>
+        <div class="mb-3">
+          <i class="bi bi-envelope-fill me-2"></i> <strong>Email:</strong>
+          <a href="mailto:kribuddhawellnesscenter@gmail.com">kribuddhawellnesscenter@gmail.com</a>
+        </div>
+        <div class="mb-3">
+          <i class="bi bi-instagram me-2"></i> <strong>Instagram:</strong>
+          <a href="https://www.instagram.com/kribuddhawellnesscenter" target="_blank">@kribuddhawellnesscenter</a>
+        </div>
+        <div class="mb-3">
+          <i class="bi bi-geo-alt-fill me-2"></i> <strong>Address:</strong><br>
+          Room No:308, Aishwarya Heaven,<br>Usarli Khurd, Navi Mumbai – 410221
+        </div>
+      </div>
+
+      <!-- QR Code -->
+      <div class="col-lg-4 text-center">
+        <h5>Quick Connect</h5>
+        <h3 class="section-title mb-4">WhatsApp Us</h3><br/>
+        <img src="public/QR.jpg" alt="WhatsApp QR" class="qr-img img-fluid rounded shadow" style="max-width:300px;">
+        <p class="small mt-2">Scan to chat on WhatsApp</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
     <!-- Map Section -->
     <section class="map-container">
