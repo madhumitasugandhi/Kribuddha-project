@@ -148,6 +148,40 @@
       height: 200px;
       object-fit: cover;
     }
+
+    /* Zoom In */
+    @keyframes zoomIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .zoom-in {
+      animation: zoomIn 1s ease forwards;
+    }
+
+    /* Fade Up */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-up {
+      animation: fadeUp 1.2s ease forwards;
+    }
   </style>
 </head>
 
@@ -180,15 +214,20 @@
     </div>
   </section>
 
+
   <!-- Courses Grid -->
-  <section class="courses py-5" style="background-color:#fdfbf7; color:#3a2e25;" data-aos="fade-up">
+  <section class="courses py-5" style="background-color:#fdfbf7; color:#3a2e25;">
     <div class="container">
-      <h2 class="section-title text-center mb-5" style="color:#a67c52;">Our Teacher Training Courses</h2>
+      <div class="text-center mb-5">
+        <h2 class="section-title fade-up">
+          Our Teacher Training Courses
+        </h2>
+      </div>
 
       <div class="row g-4">
 
         <!-- Yoga Protocol Instructor -->
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-md-4 fade-up">
           <div class="p-4 border rounded shadow-sm h-100 bg-white">
             <h5 class="fw-bold text-center mb-3" style="color:#a67c52;">Yoga Protocol Instructor</h5>
             <ul class="list-unstyled small mb-4">
@@ -206,7 +245,7 @@
         </div>
 
         <!-- Yoga Wellness Instructor -->
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-md-4 fade-up">
           <div class="p-4 border rounded shadow-sm h-100 bg-white">
             <h5 class="fw-bold text-center mb-3" style="color:#a67c52;">Yoga Wellness Instructor</h5>
             <ul class="list-unstyled small mb-4">
@@ -224,7 +263,7 @@
         </div>
 
         <!-- Yoga Volunteer Course -->
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-md-4 fade-up">
           <div class="p-4 border rounded shadow-sm h-100 bg-white">
             <h5 class="fw-bold text-center mb-3" style="color:#a67c52;">Yoga Volunteer Course</h5>
             <ul class="list-unstyled small mb-4">
@@ -242,7 +281,7 @@
         </div>
 
         <!-- Yoga Teacher Evaluator -->
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-md-4 fade-up">
           <div class="p-4 border rounded shadow-sm h-100 bg-white">
             <h5 class="fw-bold text-center mb-3" style="color:#a67c52;">Yoga Teacher Evaluator</h5>
             <ul class="list-unstyled small mb-4">
@@ -260,7 +299,7 @@
         </div>
 
         <!-- Parental Yoga TTC -->
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-md-4 fade-up">
           <div class="p-4 border rounded shadow-sm h-100 bg-white">
             <h5 class="fw-bold text-center mb-3" style="color:#a67c52;">Parental Yoga Teacher Training</h5>
             <ul class="list-unstyled small mb-4">
@@ -278,7 +317,7 @@
         </div>
 
         <!-- Yoga Therapy Course -->
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-md-4 fade-up">
           <div class="p-4 border rounded shadow-sm h-100 bg-white">
             <h5 class="fw-bold text-center mb-3" style="color:#a67c52;">Yoga Therapy Course</h5>
             <ul class="list-unstyled small mb-4">
@@ -296,7 +335,7 @@
         </div>
 
         <!-- Meditation TTC -->
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="col-md-4 fade-up">
           <div class="p-4 border rounded shadow-sm h-100 bg-white">
             <h5 class="fw-bold text-center mb-3" style="color:#a67c52;">Meditation Teacher Training</h5>
             <ul class="list-unstyled small mb-4">
@@ -314,7 +353,7 @@
         </div>
 
         <!-- Yoga Nidra -->
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="col-md-4 fade-up">
           <div class="p-4 border rounded shadow-sm h-100 bg-white">
             <h5 class="fw-bold text-center mb-3" style="color:#a67c52;">Yoga Nidra Specialist Course</h5>
             <ul class="list-unstyled small mb-4">
@@ -332,7 +371,7 @@
         </div>
 
         <!-- Corporate Yoga -->
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="col-md-4 fade-up">
           <div class="p-4 border rounded shadow-sm h-100 bg-white">
             <h5 class="fw-bold text-center mb-3" style="color:#a67c52;">Corporate Yoga Training</h5>
             <ul class="list-unstyled small mb-4">
@@ -354,27 +393,33 @@
   </section>
 
   <!-- Content Section -->
-  <section class="content-section py-5" style="background-color:#fff; color:#3a2e25;" data-aos="fade-up">
-    <div class="container">
-      <h2 class="section-title mb-4 fw-bold" style="color:#a67c52;">What is a Yoga Instructor Course?</h2>
-      <p>
+  <section class="content-section py-5" style="background-color:#fff; color:#3a2e25;">
+    <div class="container text-center mb-5">
+      <div >
+        <h2 class="section-title mb-4 fw-bold fade-up" style="color:#a67c52;">What is a Yoga Instructor Course?</h2>
+      </div>
+      <p class="fade-up">
         A yoga instructor course provides structured training in yoga practices, philosophies, and teaching
-        methodologies.
+        methodologies.<br/>
         Whether you're a beginner or an advanced practitioner, these courses prepare you to become a certified yoga
         teacher.
       </p>
 
-      <h2 class=" section-title mb-4 fw-bold" style="color:#a67c52;">Benefits of Becoming a Yoga Instructor</h2>
-      <p>
-        ✔ Gain deep knowledge of yoga practices <br>
-        ✔ Opportunity to teach worldwide <br>
-        ✔ Flexible career options <br>
-        ✔ Personal growth and mindfulness
-      </p>
-
-      <h2 class=" section-title mb-4 fw-bold" style="color:#a67c52;">How to Join?</h2>
-      <p>
-        Choose your course, enroll online, and start learning with expert teachers. Certification will be provided after
+      <div>
+        <h2 class="section-title mb-4 fw-bold fade-up" style="color:#a67c52;">Benefits of Becoming a Yoga Instructor
+        </h2>
+      </div>
+      <ul class="list-unstyled">
+        <li>Gain deep knowledge of yoga practices</li>
+        <li>Opportunity to teach worldwide </li>
+        <li>Flexible career options </li>
+        <li>Personal growth and mindfulness</li>
+      </ul>
+      <div>
+        <h2 class="section-title mb-4 fw-bold fade-up" style="color:#a67c52;">How to Join?</h2>
+      </div>
+      <p class="fade-up">
+        Choose your course, enroll online, and start learning with expert teachers. Certification will be provided after<br/>
         successful completion.
       </p>
     </div>
