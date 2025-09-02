@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,6 +20,7 @@
       overflow-x: hidden;
       background: url('public/services.jpg') center/cover no-repeat fixed;
     }
+
     .section-title {
       color: #a67c52;
       font-weight: bold;
@@ -26,6 +28,7 @@
       position: relative;
       display: inline-block;
     }
+
     .section-title::after {
       content: "";
       width: 60%;
@@ -36,152 +39,165 @@
       left: 0;
       border-radius: 5px;
     }
+
     /* Hero Section */
-.hero-section {
-    position: relative;
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    overflow: hidden;
-}
-
-/* Hero Background Image */
-.hero-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.5); /* dark overlay for text contrast */
-    z-index: 0;
-}
-
-/* Hero Text Content */
-.hero-content {
-    position: relative;
-    z-index: 2;
-    color: #fff;
-}
-
-/* Watermark Float Animation */
-@keyframes verticalFloat {
-    0% {
-        transform: translate(-50%, -55%);
+    .hero-section {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
     }
-    50% {
+
+    /* Hero Background Image */
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.5);
+      /* dark overlay for text contrast */
+      z-index: 0;
+    }
+
+    /* Hero Text Content */
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+    }
+
+    /* Watermark Float Animation */
+    @keyframes verticalFloat {
+      0% {
+        transform: translate(-50%, -55%);
+      }
+
+      50% {
         transform: translate(-50%, -45%);
-    }
-    100% {
+      }
+
+      100% {
         transform: translate(-50%, -55%);
+      }
     }
-}
 
-.hero-watermark {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 15vw;
-    font-weight: 900;
-    font-family: 'Times New Roman', Times, serif;
-    color: transparent;
-    -webkit-text-stroke: 2px rgba(49, 15, 15, 0.25);
-    text-transform: uppercase;
-    white-space: nowrap;
-    z-index: 1;
-    pointer-events: none;
-    animation: verticalFloat 5s ease-in-out infinite;
-}
+    .hero-watermark {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 15vw;
+      font-weight: 900;
+      font-family: 'Times New Roman', Times, serif;
+      color: transparent;
+      -webkit-text-stroke: 2px rgba(49, 15, 15, 0.25);
+      text-transform: uppercase;
+      white-space: nowrap;
+      z-index: 1;
+      pointer-events: none;
+      animation: verticalFloat 5s ease-in-out infinite;
+    }
 
-/* Wave Bottom Shape */
-.custom-shape-divider-bottom {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    z-index: 3;
-}
-.custom-shape-divider-bottom svg {
-    display: block;
-    width: 100%;
-    height: 100px;
-}
+    /* Wave Bottom Shape */
+    .custom-shape-divider-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      z-index: 3;
+    }
+
+    .custom-shape-divider-bottom svg {
+      display: block;
+      width: 100%;
+      height: 100px;
+    }
 
     /* Services Cards */
     .service-card {
       background: #fff;
       border-radius: 15px;
       padding: 25px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       text-align: center;
     }
+
     .service-card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     }
+
     .service-card i {
       font-size: 2.5rem;
       color: #a67c52;
       margin-bottom: 15px;
     }
+
     /* Pricing */
     .pricing-card {
       background: #fff;
       border-radius: 15px;
       padding: 30px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
       text-align: center;
       transition: all 0.3s ease;
     }
+
     .pricing-card:hover {
       transform: scale(1.05);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     }
+
     .pricing-card h3 {
       color: #a67c52;
     }
+
     /* CTA Section with transparent dark overlay */
-.cta-section {
-  background-color: rgba(70, 48, 34, 0.55); /* dark transparent overlay */
-  color: #fff;
-  padding: 60px 20px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
+    .cta-section {
+      background-color: rgba(70, 48, 34, 0.55);
+      /* dark transparent overlay */
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
 
-.cta-section .btn-light {
-  color: #333;
-  background-color: #fff;
-  border: none;
-}
+    .cta-section .btn-light {
+      color: #333;
+      background-color: #fff;
+      border: none;
+    }
 
-.cta-section .btn-light:hover {
-  background-color: #e0c097;
-  color: #333;
-}
+    .cta-section .btn-light:hover {
+      background-color: #e0c097;
+      color: #333;
+    }
   </style>
 </head>
+
 <body>
 
   <!-- Navbar -->
   <div id="navbar"></div>
 
   <!-- Hero Section -->
-<section class="hero-section">
+  <section class="hero-section">
     <img src="public/services.jpg" alt="background" class="hero-bg">
 
     <div class="hero-content">
-        <h1 class="fw-bold display-4" data-aos="zoom-in">Our Wellness Program</h1>
-        <p class="lead fst-italic" data-aos="fade-up" data-aos-delay="200">
-            Premium Yoga • Meditation • Mindfulness • Lifestyle Balance
-        </p>
+      <h1 class="fw-bold display-4" data-aos="zoom-in">Our Wellness Program</h1>
+      <p class="lead fst-italic" data-aos="fade-up" data-aos-delay="200">
+        Premium Yoga • Meditation • Mindfulness • Lifestyle Balance
+      </p>
     </div>
 
     <!-- Watermark -->
@@ -189,145 +205,153 @@
 
     <!-- Bottom Wave -->
     <div class="custom-shape-divider-bottom">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M321.39,56.44c58-10.79,114.13-30.13,172-41.86,
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.13-30.13,172-41.86,
     82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,
     985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C86.29,
     45.71,231.77,67.23,321.39,56.44Z" fill="#fff"></path>
-        </svg>
+      </svg>
     </div>
-</section>
+  </section>
 
 
   <!-- Services Offered -->
-   <div class=" bg-light">
-  <section class="py-5 servive-container" data-aos="fade-up">
-    <div class="container text-center">
-      <h2 class="section-title text-center mb-5"> Services Offered at Kribuddha Wellness Center</h2>
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4">
-          <div class="service-card h-100">
-            <i class="bi bi-person-heart"></i>
-            <h5>Personalized Wellness Consultation</h5>
-            <p>Your unique pain, stress, and health concerns addressed with tailored solutions.</p>
+  <div class=" bg-light">
+    <section class="py-5 servive-container" data-aos="fade-up">
+      <div class="container text-center">
+        <h2 class="section-title text-center mb-5"> Services Offered at Kribuddha Wellness Center</h2>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card h-100">
+              <i class="bi bi-person-heart"></i>
+              <h5>Personalized Wellness Consultation</h5>
+              <p>Your unique pain, stress, and health concerns addressed with tailored solutions.</p>
+            </div>
           </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="service-card h-100">
-            <i class="bi bi-yin-yang"></i>
-            <h5>Premium Yoga Sessions</h5>
-            <p>Experience yoga as a luxury journey—strength, flexibility, and inner calm in every pose.</p>
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card h-100">
+              <i class="bi bi-yin-yang"></i>
+              <h5>Premium Yoga Sessions</h5>
+              <p>Experience yoga as a luxury journey—strength, flexibility, and inner calm in every pose.</p>
+            </div>
           </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="service-card h-100">
-            <i class="bi bi-people"></i>
-            <h5>Team & Corporate Yoga</h5>
-            <p>Transform groups into mindful, energetic teams with powerful collective practices.</p>
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card h-100">
+              <i class="bi bi-people"></i>
+              <h5>Team & Corporate Yoga</h5>
+              <p>Transform groups into mindful, energetic teams with powerful collective practices.</p>
+            </div>
           </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="service-card h-100">
-            <i class="bi bi-stars"></i>
-            <h5>Guided Meditation & Mindfulness</h5>
-            <p>Release stress, embrace calm, and awaken mental clarity through deep inner silence.</p>
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card h-100">
+              <i class="bi bi-stars"></i>
+              <h5>Guided Meditation & Mindfulness</h5>
+              <p>Release stress, embrace calm, and awaken mental clarity through deep inner silence.</p>
+            </div>
           </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="service-card h-100">
-            <i class="bi bi-activity"></i>
-            <h5>Pain Management Programs</h5>
-            <p>Targeted yoga and therapies designed to ease back pain, stiffness, and chronic discomforts.</p>
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card h-100">
+              <i class="bi bi-activity"></i>
+              <h5>Pain Management Programs</h5>
+              <p>Targeted yoga and therapies designed to ease back pain, stiffness, and chronic discomforts.</p>
+            </div>
           </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="service-card h-100">
-            <i class="bi bi-laptop"></i>
-            <h5>Online Wellness Programs</h5>
-            <p>Premium wellness at your fingertips—flexible sessions for busy lifestyles worldwide.</p>
+          <div class="col-md-6 col-lg-4">
+            <div class="service-card h-100">
+              <i class="bi bi-laptop"></i>
+              <h5>Online Wellness Programs</h5>
+              <p>Premium wellness at your fingertips—flexible sessions for busy lifestyles worldwide.</p>
+            </div>
           </div>
-        </div>
-        <div class="col-md-6 col-lg-4 mx-auto">
-          <div class="service-card h-100">
-            <i class="bi bi-heart-pulse"></i>
-            <h5>Lifestyle & Holistic Healing</h5>
-            <p>Integrating yoga, nutrition, and breathwork to create balance in everyday living.</p>
+          <div class="col-md-6 col-lg-4 mx-auto">
+            <div class="service-card h-100">
+              <i class="bi bi-heart-pulse"></i>
+              <h5>Lifestyle & Holistic Healing</h5>
+              <p>Integrating yoga, nutrition, and breathwork to create balance in everyday living.</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Pricing Packages -->
-  <section class="py-5" data-aos="fade-up">
-    <div class="container text-center">
-      <h2 class="section-title text-center mb-5"> Packages & Pricing</h2>
-      <div class="row g-4 justify-content-center">
-        <div class="col-md-4">
-          <div class="pricing-card">
-            <h3>Monthly</h3>
-            <p class="fs-4 fw-bold">₹4,999</p>
-            <p>Unlimited Yoga & Meditation Sessions<br>1 Consultation Included</p>
-            <a href="contact.html" class="btn btn-outline-dark mt-3">Get Started</a>
+    <!-- Pricing Packages -->
+    <section class="py-5" data-aos="fade-up">
+      <div class="container text-center">
+        <h2 class="section-title text-center mb-5"> Packages & Pricing</h2>
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-4">
+            <div class="pricing-card">
+              <h3>Monthly</h3>
+              <p class="fs-4 fw-bold">₹4,999</p>
+              <p>Unlimited Yoga & Meditation Sessions<br>1 Consultation Included</p>
+              <a href="contact.html" class="btn btn-outline-dark mt-3">Get Started</a>
+            </div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="pricing-card">
-            <h3>Quarterly</h3>
-            <p class="fs-4 fw-bold">₹12,999</p>
-            <p>All Monthly Benefits<br>+ 3 Personalized Consultations</p>
-            <a href="contact.html" class="btn btn-outline-dark mt-3">Get Started</a>
+          <div class="col-md-4">
+            <div class="pricing-card">
+              <h3>Quarterly</h3>
+              <p class="fs-4 fw-bold">₹12,999</p>
+              <p>All Monthly Benefits<br>+ 3 Personalized Consultations</p>
+              <a href="contact.html" class="btn btn-outline-dark mt-3">Get Started</a>
+            </div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="pricing-card">
-            <h3>Yearly</h3>
-            <p class="fs-4 fw-bold">₹39,999</p>
-            <p>All Benefits + Priority Booking<br>Exclusive Wellness Retreat Access</p>
-            <a href="contact.html" class="btn btn-outline-dark mt-3">Get Started</a>
+          <div class="col-md-4">
+            <div class="pricing-card">
+              <h3>Yearly</h3>
+              <p class="fs-4 fw-bold">₹39,999</p>
+              <p>All Benefits + Priority Booking<br>Exclusive Wellness Retreat Access</p>
+              <a href="contact.html" class="btn btn-outline-dark mt-3">Get Started</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Why Choose Us -->
-  <section class="py-5" data-aos="fade-up">
-    <div class="container text-center">
-      <h2 class="section-title mb-4"> Why Choose Kribuddha?</h2>
-      <p class="lead mb-4">Our USP lies in blending timeless yoga with modern premium wellness.</p>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="service-card h-100">
-            <h5>🌿 Premium Experience</h5>
-            <p>Every session is crafted with healing, rejuvenation, and inner transformation in mind.</p>
+    <!-- Why Choose Us -->
+    <section class="py-5" data-aos="fade-up">
+      <div class="container text-center">
+        <h2 class="section-title mb-4"> Why Choose Kribuddha?</h2>
+        <p class="lead mb-4">Our USP lies in blending timeless yoga with modern premium wellness.</p>
+        <div class="row g-5">
+          <div class="col-md-4">
+            <div class="service-card h-100">
+              <h5>🌿 Premium Experience</h5>
+              <p>Every session is crafted with healing, rejuvenation, and inner transformation in mind.</p>
+            </div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="service-card h-100">
-            <h5>🌸 Expert Guidance</h5>
-            <p>Led by <strong>Reetu Varma</strong> with deep expertise in yoga, meditation, and wellness practices.</p>
+          <div class="col-md-4">
+            <div class="service-card h-100">
+              <h5>🌸 Expert Guidance</h5>
+              <p>Led by <strong>Reetu Varma</strong> with deep expertise in yoga, meditation, and wellness practices.
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="service-card h-100">
-            <h5>🌍 Global Access</h5>
-            <p>From local centers to online programs, Kribuddha is accessible anytime, anywhere.</p>
+          <div class="col-md-4">
+            <div class="service-card h-100">
+              <h5>🌍 Global Access</h5>
+              <p>From local centers to online programs, Kribuddha is accessible anytime, anywhere.</p>
+            </div>
           </div>
+          <div class="col-md-4">
+            <div class="service-card h-100">
+              <h5>🌍 Physiotherapist consultation</h5>
+              <p>From local centers to online programs, Kribuddha is accessible anytime, anywhere.</p>
+            </div>
+          </div>
+
         </div>
       </div>
-    </div>
-  </section>
+    </section>
   </div>
 
- <!-- CTA -->
-<section class="cta-section">
-  <div class="container">
-    <h2>Begin Your Wellness Journey Today</h2>
-    <p class="lead mb-4">Discover the Kribuddha way — balance, healing, and premium self-discovery.</p>
-    <a href="contact.html" class="btn btn-light btn-lg">Book a Session</a>
-  </div>
-</section>
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Begin Your Wellness Journey Today</h2>
+      <p class="lead mb-4">Discover the Kribuddha way — balance, healing, and premium self-discovery.</p>
+      <a href="contact.html" class="btn btn-light btn-lg">Book a Session</a>
+    </div>
+  </section>
 
   <!-- Footer -->
   <div id="footer"></div>
@@ -355,5 +379,5 @@
     });
   </script>
 </body>
-</html>
 
+</html>
