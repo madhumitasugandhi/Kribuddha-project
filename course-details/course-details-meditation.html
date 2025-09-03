@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meditation - Course Details</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fdfbf7;
+      color: #3a2e25;
+    }
+
+    .hero-section {
+      background: linear-gradient(rgba(58, 46, 37, 0.8), rgba(58, 46, 37, 0.8)),
+        url('https://images.pexels.com/photos/3822621/pexels-photo-3822621.jpeg') center/cover no-repeat;
+      color: #fff;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .hero-section h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #e0c097;
+    }
+
+    .section-title {
+      font-weight: bold;
+      color: #a67c52;
+      margin-bottom: 15px;
+      border-left: 5px solid #a67c52;
+      padding-left: 10px;
+    }
+
+    .info-box {
+      background: #fff;
+      border: 1px solid #e0c097;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .info-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .btn-enroll {
+      background: #3a2e25;
+      color: #fff;
+      border-radius: 30px;
+      padding: 12px 35px;
+      font-weight: bold;
+    }
+
+    .btn-enroll:hover {
+      background: #a67c52;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <h1>Meditation</h1>
+    <p class="lead">Mind • Awareness • Inner Peace</p>
+  </section>
+
+  <!-- Course Overview -->
+  <section class="container py-5">
+    <h2 class="section-title">Course Overview</h2>
+    <p>
+      The <strong>Meditation Course</strong> provides an in-depth understanding of meditation techniques and practices.
+      It aims to help learners develop mindfulness, inner peace, emotional balance, and mental clarity for personal and
+      professional growth.
+    </p>
+  </section>
+
+  <!-- Course Details -->
+  <section class="container py-4">
+    <h2 class="section-title">Eligibility & Duration</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="info-box">
+          <h5>⏳ Duration</h5>
+          <p>3 Months</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="info-box">
+          <h5>🎓 Eligibility</h5>
+          <p>Open to All (Age 15+)</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="info-box">
+          <h5>💰 Fees</h5>
+          <p>₹5,000</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Learning Outcomes -->
+  <section class="container py-5">
+    <h2 class="section-title">What You Will Learn</h2>
+    <ul>
+      <li>Foundations of Meditation & Mindfulness</li>
+      <li>Breathing & Concentration Techniques</li>
+      <li>Guided & Silent Meditation Practices</li>
+      <li>Managing Stress, Anxiety & Emotions</li>
+      <li>Daily Meditation Habits for Inner Peace</li>
+    </ul>
+  </section>
+
+  <!-- Certification -->
+  <section class="container py-4">
+    <h2 class="section-title">Certification</h2>
+    <p>
+      After completion, participants will receive a <strong>Certificate in Meditation Practices</strong>, recognized for
+      personal and professional use in wellness and yoga fields.
+    </p>
+  </section>
+
+  <!-- Enroll & Back Buttons -->
+  <section class="text-center py-5">
+    <button class="btn btn-enroll me-3" data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
+    <a href="../yoga-teacher-training.html" class="btn btn-outline-dark">⬅ Back</a>
+  </section>
+
+  <!-- Enroll Modal -->
+  <div class="modal fade" id="enrollModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title" style="color:#a67c52;">Enroll Now</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body">
+          <form id="enrollForm">
+            <div class="mb-3">
+              <label class="form-label">Full Name</label>
+              <input type="text" id="name" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" id="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Course</label>
+              <input type="text" id="course" class="form-control" value="Meditation" readonly>
+            </div>
+            <button type="submit" class="btn btn-dark w-100">Submit</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- WhatsApp Integration -->
+  <script>
+    document.getElementById("enrollForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      let name = document.getElementById("name").value;
+      let email = document.getElementById("email").value;
+      let course = document.getElementById("course").value;
+
+      let phone = "9823432448"; // test number
+      let msg = `Hello, I want to enroll!\n\nName: ${name}\nEmail: ${email}\nCourse: ${course}`;
+
+      let url = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
+      window.open(url, "_blank");
+    });
+  </script>
+
+</body>
+</html>
