@@ -211,16 +211,36 @@
   </section>
 
   <!-- Newsletter -->
-  <section class="py-5 text-center" data-aos="fade-up">
-    <div class="container">
-      <h2 class="section-title">Join Our Wellness Insider</h2>
-      <p>Get tips, updates & offers directly in your inbox.</p>
-      <form class="d-flex justify-content-center" data-aos="zoom-in">
-        <input type="email" class="form-control w-50 mx-2" placeholder="Enter your email">
-        <a href="subscription.html" class="btn text-white" style="background-color:#a67c52;">Subscribe</a>
-      </form>
-    </div>
-  </section>
+  <section class="py-5 text-center" style="background:#f9f7f3;">
+  <div class="container" data-aos="fade-up">
+    <h2 class="fw-bold mb-3" style="color:#a67c52;">Join Our Wellness Insider</h2>
+    <p class="text-muted mb-4">Get tips, updates & offers directly in your WhatsApp.</p>
+    
+    <form id="subscribeForm" class="row justify-content-center g-2">
+      <div class="col-md-3 col-10">
+        <input type="text" id="nameInput" class="form-control" placeholder="Enter your name" required>
+      </div>
+      <div class="col-md-2 col-10">
+        <button type="submit" class="btn w-100 text-white" style="background-color:#a67c52;">Subscribe</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<script>
+  document.getElementById("subscribeForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let name = document.getElementById("nameInput").value;
+    let phone = "9823432448"; // WhatsApp number
+
+    let message = `New Subscription Request:\nName: ${name}`;
+    let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+    window.open(url, "_blank");
+  });
+</script>
+
 
   <!-- Footer load -->
   <div id="footer"></div>
