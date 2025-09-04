@@ -40,102 +40,154 @@
     }
 
     /* Hero Section */
-        .hero-section {
-            position: relative;
-            min-height: 70vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            overflow: hidden;
-        }
-
-        /* Hero Background Image */
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: brightness(0.5);
-            /* dark overlay for text contrast */
-            z-index: 0;
-        }
-
-        /* Hero Text Content */
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            color: #fff;
-        }
-
-        /* Big Watermark */
-        @keyframes verticalFloat {
-            0% {
-                transform: translate(-50%, -55%);
-            }
-
-            50% {
-                transform: translate(-50%, -45%);
-            }
-
-            100% {
-                transform: translate(-50%, -55%);
-            }
-        }
-
-        .hero-watermark {
-            position: absolute;
-            top: 40%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 15vw;
-            font-weight: 900;
-            font-family: 'Times New Roman', Times, serif;
-            color: transparent;
-            -webkit-text-stroke: 2px rgba(49, 15, 15, 0.25);
-            text-transform: uppercase;
-            white-space: nowrap;
-            z-index: 1;
-            pointer-events: none;
-            animation: verticalFloat 5s ease-in-out infinite;
-        }
-
-        /* Wave Bottom Shape */
-        .custom-shape-divider-bottom {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            overflow: hidden;
-            line-height: 0;
-            z-index: 3;
-        }
-
-        .custom-shape-divider-bottom svg {
-            display: block;
-            width: 100%;
-            height: 100px;
-        }
-
-    /* Mission & Vision */
-    .mv-card {
-      background: #fff;
-      border-radius: 15px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-      padding: 30px;
-      transition: all 0.4s ease;
+    .hero-section {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
     }
-    .mv-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-    }
-    .mv-card img {
-      border-radius: 12px;
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
-      max-height: 300px;
+      filter: brightness(0.5);
+      z-index: 0;
     }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+    }
+    @keyframes verticalFloat {
+      0% { transform: translate(-50%, -55%); }
+      50% { transform: translate(-50%, -45%); }
+      100% { transform: translate(-50%, -55%); }
+    }
+    .hero-watermark {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 15vw;
+      font-weight: 900;
+      font-family: 'Times New Roman', Times, serif;
+      color: transparent;
+      -webkit-text-stroke: 2px rgba(49, 15, 15, 0.25);
+      text-transform: uppercase;
+      white-space: nowrap;
+      z-index: 1;
+      pointer-events: none;
+      animation: verticalFloat 5s ease-in-out infinite;
+    }
+    .custom-shape-divider-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      z-index: 3;
+    }
+    .custom-shape-divider-bottom svg {
+      display: block;
+      width: 100%;
+      height: 100px;
+    }
+
+    /* Mission & Vision Card Section */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+.wrapper .container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
+}
+.card {
+  background: #ffffff;
+  border-radius: 0 0 14px 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  position: relative;
+  padding: 80px 25px 40px;
+  transition: transform .3s ease, box-shadow .3s ease, background .3s ease;
+  overflow: hidden;
+  flex: 1 1 45%;   /* bada width large screen pe */
+  max-width: 500px; /* limit set */
+  min-height: 280px; /* ek decent height */
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+  background: #a67c52;
+  color: #fff;
+}
+.tab {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #a67c52;
+  color: #fff;
+  font-weight: 600;
+  font-size: 22px;
+  width: 80%;
+  max-width: 400px;
+  height: 60px;           
+  border-radius: 0 0 150px 150px; 
+  display: flex;
+  align-items: flex-end;   
+  justify-content: center;
+  padding-bottom: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: background .3s ease, color .3s ease;
+  z-index: 2;
+}
+.card:hover .tab {
+  background: #ffffff;
+  color: #a67c52;
+}
+.card p {
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: center;
+  color: #333;
+  transition: color .3s ease;
+}
+.card:hover p {
+  color: #fff;
+}
+
+/* Small screen adjustments */
+@media(max-width: 768px) {
+  .wrapper .container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+    min-height: auto; /* height free so text adjust */
+    padding: 70px 20px 30px;
+  }
+  .tab {
+    font-size: 20px;
+    width: 90%;
+    max-width: none;
+  }
+}
+
 
     /* Philosophy */
     .philosophy-card {
@@ -163,112 +215,82 @@
   <div id="navbar"></div>
 
   <!-- Hero Section -->
-    <section class="hero-section">
-        <img src="public/services.jpg" alt="background" class="hero-bg">
-
-        <div class="hero-content">
-            <h1 class="fw-bold display-4" data-aos="zoom-in">About</h1>
-            <p class="lead fst-italic" data-aos="fade-up" data-aos-delay="200">
-               <i>A premium sanctuary of wellness, balance & inner strength</i>
-            </p>
-        </div>
-
-        <!-- Watermark -->
-        <div class="hero-watermark">About</div>
-
-        <!-- Bottom Wave -->
-        <div class="custom-shape-divider-bottom">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.13-30.13,172-41.86,
+  <section class="hero-section">
+    <img src="public/services.jpg" alt="background" class="hero-bg">
+    <div class="hero-content">
+      <h1 class="fw-bold display-4" data-aos="zoom-in">About</h1>
+      <p class="lead fst-italic" data-aos="fade-up" data-aos-delay="200">
+        <i>A premium sanctuary of wellness, balance & inner strength</i>
+      </p>
+    </div>
+    <div class="hero-watermark">About</div>
+    <div class="custom-shape-divider-bottom">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.13-30.13,172-41.86,
         82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,
         985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C86.29,
         45.71,231.77,67.23,321.39,56.44Z" fill="#fff"></path>
-            </svg>
-        </div>
-    </section>
-
-
-
+      </svg>
+    </div>
+  </section>
 
   <!-- Introduction -->
   <section id="intro" class="py-5" data-aos="fade-up">
-    <div class="container text-center">
-      <h2 class="section-title">Introduction</h2>
-      <p class="lead mt-4">
-        “To guide individuals and communities towards a pain-free, balanced, and harmonious life through the timeless wisdom of<br/> Yoga,Meditation, and Holistic Wellness.”
-      </p>
-      <ul class="list-unstyled text-md-center">
-        <li>
-           Personalized consultations
+  <div class="container text-center">
+    <h2 class="section-title">Introduction</h2>
+    <p class="lead mt-4">
+      “At Kribuddha Wellness Center, we believe that true wellness is the harmony of mind, body, and spirit. Our mission is to make holistic health accessible to everyone by blending modern physiotherapy, ancient yoga practices, and lifestyle coaching into one complete wellness experience.
+      <br/>
+Founded with a vision to go beyond temporary solutions, Kribuddha is not just a center—it’s a movement towards healthy and balanced living.”
+    </p>
+    <ul class="list-unstyled mt-4 d-inline-block text-start">
+      <li>✅ Personalized consultations</li>
+      <li>✅ Team practices & retreats</li>
+      <li>✅ Visible transformation in body, mind & spirit</li>
+    </ul>
+  </div>
+</section>
 
-        </li>
-        <li>
- Team practices & retreats
-        </li>
-        <li>
- Visible transformation in body, mind & spirit
-        </li>
-      </ul>
-    </div>
-  </section>
-
-    <!-- Mission & Vision -->
+  <!-- Mission & Vision (Card Style) -->
   <section class="py-5 bg-light" data-aos="fade-up">
-    <div class="container">
+    <div class="container text-center">
+      <h2 class="section-title mb-5">Mission & Vision</h2>
+      <div class="wrapper">
+        <div class="container">
 
-      <!-- Mission -->
-      <div class="row align-items-center mb-5">
-        <div class="col-lg-12 text-center mb-4" data-aos="fade-up">
-          <h2 class="section-title"> Mission</h2>
-        </div>
-        <div class="col-md-6 mb-4" data-aos="fade-right">
-          <p class="lead">
-            To guide individuals and communities towards a pain-free, balanced, and harmonious life 
-            through the timeless wisdom of yoga, meditation, and holistic wellness. 
-          </p>
-          <p>
-            We are committed to offering personalized consultations and exclusive team practices 
-            that bring visible transformation in body, mind, and spirit.
-          </p>
-        </div>
-        <div class="col-md-6 text-center" data-aos="fade-left">
-          <img src="public/mission.jpg" alt="Mission" class="img-fluid mission-img shadow-lg rounded-5">
+          <!-- Mission Card -->
+          <div class="card mission-card" data-aos="fade-right">
+            <div class="tab">Mission</div>
+            <p>
+              To guide individuals and communities towards a pain-free, balanced, and harmonious life 
+              through the timeless wisdom of yoga, meditation, and holistic wellness. 
+              We are committed to offering personalized consultations and exclusive team practices 
+              that bring visible transformation in body, mind, and spirit.
+            </p>
+          </div>
+
+          <!-- Vision Card -->
+          <div class="card vision-card" data-aos="fade-left">
+            <div class="tab">Vision</div>
+            <p>
+              To be recognized as a global sanctuary of premium wellness, 
+              where people from all walks of life experience healing, inner peace, and elevated living.
+              Our vision is to make <strong>Kribuddha</strong> a symbol of fruitful transformation, 
+              blending spirituality with modern wellness needs—accessible anytime, anywhere.
+            </p>
+          </div>
+
         </div>
       </div>
-
-      <!-- Vision -->
-      <div class="row align-items-center mt-5">
-        
-        <div class="col-lg-12 text-center mb-4" data-aos="fade-up">
-          <h2 class="section-title">
-             Vision</h2>
-        </div>
-        <div class="col-md-6 text-center" data-aos="fade-left">
-          <img src="public/vision.jpg" alt="Vision" class="img-fluid vision-img shadow-lg rounded-5">
-        </div>
-        <div class="col-md-6 mb-4" data-aos="fade-right">
-          <p class="lead">
-            To be recognized as a global sanctuary of premium wellness, 
-            where people from all walks of life experience healing, inner peace, and elevated living.
-          </p>
-          <p>
-            Our vision is to make <strong>Kribuddha</strong> a symbol of fruitful transformation, 
-            blending spirituality with modern wellness needs—accessible anytime, anywhere.
-          </p>
-        </div>
-      </div>
-
     </div>
   </section>
-
 
   <!-- Philosophy -->
   <section class="py-5" data-aos="fade-up">
     <div class="container">
-        <div class="col-lg-12 text-center mb-4" data-aos="fade-up">
-          <h2 class="section-title">
-             Philosophy</h2>
-          </div>
+      <div class="col-lg-12 text-center mb-4" data-aos="fade-up">
+        <h2 class="section-title">Philosophy</h2>
+      </div>
       <div class="row g-4">
         <div class="col-md-6 col-lg-3">
           <div class="philosophy-card h-100">
