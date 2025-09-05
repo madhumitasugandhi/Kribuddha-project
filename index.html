@@ -38,6 +38,46 @@
       left: 0;
       border-radius: 5px;
     }
+
+    /* Hero CTA hover effect */
+    .btn-gold {
+      background-color: #a67c52;
+      border-radius: 50px;
+      padding: 12px 32px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .btn-gold:hover {
+      background-color: #8c6239;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+     .hero-section {
+      background: url('https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg') center/cover no-repeat;
+      color: #333;
+      position: relative;
+      padding: 100px 20px;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(253, 251, 247, 0.7); /* soft overlay for readability */
+      z-index: 1;
+    }
+
+    .hero-section .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-section a.btn:hover {
+      background-color: #8c6239 !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
   </style>
 </head>
 
@@ -47,8 +87,7 @@
   <div id="navbar"></div>
 
   <!-- Hero Section -->
-  <section class="py-5 text-center position-relative overflow-hidden" style="background-color:#f8f4ef;"
-    data-aos="fade-in">
+  <section class="hero-section py-5 text-center position-relative overflow-hidden" data-aos="fade-in">
     <div class="container position-relative" style="z-index:2;">
       <!-- Logo -->
       <img src="/public/Logo.jpg" alt="Kribuddha Logo" width="180" class="mb-3 rounded-circle border"
@@ -58,7 +97,8 @@
       <h1 class="fw-bold mb-2" style="color:#a67c52;" data-aos="fade-up">Kribuddha Wellness Center</h1>
 
       <!-- Tagline -->
-      <h4 class="fst-italic mb-3" style="color:#555;" data-aos="fade-up" data-aos-delay="200">“Boundless Inner Peace.”
+      <h4 class="fst-italic mb-3" style="color:#444; font-size:1.6rem;" data-aos="fade-up" data-aos-delay="200">
+        “Boundless Inner Peace.”
       </h4>
 
       <!-- Slogan -->
@@ -66,16 +106,21 @@
         <strong>Yoga Anytime, Anywhere</strong> — Bringing Ancient Wisdom into Busy Modern Lives.
       </p>
 
-      <!-- Logo Caption -->
-      <p class="fw-semibold mb-4" style="color:#777;" data-aos="fade-up" data-aos-delay="600">Awakening Harmony Within
+      <!-- Social Proof -->
+      <p class="fw-semibold mb-4" style="color:#555;" data-aos="fade-up" data-aos-delay="500">
+        Trusted by 100+ students | Online & Offline Yoga Classes
       </p>
 
       <!-- CTA -->
-      <a href="about.html" class="btn btn-lg text-white" style="background-color:#a67c52;" data-aos="zoom-in"
-        data-aos-delay="800">
+      <a href="about.html" class="btn btn-lg text-white rounded-pill shadow px-4 py-2"
+        style="background-color:#a67c52; transition: all 0.3s ease;" 
+        data-aos="zoom-in" data-aos-delay="700">
         Discover More
       </a>
     </div>
+
+    <!-- Overlay -->
+    <div class="hero-overlay"></div>
 
     <!-- Waves Background -->
     <div class="position-absolute bottom-0 start-0 w-100">
@@ -85,8 +130,7 @@
             M0,96L48,80C96,64,192,32,288,26.7C384,21,480,43,576,80C672,117,768,171,864,181.3C960,192,1056,160,1152,128C1248,96,1344,64,1392,48L1440,32L1440,320L0,320Z;
             M0,64L48,74.7C96,85,192,107,288,112C384,117,480,107,576,90.7C672,75,768,53,864,64C960,75,1056,117,1152,122.7C1248,128,1344,96,1392,80L1440,64L1440,320L0,320Z;
             M0,96L48,80C96,64,192,32,288,26.7C384,21,480,43,576,80C672,117,768,171,864,181.3C960,192,1056,160,1152,128C1248,96,1344,64,1392,48L1440,32L1440,320L0,320Z
-          ">
-          </animate>
+          "></animate>
         </path>
       </svg>
     </div>
@@ -120,15 +164,11 @@
           <h2 class="section-title mb-4">About Us</h2>
           <ul class="text-start">
             <li>A premium sanctuary of wellness, balance & strength</li>
-
             <li>At Kribuddha Wellness Center, we believe true luxury is a life free from stress, pain & imbalance.
-              Our approach blends Yoga, Meditation & Mindfulness with a premium holistic touch.</li>  
-
-              <li>Personalized consultations</li>  
-
-              <li>Group & team yoga sessions</li>  
-
-              <li>Healing retreats & workshops</li>
+              Our approach blends Yoga, Meditation & Mindfulness with a premium holistic touch.</li>
+            <li>Personalized consultations</li>
+            <li>Group & team yoga sessions</li>
+            <li>Healing retreats & workshops</li>
           </ul>
           <a href="about.html" class="btn btn-dark rounded-pill px-4 py-2 mt-3 shadow" data-aos="zoom-in">Read More</a>
         </div>
@@ -212,35 +252,34 @@
 
   <!-- Newsletter -->
   <section class="py-5 text-center" style="background:#f9f7f3;">
-  <div class="container" data-aos="fade-up">
-    <h2 class="section-title fw-bold mb-3" style="color:#a67c52;">Join Our Wellness Insider</h2>
-    <p class="text-muted mb-4">Get tips, updates & offers directly in your WhatsApp.</p>
-    
-    <form id="subscribeForm" class="row justify-content-center g-2">
-      <div class="col-md-3 col-10">
-        <input type="text" id="nameInput" class="form-control" placeholder="Enter your name" required>
-      </div>
-      <div class="col-md-2 col-10">
-        <button type="submit" class="btn w-100 text-white" style="background-color:#a67c52;">Subscribe</button>
-      </div>
-    </form>
-  </div>
-</section>
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-title fw-bold mb-3" style="color:#a67c52;">Join Our Wellness Insider</h2>
+      <p class="text-muted mb-4">Get tips, updates & offers directly in your WhatsApp.</p>
 
-<script>
-  document.getElementById("subscribeForm").addEventListener("submit", function(e) {
-    e.preventDefault();
+      <form id="subscribeForm" class="row justify-content-center g-2">
+        <div class="col-md-3 col-10">
+          <input type="text" id="nameInput" class="form-control" placeholder="Enter your name" required>
+        </div>
+        <div class="col-md-2 col-10">
+          <button type="submit" class="btn w-100 text-white" style="background-color:#a67c52;">Subscribe</button>
+        </div>
+      </form>
+    </div>
+  </section>
 
-    let name = document.getElementById("nameInput").value;
-    let phone = "9823432448"; // WhatsApp number
+  <script>
+    document.getElementById("subscribeForm").addEventListener("submit", function (e) {
+      e.preventDefault();
 
-    let message = `New Subscription Request:\nName: ${name}`;
-    let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+      let name = document.getElementById("nameInput").value;
+      let phone = "9823432448"; // WhatsApp number
 
-    window.open(url, "_blank");
-  });
-</script>
+      let message = `New Subscription Request:\nName: ${name}`;
+      let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
 
+      window.open(url, "_blank");
+    });
+  </script>
 
   <!-- Footer load -->
   <div id="footer"></div>
@@ -265,8 +304,8 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({
-      duration: 1200, // animation speed
-      once: true      // ek hi baar chalega
+      duration: 1200,
+      once: true
     });
   </script>
 </body>
