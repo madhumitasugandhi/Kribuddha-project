@@ -29,18 +29,41 @@
     .footer-icon {
       color: #e0c097;
       margin-right: 8px;
+      width: 20px; /* icons same width */
+      text-align: center;
+    }
+    .footer-col ul li {
+      margin-bottom: 8px;
+    }
+
+    /* Responsive Alignment Fix */
+    .footer-col {
+      text-align: center; /* default for small screens */
+    }
+    .footer-col ul {
+      display: inline-block;
+      text-align: left;
+    }
+
+    @media (min-width: 768px) {
+      .footer-col {
+        text-align: left; /* medium screen se left align */
+      }
+      .footer-col ul {
+        display: block;
+      }
     }
   </style>
 </head>
 <body>
 
   <!-- Footer Start -->
-  <footer class="text-center text-lg-start" style="background-color:#3a2e25; color:#fdfbf7;">
+  <footer style="background-color:#3a2e25; color:#fdfbf7;">
     <div class="container p-4">
-
       <div class="row">
+        
         <!-- About -->
-        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0 footer-col">
           <h5 class="fw-bold">Kribuddha Wellness</h5>
           <p>
             Kribuddha Wellness is a holistic Yoga & Wellness Center dedicated to balancing mind, body, and soul — guided by certified yoga instructor <strong>Reetu Varma</strong>.
@@ -48,29 +71,29 @@
         </div>
 
         <!-- Quick Links -->
-        <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+        <div class="col-lg-2 col-md-6 mb-4 mb-md-0 footer-col">
           <h6 class="text-uppercase fw-bold">Quick Links</h6>
           <ul class="list-unstyled mb-0">
-            <li><a href="about.html" class="text-light text-decoration-none"><i class="bi bi-info-circle footer-icon"></i>About</a></li>
-            <li><a href="services.html" class="text-light text-decoration-none"><i class="bi bi-person-bounding-box footer-icon"></i>Services</a></li>
-            <li><a href="pricing.html" class="text-light text-decoration-none"><i class="bi bi-cash-coin footer-icon"></i>Pricing</a></li>
-            <li><a href="contact.html" class="text-light text-decoration-none"><i class="bi bi-envelope footer-icon"></i>Contact</a></li>
+            <li><a href="about.html" class="text-light text-decoration-none"><i class="bi bi-info-circle footer-icon"></i> About</a></li>
+            <li><a href="services.html" class="text-light text-decoration-none"><i class="bi bi-person-bounding-box footer-icon"></i> Services</a></li>
+            <li><a href="pricing.html" class="text-light text-decoration-none"><i class="bi bi-cash-coin footer-icon"></i> Pricing</a></li>
+            <li><a href="contact.html" class="text-light text-decoration-none"><i class="bi bi-envelope footer-icon"></i> Contact</a></li>
           </ul>
         </div>
 
         <!-- Services -->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0 footer-col">
           <h6 class="text-uppercase fw-bold">Services</h6>
           <ul class="list-unstyled mb-0">
-            <li><a href="#" class="text-light text-decoration-none"><i class="bi bi-yoga footer-icon"></i>Yoga Sessions</a></li>
-            <li><a href="#" class="text-light text-decoration-none"><i class="bi bi-flower2 footer-icon"></i>Meditation</a></li>
-            <li><a href="#" class="text-light text-decoration-none"><i class="bi bi-stars footer-icon"></i>Wellness Retreats</a></li>
-            <li><a href="#" class="text-light text-decoration-none"><i class="bi bi-journal-text footer-icon"></i>Workshops</a></li>
+            <li><a href="#" class="text-light text-decoration-none"><i class="bi bi-yoga footer-icon"></i> Yoga Sessions</a></li>
+            <li><a href="#" class="text-light text-decoration-none"><i class="bi bi-flower2 footer-icon"></i> Meditation</a></li>
+            <li><a href="#" class="text-light text-decoration-none"><i class="bi bi-stars footer-icon"></i> Wellness Retreats</a></li>
+            <li><a href="#" class="text-light text-decoration-none"><i class="bi bi-journal-text footer-icon"></i> Workshops</a></li>
           </ul>
         </div>
 
         <!-- Contact -->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0 footer-col">
           <h6 class="text-uppercase fw-bold">Contact</h6>
           <div class="mb-3">
             <i class="bi bi-geo-alt-fill me-2"></i> <strong>Address:</strong><br>
@@ -98,7 +121,6 @@
           </div>
         </div>
       </div>
-
     </div>
 
     <div class="text-center p-3" style="background-color:#2a211b; color:#aaa;">
