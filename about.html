@@ -100,94 +100,80 @@
       height: 100px;
     }
 
+    /* Intro */
+    #intro p {
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+
     /* Mission & Vision Card Section */
-.wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px 20px;
-}
-.wrapper .container {
-  display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 1200px;
-  width: 100%;
-}
-.card {
-  background: #ffffff;
-  border-radius: 0 0 14px 14px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-  position: relative;
-  padding: 80px 25px 40px;
-  transition: transform .3s ease, box-shadow .3s ease, background .3s ease;
-  overflow: hidden;
-  flex: 1 1 45%;   /* bada width large screen pe */
-  max-width: 500px; /* limit set */
-  min-height: 280px; /* ek decent height */
-}
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.15);
-  background: #a67c52;
-  color: #fff;
-}
-.tab {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #a67c52;
-  color: #fff;
-  font-weight: 600;
-  font-size: 22px;
-  width: 80%;
-  max-width: 400px;
-  height: 60px;           
-  border-radius: 0 0 150px 150px; 
-  display: flex;
-  align-items: flex-end;   
-  justify-content: center;
-  padding-bottom: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  transition: background .3s ease, color .3s ease;
-  z-index: 2;
-}
-.card:hover .tab {
-  background: #ffffff;
-  color: #a67c52;
-}
-.card p {
-  font-size: 15px;
-  line-height: 1.6;
-  text-align: center;
-  color: #333;
-  transition: color .3s ease;
-}
-.card:hover p {
-  color: #fff;
-}
-
-/* Small screen adjustments */
-@media(max-width: 768px) {
-  .wrapper .container {
-    flex-direction: column;
-    gap: 30px;
-  }
-  .card {
-    flex: 1 1 100%;
-    max-width: 100%;
-    min-height: auto; /* height free so text adjust */
-    padding: 70px 20px 30px;
-  }
-  .tab {
-    font-size: 20px;
-    width: 90%;
-    max-width: none;
-  }
-}
-
+    .wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+    .wrapper .container {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1200px;
+      width: 100%;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 0 0 14px 14px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      position: relative;
+      padding: 80px 25px 40px;
+      transition: transform .3s ease, box-shadow .3s ease, background .3s ease;
+      overflow: hidden;
+      flex: 1 1 45%;
+      max-width: 500px;
+      min-height: 280px;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+      background: #a67c52;
+      color: #fff;
+    }
+    .tab {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #a67c52;
+      color: #fff;
+      font-weight: 600;
+      font-size: 22px;
+      width: 80%;
+      max-width: 400px;
+      height: 60px;
+      border-radius: 0 0 150px 150px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: background .3s ease, color .3s ease;
+      z-index: 2;
+    }
+    .card:hover .tab {
+      background: #ffffff;
+      color: #a67c52;
+    }
+    .card p {
+      font-size: 15px;
+      line-height: 1.6;
+      text-align: center;
+      color: #333;
+      transition: color .3s ease;
+    }
+    .card:hover p {
+      color: #fff;
+    }
 
     /* Philosophy */
     .philosophy-card {
@@ -207,6 +193,59 @@
       color: #a67c52;
       margin-bottom: 15px;
     }
+    .philosophy-card h5 {
+      color: #a67c52;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    /* Why Choose Us */
+    .choose-icon {
+      font-size: 2.2rem;
+      color: #a67c52;
+      margin-bottom: 12px;
+    }
+
+    /* Button */
+    .btn:hover {
+      background-color: #8c6239 !important;
+      transform: translateY(-3px);
+      transition: all 0.3s ease;
+    }
+
+    /* Small screen adjustments */
+    @media(max-width: 768px) {
+      .wrapper .container {
+        flex-direction: column;
+        gap: 30px;
+      }
+      .card {
+        flex: 1 1 100%;
+        max-width: 100%;
+        min-height: auto;
+        padding: 70px 20px 30px;
+      }
+      .tab {
+        font-size: 20px;
+        width: 90%;
+        max-width: none;
+      }
+    } 
+    html, body {
+  overflow-x: hidden;
+}
+
+.waves {
+  width: 100% !important;
+  height: auto;
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
   </style>
 </head>
 <body>
@@ -218,12 +257,12 @@
   <section class="hero-section">
     <img src="public/services.jpg" alt="background" class="hero-bg">
     <div class="hero-content">
-      <h1 class="fw-bold display-4" data-aos="zoom-in">About</h1>
+      <h1 class="fw-bold display-4" data-aos="zoom-in">About Us</h1>
       <p class="lead fst-italic" data-aos="fade-up" data-aos-delay="200">
         <i>A premium sanctuary of wellness, balance & inner strength</i>
       </p>
     </div>
-    <div class="hero-watermark">About</div>
+    <div class="hero-watermark">About Us</div>
     <div class="custom-shape-divider-bottom">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
         <path d="M321.39,56.44c58-10.79,114.13-30.13,172-41.86,
@@ -235,91 +274,74 @@
   </section>
 
   <!-- Introduction -->
-<section id="intro" class="py-5" data-aos="fade-up">
-  <div class="container">
-    <div class="row align-items-center g-5">
+  <section id="intro" class="py-5" data-aos="fade-up">
+    <div class="container">
+      <div class="row align-items-center g-5">
 
-      <!-- Image Side -->
-      <div class="col-md-6" data-aos="fade-right">
-        <div class="position-relative">
-          <img src="public/about.jpg" alt="About Kribuddha" 
-               class="img-fluid rounded-3 shadow" 
-               style="filter: brightness(1.1);">
-          <div class="position-absolute top-0 start-0 w-100 h-100" 
-               style="background: linear-gradient(to bottom right, rgba(255,255,255,0.2), rgba(255,255,255,0.1)); 
-                      border-radius: 12px;">
+        <!-- Image Side -->
+        <div class="col-md-6" data-aos="fade-right">
+          <div class="position-relative">
+            <img src="public/about.jpg" alt="About Kribuddha" 
+                 class="img-fluid rounded-3 shadow" 
+                 style="filter: brightness(1.1);">
+            <div class="position-absolute top-0 start-0 w-100 h-100" 
+                 style="background: linear-gradient(to bottom right, rgba(255,223,186,0.25), rgba(255,255,255,0.15)); 
+                        border-radius: 12px;">
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Text Side -->
-      <div class="col-md-6 text-center text-md-start" data-aos="fade-left">
-        
-        <!-- Icon + Heading -->
-        <h2 class="section-title mb-4 text-center text-md-start">About Us</h2>
-
-        <!-- Simplified Content -->
-        <p class="lead">
-          Kribuddha Wellness Center is a sanctuary of <strong>balance, wellness, and strength</strong>.  
-          We believe true luxury is living free from stress, pain, and imbalance.  
-          Our approach blends <strong>Yoga, Meditation, and Mindfulness</strong> with a holistic touch.
-        </p>
-
-        <!-- Bullet Points -->
-        <ul class="list-unstyled mt-4">
-  <li class="mb-2">
-    <i class="bi bi-person-check text-warning me-2"></i> Personalized consultations
-  </li>
-  <li class="mb-2">
-    <i class="bi bi-people text-warning me-2"></i> Group & team yoga sessions
-  </li>
-  <li class="mb-2">
-    <i class="bi bi-flower2 text-warning me-2"></i> Healing retreats & workshops
-  </li>
-</ul>
-
-
-        <!-- Button -->
-        <a href="about.html" 
-           class="btn text-white rounded-pill px-4 py-2 mt-3 shadow" 
-           style="background-color:#a67c52;">
-          Discover More
-        </a>
+        <!-- Text Side -->
+        <div class="col-md-6 text-center text-md-start" data-aos="fade-left">
+          <h2 class="section-title mb-4 text-center text-md-start">About Us</h2>
+          <p class="lead">
+            Kribuddha Wellness Center is a sanctuary of <strong>balance, wellness, and strength</strong>.  
+            We believe true luxury is living free from stress, pain, and imbalance.  
+            Our approach blends <strong>Yoga, Meditation, and Mindfulness</strong> with a holistic touch.
+          </p>
+          <ul class="list-unstyled mt-4">
+            <li class="mb-2">
+              <i class="bi bi-person-check me-2" style="color:#a67c52;"></i> Personalized consultations
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-people me-2" style="color:#a67c52;"></i> Group & team yoga sessions
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-flower2 me-2" style="color:#a67c52;"></i> Healing retreats & workshops
+            </li>
+          </ul>
+          <a href="about.html" 
+             class="btn text-white rounded-pill px-4 py-2 mt-3 shadow" 
+             style="background-color:#a67c52;">
+            Discover More
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-  <!-- Mission & Vision (Card Style) -->
+  <!-- Mission & Vision -->
   <section class="py-5 bg-light" data-aos="fade-up">
     <div class="container text-center">
-      <h2 class="section-title mb-5">Mission & Vision</h2>
+      <h2 class="section-title mb-3">Mission & Vision</h2>
       <div class="wrapper">
         <div class="container">
-
-          <!-- Mission Card -->
           <div class="card mission-card" data-aos="fade-right">
             <div class="tab">Mission</div>
             <p>
-              To guide individuals and communities towards a pain-free, balanced, and harmonious life 
-              through the timeless wisdom of yoga, meditation, and holistic wellness. 
-              We are committed to offering personalized consultations and exclusive team practices 
-              that bring visible transformation in body, mind, and spirit.
+              To guide individuals and communities towards a <strong>pain-free, balanced, and harmonious life</strong>  
+              through yoga, meditation, and holistic wellness. We offer personalized consultations and group practices  
+              that inspire transformation in <strong>body, mind, and spirit</strong>.
             </p>
           </div>
-
-          <!-- Vision Card -->
           <div class="card vision-card" data-aos="fade-left">
             <div class="tab">Vision</div>
             <p>
-              To be recognized as a global sanctuary of premium wellness, 
-              where people from all walks of life experience healing, inner peace, and elevated living.
-              Our vision is to make <strong>Kribuddha</strong> a symbol of fruitful transformation, 
-              blending spirituality with modern wellness needs—accessible anytime, anywhere.
+              To be recognized as a <strong>global sanctuary of wellness</strong>, where people experience  
+              <strong>healing, inner peace, and elevated living</strong>. Kribuddha blends ancient wisdom with  
+              modern practices for a healthier, more conscious world.
             </p>
           </div>
-
         </div>
       </div>
     </div>
@@ -329,36 +351,65 @@
   <section class="py-5" data-aos="fade-up">
     <div class="container">
       <div class="col-lg-12 text-center mb-4" data-aos="fade-up">
-        <h2 class="section-title">Philosophy</h2>
+        <h2 class="section-title">Our Philosophy</h2>
       </div>
       <div class="row g-4">
         <div class="col-md-6 col-lg-3">
           <div class="philosophy-card h-100">
             <i class="bi bi-heart"></i>
             <h5>Wellness is luxury</h5>
-            <p>True richness comes from a healthy body, a calm mind, and a peaceful spirit.</p>
+            <p>True richness lies in a healthy body, calm mind, and peaceful spirit.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3">
           <div class="philosophy-card h-100">
             <i class="bi bi-flower2"></i>
             <h5>Every pain has a path</h5>
-            <p>Healing comes through mindful consultation, practice, and self-awareness.</p>
+            <p>Healing unfolds through mindful consultation, practice, and self-awareness.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3">
           <div class="philosophy-card h-100">
             <i class="bi bi-people"></i>
             <h5>Together we grow</h5>
-            <p>Team yoga and group wellness create harmony for families, workplaces, and communities.</p>
+            <p>A community where learning, healing, and growth happen collectively.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3">
           <div class="philosophy-card h-100">
             <i class="bi bi-sun"></i>
             <h5>Spiritual yet practical</h5>
-            <p>Premium approach rooted in timeless truths, designed for modern life.</p>
+            <p>Rooted in timeless truths, designed for modern life and needs.</p>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-5 bg-light" data-aos="fade-up">
+    <div class="container text-center">
+      <h2 class="section-title mb-5">Why Choose Us</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <i class="bi bi-flower2 choose-icon"></i>
+          <h5>Authentic Traditions</h5>
+          <p>Yoga & wellness rooted in ancient practices, adapted for today.</p>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <i class="bi bi-person-check choose-icon"></i>
+          <h5>Certified Experts</h5>
+          <p>Guided by experienced instructors and holistic healers.</p>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <i class="bi bi-star choose-icon"></i>
+          <h5>Personalized Journeys</h5>
+          <p>Healing plans tailored for body, mind, and spirit balance.</p>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <i class="bi bi-people choose-icon"></i>
+          <h5>Community Spirit</h5>
+          <p>Grow with like-minded seekers in a supportive environment.</p>
         </div>
       </div>
     </div>
