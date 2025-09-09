@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,95 +16,156 @@
     footer a {
       transition: all 0.3s ease;
     }
+
     footer a:hover {
       color: #e0c097 !important;
       text-decoration: underline !important;
     }
-    footer h5, footer h6 {
+
+    footer h5,
+    footer h6 {
       color: #e0c097 !important;
       letter-spacing: 0.5px;
     }
-    footer p, footer li, footer div {
+
+    footer p,
+    footer li,
+    footer div {
       line-height: 1.7;
     }
+
     .footer-icon {
       color: #e0c097;
       margin-right: 8px;
-      width: 20px; /* icons same width */
+      width: 20px;
+      /* icons same width */
       text-align: center;
     }
+
     .footer-col ul li {
       margin-bottom: 8px;
     }
 
     /* Responsive Alignment Fix */
     .footer-col {
-      text-align: center; /* default for small screens */
+      text-align: center;
+      /* default for small screens */
     }
+
     .footer-col ul {
       display: inline-block;
       text-align: left;
     }
 
+    /* Small screen (max-width: 767px) me Quick Links aur Services ek row me */
+    @media (max-width: 767px) {
+      .footer-col {
+        text-align: center !important;
+      }
+
+      /* Quick Links aur Services side-by-side */
+      .footer-col:nth-child(2),
+      .footer-col:nth-child(3) {
+        display: inline-block;
+        vertical-align: top;
+        width: 45%;
+        text-align: left !important;
+      }
+
+      /* About + Contact full width & center */
+      .footer-col:nth-child(1),
+      .footer-col:nth-child(4) {
+        width: 100%;
+        display: block;
+        text-align: center !important;
+      }
+    }
+
+
     @media (min-width: 768px) {
       .footer-col {
-        text-align: left; /* medium screen se left align */
+        text-align: left;
+        /* medium screen se left align */
       }
+
       .footer-col ul {
         display: block;
       }
     }
   </style>
 </head>
+
 <body>
 
   <!-- Footer Start -->
   <footer style="background-color:#3a2e25; color:#fdfbf7;">
     <div class="container p-4">
       <div class="row">
-        
+
         <!-- About -->
-        <div class="col-lg-4 col-md-6 mb-4 mb-md-0 footer-col">
-          <h5 class="fw-bold">Kribuddha Wellness</h5>
+        <div class="col-lg-4 col-md-6 mb-4  mb-md-0 footer-col">
+          <a class="navbar-brand d-flex align-items-center fw-semibold" href="index.html">
+            <img src="/public/Logo.jpg" alt="Kribuddha Logo" width="40" class="me-2" style="border-radius: 50%;">
+            <span class="" style="color:#e0c097">Kribuddha Wellness</span>
+          </a>
           <p>
-            Kribuddha Wellness is a holistic Yoga & Wellness Center dedicated to balancing mind, body, and soul — guided by certified yoga instructor <strong>Reetu Varma</strong>.
+            Kribuddha Wellness is a holistic Yoga & Wellness Center dedicated to balancing mind, body, and soul — guided
+            by certified yoga instructor <strong>Reetu Varma</strong>.
           </p>
+          <!-- Social icons -->
+          <div class="my-2">
+            <a href="https://www.instagram.com/kribuddhawellnesscenter" class="text-light me-3" target="_blank"><i
+                class="bi bi-instagram"></i></a>
+            <a href="https://www.facebook.com/share/1BChPsgzSY/" class="text-light me-3" target="_blank"><i
+                class="bi bi-facebook"></i></a>
+            <a href="https://www.youtube.com/@KribuddhaWellness" class="text-light me-3" target="_blank"><i
+                class="bi bi-youtube"></i></a>
+            <a href="https://wa.me/917777001185" class="text-light me-3" target="_blank"><i
+                class="bi bi-whatsapp"></i></a>
+          </div>
         </div>
 
         <!-- Quick Links -->
-        <div class="col-lg-2 col-md-6 mb-4 mb-md-0 footer-col">
+        <div class="col-lg-2 col-md-6 mb-4 mt-2 mb-md-0 footer-col">
           <h6 class="text-uppercase fw-bold">Quick Links</h6>
           <ul class="list-unstyled mb-0">
-            <li><a href="about.html" class="text-light text-decoration-none"><i class="bi bi-info-circle footer-icon"></i> About</a></li>
-            <li><a href="services.html" class="text-light text-decoration-none"><i class="bi bi-person-bounding-box footer-icon"></i> Services</a></li>
-            <li><a href="pricing.html" class="text-light text-decoration-none"><i class="bi bi-cash-coin footer-icon"></i> Pricing</a></li>
-            <li><a href="contact.html" class="text-light text-decoration-none"><i class="bi bi-envelope footer-icon"></i> Contact</a></li>
+            <li><a href="about.html" class="text-light text-decoration-none"><i
+                  class="bi bi-info-circle footer-icon"></i> About</a></li>
+            <li><a href="services.html" class="text-light text-decoration-none"><i
+                  class="bi bi-person-bounding-box footer-icon"></i> Services</a></li>
+            <li><a href="pricing.html" class="text-light text-decoration-none"><i
+                  class="bi bi-cash-coin footer-icon"></i> Pricing</a></li>
+            <li><a href="contact.html" class="text-light text-decoration-none"><i
+                  class="bi bi-envelope footer-icon"></i> Contact</a></li>
           </ul>
         </div>
 
         <!-- Services -->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0 footer-col">
+        <div class="col-lg-3 col-md-6 mb-4 mt-2 mb-md-0 footer-col">
           <h6 class="text-uppercase fw-bold">Services</h6>
           <ul class="list-unstyled mb-0">
-            <li><a href="#" class="text-light text-decoration-none"><i class="bi bi-yoga footer-icon"></i> Yoga Sessions</a></li>
-            <li><a href="#" class="text-light text-decoration-none"><i class="bi bi-flower2 footer-icon"></i> Meditation</a></li>
-            <li><a href="#" class="text-light text-decoration-none"><i class="bi bi-stars footer-icon"></i> Wellness Retreats</a></li>
-            <li><a href="#" class="text-light text-decoration-none"><i class="bi bi-journal-text footer-icon"></i> Workshops</a></li>
+            <li><a class="text-light text-decoration-none"><i class="bi bi-brilliance footer-icon"></i> Yoga
+                Sessions</a></li>
+            <li><a class="text-light text-decoration-none"><i class="bi bi-flower2 footer-icon"></i> Meditation</a></li>
+            <li><a class="text-light text-decoration-none"><i class="bi bi-stars footer-icon"></i>Retreats</a></li>
+            <li><a class="text-light text-decoration-none"><i class="bi bi-journal-text footer-icon"></i> Workshops</a>
+            </li>
           </ul>
         </div>
 
         <!-- Contact -->
-        <div class="col-lg-3 col-md-6 mb-4 mb-md-0 footer-col">
+        <div class="col-lg-3 col-md-6 mb-4 mt-2 mb-md-0 footer-col">
           <h6 class="text-uppercase fw-bold">Contact</h6>
           <div class="mb-3">
             <i class="bi bi-geo-alt-fill me-2"></i> <strong>Address:</strong><br>
-            <a href="https://maps.google.com/?q=Room+No:308,+Aishwarya+Heaven,+Usarli+Khurd,+Navi+Mumbai+410221" target="_blank" class="text-light text-decoration-none">
+            <a href="https://maps.google.com/?q=Room+No:308,+Aishwarya+Heaven,+Usarli+Khurd,+Navi+Mumbai+410221"
+              target="_blank" class="text-light text-decoration-none">
               Room No:308, Aishwarya Heaven, Usarli Khurd, Navi Mumbai – 410221
             </a>
           </div>
           <div class="mb-3">
             <i class="bi bi-telephone-fill me-2"></i> <strong>Phone:</strong>
-            <a href="tel:+917777001185" class="text-light text-decoration-none">7777001185</a>
+            <a href="tel:+917777001185" class="text-light text-decoration-none"><br /> 7777001185</a>
           </div>
           <div class="mb-3">
             <i class="bi bi-envelope-fill me-2"></i> <strong>Email:</strong>
@@ -112,13 +174,7 @@
             </a>
           </div>
 
-          <!-- Social icons -->
-          <div class="mt-2">
-            <a href="https://www.instagram.com/kribuddhawellnesscenter" class="text-light me-3" target="_blank"><i class="bi bi-instagram"></i></a>
-            <a href="https://www.facebook.com/share/1BChPsgzSY/" class="text-light me-3" target="_blank"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.youtube.com/@KribuddhaWellness" class="text-light me-3" target="_blank"><i class="bi bi-youtube"></i></a>
-            <a href="https://wa.me/917777001185" class="text-light me-3" target="_blank"><i class="bi bi-whatsapp"></i></a>
-          </div>
+
         </div>
       </div>
     </div>
@@ -134,4 +190,5 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
