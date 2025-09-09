@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lifestyle & Holistic Healing</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <style>
+    body { background:#fdfbf7; font-family:'Segoe UI',sans-serif; color:#333; }
+    .section-title { color:#a67c52; font-weight:bold; position:relative; display:inline-block; }
+    .section-title::after { content:""; width:60%; height:3px; background:linear-gradient(to right,#a67c52,#e0c097); position:absolute; bottom:-8px; left:0; border-radius:5px; }
+    .card h6 { color:#333; font-weight:600; }
+  </style>
+</head>
+<body>
+<div id="navbar"></div>
+
+<section class="py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Lifestyle & Holistic Healing</h2>
+    <p class="lead text-center mb-4">Integrating yoga, nutrition, and inner practices to transform body, mind, and spirit—designed for long-term health & growth.</p>
+    <div class="row g-4">
+
+      <!-- Yoga + Nutrition Lifestyle Reset -->
+      <div class="col-md-3">
+        <div class="card shadow h-100 text-center">
+          <img src="https://images.pexels.com/photos/3822621/pexels-photo-3822621.jpeg" class="card-img-top" style="height:230px; object-fit:cover;" alt="Yoga + Nutrition Lifestyle Reset">
+          <div class="card-body">
+            <h6>Yoga + Nutrition Lifestyle Reset</h6>
+            <p class="small text-muted">Yoga + diet plans + accountability coaching.</p>
+            <p class="small fw-bold">8 weeks</p>
+            <p class="fw-bold" style="color:#a67c52;">₹4,500</p>
+            <a href="https://wa.me/917777001185" target="_blank" class="btn btn-sm text-white rounded-pill" style="background:#a67c52;">Join Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Detox & Breathwork Healing -->
+      <div class="col-md-3">
+        <div class="card shadow h-100 text-center">
+          <img src="https://images.pexels.com/photos/3822653/pexels-photo-3822653.jpeg" class="card-img-top" style="height:230px; object-fit:cover;" alt="Detox & Breathwork Healing">
+          <div class="card-body">
+            <h6>Detox & Breathwork Healing</h6>
+            <p class="small text-muted">Pranayama + cleansing techniques for renewal.</p>
+            <p class="small fw-bold">6 weeks</p>
+            <p class="fw-bold" style="color:#a67c52;">₹2,500</p>
+            <a href="https://wa.me/917777001185" target="_blank" class="btn btn-sm text-white rounded-pill" style="background:#a67c52;">Join Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Holistic Weight Management -->
+      <div class="col-md-3">
+        <div class="card shadow h-100 text-center">
+          <img src="https://images.pexels.com/photos/4056729/pexels-photo-4056729.jpeg" class="card-img-top" style="height:230px; object-fit:cover;" alt="Holistic Weight Management">
+          <div class="card-body">
+            <h6>Holistic Weight Management</h6>
+            <p class="small text-muted">Yoga, mindful eating & lifestyle transformation.</p>
+            <p class="small fw-bold">8 weeks</p>
+            <p class="fw-bold" style="color:#a67c52;">₹4,000</p>
+            <a href="https://wa.me/917777001185" target="_blank" class="btn btn-sm text-white rounded-pill" style="background:#a67c52;">Join Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Spiritual Growth & Self-Healing -->
+      <div class="col-md-3">
+        <div class="card shadow h-100 text-center">
+          <img src="https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg" class="card-img-top" style="height:230px; object-fit:cover;" alt="Spiritual Growth & Self-Healing">
+          <div class="card-body">
+            <h6>Spiritual Growth & Self-Healing</h6>
+            <p class="small text-muted">Meditation, yoga philosophy & inner journey.</p>
+            <p class="small fw-bold">12 weeks</p>
+            <p class="fw-bold" style="color:#a67c52;">₹6,000</p>
+            <a href="https://wa.me/917777001185" target="_blank" class="btn btn-sm text-white rounded-pill" style="background:#a67c52;">Join Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div id="footer"></div>
+
+<script>
+fetch("../layout/navbar.html").then(r=>r.text()).then(d=>document.getElementById("navbar").innerHTML=d);
+fetch("../layout/footer.html").then(r=>r.text()).then(d=>document.getElementById("footer").innerHTML=d);
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
