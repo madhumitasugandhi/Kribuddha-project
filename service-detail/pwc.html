@@ -12,119 +12,105 @@
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
-  <style>
-    body {
-      background-color: #fdfbf7;
-      color: #333;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+<style>
+  body {
+    background-color: #fdfbf7;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .section-title {
+    color: #a67c52;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+  }
+
+  .section-title::after {
+    content: "";
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(to right, #a67c52, #e0c097);
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    border-radius: 5px;
+  }
+
+  .list-group-item {
+    border: none;
+    background: #fffaf3;
+    margin-bottom: 10px;
+    border-left: 4px solid #a67c52;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  }
+
+  .btn-custom {
+    background-color: #a67c52;
+    color: #fff;
+    border-radius: 50px;
+    padding: 10px 25px;
+    transition: 0.3s;
+  }
+
+  .btn-custom:hover {
+    background-color: #8c6239;
+    transform: translateY(-3px);
+  }
+
+  /* ✅ Responsive Tweaks */
+  @media (max-width: 991px) {
+    .card img {
+      height: 200px !important;
+    }
     .section-title {
-      color: #a67c52;
-      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    .lead {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .card img {
+      height: 180px !important;
+    }
+    .section-title {
+      font-size: 1.3rem;
+    }
+    .card-body h5 {
+      font-size: 1rem;
+    }
+    .lead {
+      font-size: 0.95rem;
+    }
+    .card-footer {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 575px) {
+    .card img {
+      height: 160px !important;
+    }
+    .section-title {
+      font-size: 1.2rem;
+    }
+    p.lead {
+      font-size: 0.9rem;
+      padding: 0 10px;
+    }
+    .card {
       margin-bottom: 20px;
-      position: relative;
-      display: inline-block;
     }
+  }
+</style>
 
-    .section-title::after {
-      content: "";
-      width: 60%;
-      height: 3px;
-      background: linear-gradient(to right, #a67c52, #e0c097);
-      position: absolute;
-      bottom: -8px;
-      left: 0;
-      border-radius: 5px;
-    }
-
-    @keyframes fadeInDown {
-      0% {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes growLine {
-      0% {
-        width: 0;
-      }
-
-      100% {
-        width: 60%;
-      }
-    }
-
-    .list-group-item {
-      border: none;
-      background: #fffaf3;
-      margin-bottom: 10px;
-      border-left: 4px solid #a67c52;
-      border-radius: 6px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-    }
-
-    .list-group-item strong {
-      color: #a67c52;
-    }
-
-    .btn-custom {
-      background-color: #a67c52;
-      color: #fff;
-      border-radius: 50px;
-      padding: 10px 25px;
-      transition: 0.3s;
-    }
-
-    .btn-custom:hover {
-      background-color: #8c6239;
-      transform: translateY(-3px);
-    }
-
-    /* Responsive tweaks */
-    @media (max-width: 991px) {
-      .card img {
-        height: 200px;
-      }
-
-      .section-title {
-        font-size: 1.5rem;
-      }
-    }
-
-    @media (max-width: 767px) {
-      .card img {
-        height: 180px;
-      }
-
-      .section-title {
-        font-size: 1.3rem;
-      }
-
-      .card-body h5 {
-        font-size: 1rem;
-      }
-    }
-
-    @media (max-width: 575px) {
-      .card img {
-        height: 160px;
-      }
-
-      .section-title {
-        font-size: 1.2rem;
-      }
-
-      p.lead {
-        font-size: 0.95rem;
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -133,17 +119,16 @@
   <!-- Premium Yoga Sessions Section -->
   <section class="py-5" style="background-color:#faf7f3;" data-aso="fade-up">
     <div class="container text-center">
-      <h2 class="section-title mb-5">Personalized Wellness Consultation</h2>
-      <p class="lead mb-4">Tailored solutions for stress, pain, and health concerns—crafted to restore balance and inner
+      <h2 class="section-title mb-5" data-aos="fade-down">Personalized Wellness Consultation</h2>
+      <p class="lead mb-4" data-aos="fade-up" data-aos-delay="200">Tailored solutions for stress, pain, and health concerns—crafted to restore balance and inner
         peace.</p>
       <div class="row g-4">
 
         <!-- Service Card -->
-        <div class="col-md-4">
+         <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
           <div class="card shadow border-0 h-100 text-center">
             <img src="https://images.pexels.com/photos/3759657/pexels-photo-3759657.jpeg"
               class="card-img-top rounded-top" alt="Stress Relief Yoga" style="height:230px; object-fit:cover;">
-
             <div class="card-body">
               <h5 class="fw-bold text-dark">Stress Relief & Emotional Balance</h5>
               <p class="text-muted small">Calming yoga practices for a peaceful mind.</p>
@@ -154,7 +139,6 @@
                 Enroll Now
               </button>
             </div>
-
             <!-- About Section inside Card -->
             <div class="card-footer bg-light text-start">
               <h6 class="fw-bold text-center mb-3" style="color:#a67c52;">About this Program</h6>
@@ -184,19 +168,16 @@
         </div>
 
         <!-- Service Card -->
-        <div class="col-md-4">
+       <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
           <div class="card shadow border-0 h-100 text-center">
-            <!-- Card Image -->
             <img src="https://images.pexels.com/photos/317155/pexels-photo-317155.jpeg" class="card-img-top rounded-top"
               alt="Flexibility & Strength" style="height:230px; object-fit:cover;">
-
-            <!-- Card Body -->
             <div class="card-body">
               <h5 class="fw-bold text-dark">Flexibility & Strength</h5>
               <p class="text-muted small">Dynamic yoga sessions to energize body & mind.</p>
               <p class="text-muted small mb-1"><b>Duration : 4 weeks</b></p>
               <p class="fw-bold mb-3" style="color:#a67c52;">₹83.33 / day</p>
-              <button class="btn btn-dark btn-sm enroll-btn" data-course="Stress Relief & Emotional Balance"
+              <button class="btn btn-dark btn-sm enroll-btn" data-course="Flexibility & Strength"
                 data-bs-toggle="modal" data-bs-target="#enrollModal">
                 Enroll Now
               </button>
@@ -234,24 +215,20 @@
         </div>
 
         <!-- Service Card -->
-        <div class="col-md-4">
+       <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
           <div class="card shadow border-0 h-100 text-center">
-            <!-- Card Image -->
             <img src="https://images.pexels.com/photos/6246580/pexels-photo-6246580.jpeg"
               class="card-img-top rounded-top" alt="Therapeutic Yoga" style="height:230px; object-fit:cover;">
-
-            <!-- Card Body -->
             <div class="card-body">
               <h5 class="fw-bold text-dark">Therapeutic Yoga</h5>
               <p class="text-muted small">Targeted sessions for pain relief & recovery.</p>
               <p class="text-muted small mb-1"><b>Duration : 4 weeks</b></p>
               <p class="fw-bold mb-3" style="color:#a67c52;">₹100 / day</p>
-              <button class="btn btn-dark btn-sm enroll-btn mb-" data-course="Stress Relief & Emotional Balance"
+              <button class="btn btn-dark btn-sm enroll-btn " data-course="Therapeutic Yoga"
                 data-bs-toggle="modal" data-bs-target="#enrollModal">
                 Enroll Now
               </button>
             </div>
-
             <!-- Card Footer (Details Section) -->
             <div class="card-footer bg-light text-start">
               <h6 class="fw-bold text-center mb-3" style="color:#a67c52;">About this Program</h6>
@@ -275,13 +252,11 @@
 
               <p class="fw-bold mb-2"> Who Can Join</p>
               <p class="small text-muted">
-                People with chronic pain or stiffness (back, knee, neck, shoulders).
+                People with chronic pain or stiffness (back, shoulders).
               </p>
             </div>
           </div>
         </div>
-
-
       </div>
     </div>
   </section>
