@@ -1,68 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yoga Instructor Course Online | Ekam Yoga</title>
 
   <!-- Bootstrap CSS (safe to add here) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      line-height: 1.6;
+    }
 
-    .section-title {
-      color: #a67c52; font-weight: bold; margin-bottom: 20px;
-      position: relative; display: inline-block;
-    }
-    .section-title::after {
-      content: ""; width: 60%; height: 3px;
-      background: linear-gradient(to right, #a67c52, #e0c097);
-      position: absolute; bottom: -8px; left: 0; border-radius: 5px;
-    }
+   .section-title {
+  color: #a67c52;
+  font-weight: bold;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+/* Default underline (md+ lg screens) */
+.section-title::after {
+  content: "";
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(to right, #a67c52, #e0c097);
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  border-radius: 5px;
+}
+
+/* -------- Small screen (center underline) -------- */
+@media (max-width: 767px) {
+  .section-title {
+    display: inline-block; /* text bhi centerable rahe */
+  }
+  .section-title::after {
+    left: 50%;
+    transform: translateX(-50%); /* line center me aa jayegi */
+  }
+}
+
+
 
     /* Hero Section */
-    .hero-section { position: relative; min-height: 70vh; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
-    .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.5); z-index: 0; }
-    .hero-content { position: relative; z-index: 2; color: #fff; }
+    .hero-section {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.5);
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+    }
 
     /* Watermark Float Animation */
     @keyframes verticalFloat {
-      0% { transform: translate(-50%, -55%); }
-      50% { transform: translate(-50%, -45%); }
-      100% { transform: translate(-50%, -55%); }
+      0% {
+        transform: translate(-50%, -55%);
+      }
+
+      50% {
+        transform: translate(-50%, -45%);
+      }
+
+      100% {
+        transform: translate(-50%, -55%);
+      }
     }
+
     .hero-watermark {
-      position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%);
-      font-size: 15vw; font-family: 'Times New Roman', Times, serif; font-weight: 900;
-      color: transparent; -webkit-text-stroke: 2px rgba(49,15,15,0.25);
-      text-transform: uppercase; white-space: nowrap; z-index: 1; pointer-events: none;
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 15vw;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: 900;
+      color: transparent;
+      -webkit-text-stroke: 2px rgba(49, 15, 15, 0.25);
+      text-transform: uppercase;
+      white-space: nowrap;
+      z-index: 1;
+      pointer-events: none;
       animation: verticalFloat 5s ease-in-out infinite;
     }
 
     /* Wave Bottom Shape */
-    .custom-shape-divider-bottom { position: absolute; bottom: 0; left: 0; width: 100%; overflow: hidden; line-height: 0; z-index: 3; }
-    .custom-shape-divider-bottom svg { display: block; width: 100%; height: 100px; }
-
-    .course-card { border-radius: 15px; overflow: hidden; transition: transform .3s ease, box-shadow .3s ease; }
-    .course-card:hover { transform: translateY(-6px); box-shadow: 0 8px 20px rgba(0,0,0,.15); }
-    .course-card::after {
-      content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-      background: linear-gradient(to bottom right, rgba(166,124,82,.1), rgba(224,192,151,.1));
-      opacity: 0; transition: opacity .4s ease; border-radius: 15px; pointer-events: none;
+    .custom-shape-divider-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      z-index: 3;
     }
-    .course-card:hover::after { opacity: 1; }
-    .course-card img { height: 200px; object-fit: cover; }
+
+    .custom-shape-divider-bottom svg {
+      display: block;
+      width: 100%;
+      height: 100px;
+    }
+
+    .course-card {
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+
+    .course-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, .15);
+    }
+
+    .course-card::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom right, rgba(166, 124, 82, .1), rgba(224, 192, 151, .1));
+      opacity: 0;
+      transition: opacity .4s ease;
+      border-radius: 15px;
+      pointer-events: none;
+    }
+
+    .course-card:hover::after {
+      opacity: 1;
+    }
+
+    .course-card img {
+      height: 200px;
+      object-fit: cover;
+    }
 
     /* Zoom / Fade (for your theme) */
-    @keyframes zoomIn { from{opacity:0; transform:scale(.8)} to{opacity:1; transform:scale(1)} }
-    .zoom-in { animation: zoomIn 1s ease forwards; }
+    @keyframes zoomIn {
+      from {
+        opacity: 0;
+        transform: scale(.8)
+      }
 
-    @keyframes fadeUp { from{opacity:0; transform:translateY(30px)} to{opacity:1; transform:translateY(0)} }
-    .fade-up { animation: fadeUp 1.2s ease forwards; }
+      to {
+        opacity: 1;
+        transform: scale(1)
+      }
+    }
+
+    .zoom-in {
+      animation: zoomIn 1s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    .fade-up {
+      animation: fadeUp 1.2s ease forwards;
+    }
+    .benefits{
+      align-items: center;
+    }
+
+    .responsive-text {
+      text-align: center;
+    }
+
+    /* Small screens only (sm) → justify align */
+    @media (max-width: 767px) {
+      .responsive-text {
+        text-align: justify;
+      }
+    }
   </style>
 </head>
 
@@ -72,7 +220,7 @@
 
   <!-- Hero Section -->
   <section class="hero-section">
-    <img src="public/about.jpg" alt="Yoga Instructor Course" class="hero-bg"/>
+    <img src="public/about.jpg" alt="Yoga Instructor Course" class="hero-bg" />
 
     <div class="hero-content">
       <h1 class="fw-bold display-4" data-aos="zoom-in">Yoga Instructor Course Online</h1>
@@ -108,11 +256,17 @@
           <div class="p-4 border rounded shadow-sm h-100 bg-white position-relative course-card">
             <h5 class="fw-bold text-center mb-3" style="color:#a67c52;">Yoga Protocol Instructor</h5>
             <ul class="list-unstyled small mb-4">
-              <li>Age: 18 or above</li><li>Duration: 3 Months</li><li>Seats: 30</li><li>Eligibility: 10th</li><li>Fees: ₹7,000</li>
+              <li>Age: 18 or above</li>
+              <li>Duration: 3 Months</li>
+              <li>Seats: 30</li>
+              <li>Eligibility: 10th</li>
+              <li>Fees: ₹7,000</li>
             </ul>
             <div class="d-flex justify-content-center gap-2">
-              <a href="/course-details/course-details-yoga-protocol.html" class="btn btn-outline-dark btn-sm">Course Details</a>
-              <button class="btn btn-dark btn-sm enroll-btn" data-course="Yoga Protocol Instructor" data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
+              <a href="/course-details/course-details-yoga-protocol.html" class="btn btn-outline-dark btn-sm">Course
+                Details</a>
+              <button class="btn btn-dark btn-sm enroll-btn" data-course="Yoga Protocol Instructor"
+                data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
             </div>
           </div>
         </div>
@@ -122,11 +276,17 @@
           <div class="p-4 border rounded shadow-sm h-100 bg-white position-relative course-card">
             <h5 class="fw-bold text-center mb-3" style="color:#a67c52;">Yoga Wellness Instructor</h5>
             <ul class="list-unstyled small mb-4">
-              <li>Age: 18 or above</li><li>Duration: 6 Months</li><li>Seats: 30</li><li>Eligibility: 12th</li><li>Fees: ₹15,000</li>
+              <li>Age: 18 or above</li>
+              <li>Duration: 6 Months</li>
+              <li>Seats: 30</li>
+              <li>Eligibility: 12th</li>
+              <li>Fees: ₹15,000</li>
             </ul>
             <div class="d-flex justify-content-center gap-2">
-              <a href="/course-details/course-details-yoga-wellness.html" class="btn btn-outline-dark btn-sm">Course Details</a>
-              <button class="btn btn-dark btn-sm enroll-btn" data-course="Yoga Wellness Instructor" data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
+              <a href="/course-details/course-details-yoga-wellness.html" class="btn btn-outline-dark btn-sm">Course
+                Details</a>
+              <button class="btn btn-dark btn-sm enroll-btn" data-course="Yoga Wellness Instructor"
+                data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
             </div>
           </div>
         </div>
@@ -136,11 +296,17 @@
           <div class="p-4 border rounded shadow-sm h-100 bg-white position-relative course-card">
             <h5 class="fw-bold text-center mb-3" style="color:#a67c52;">Yoga Volunteer Course</h5>
             <ul class="list-unstyled small mb-4">
-              <li>Age: No age limit</li><li>Duration: 1 Month</li><li>Seats: 100</li><li>Eligibility: 8th</li><li>Fees: ₹1,500</li>
+              <li>Age: No age limit</li>
+              <li>Duration: 1 Month</li>
+              <li>Seats: 100</li>
+              <li>Eligibility: 8th</li>
+              <li>Fees: ₹1,500</li>
             </ul>
             <div class="d-flex justify-content-center gap-2">
-              <a href="/course-details/course-details-volunteer.html" class="btn btn-outline-dark btn-sm">Course Details</a>
-              <button class="btn btn-dark btn-sm enroll-btn" data-course="Yoga Volunteer Course" data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
+              <a href="/course-details/course-details-volunteer.html" class="btn btn-outline-dark btn-sm">Course
+                Details</a>
+              <button class="btn btn-dark btn-sm enroll-btn" data-course="Yoga Volunteer Course" data-bs-toggle="modal"
+                data-bs-target="#enrollModal">Enroll Now</button>
             </div>
           </div>
         </div>
@@ -150,11 +316,17 @@
           <div class="p-4 border rounded shadow-sm h-100 bg-white position-relative course-card">
             <h5 class="fw-bold text-center mb-3" style="color:#a67c52;">Yoga Teacher Evaluator</h5>
             <ul class="list-unstyled small mb-4">
-              <li>Age: No age limit</li><li>Duration: 6 Months</li><li>Seats: 30</li><li>Eligibility: Graduation</li><li>Fees: ₹24,000</li>
+              <li>Age: No age limit</li>
+              <li>Duration: 6 Months</li>
+              <li>Seats: 30</li>
+              <li>Eligibility: Graduation</li>
+              <li>Fees: ₹24,000</li>
             </ul>
             <div class="d-flex justify-content-center gap-2">
-              <a href="/course-details/course-details-teacher-evaluator.html" class="btn btn-outline-dark btn-sm">Course Details</a>
-              <button class="btn btn-dark btn-sm enroll-btn" data-course="Yoga Teacher Evaluator" data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
+              <a href="/course-details/course-details-teacher-evaluator.html" class="btn btn-outline-dark btn-sm">Course
+                Details</a>
+              <button class="btn btn-dark btn-sm enroll-btn" data-course="Yoga Teacher Evaluator" data-bs-toggle="modal"
+                data-bs-target="#enrollModal">Enroll Now</button>
             </div>
           </div>
         </div>
@@ -164,11 +336,17 @@
           <div class="p-4 border rounded shadow-sm h-100 bg-white position-relative course-card">
             <h5 class="fw-bold text-center mb-3" style="color:#a67c52;">Parental Yoga Teacher Training</h5>
             <ul class="list-unstyled small mb-4">
-              <li>Age: 21+</li><li>Duration: 3 Months</li><li>Seats: 25</li><li>Eligibility: Graduation</li><li>Fees: ₹12,000</li>
+              <li>Age: 21+</li>
+              <li>Duration: 3 Months</li>
+              <li>Seats: 25</li>
+              <li>Eligibility: Graduation</li>
+              <li>Fees: ₹12,000</li>
             </ul>
             <div class="d-flex justify-content-center gap-2">
-              <a href="/course-details/course-details-parental-yoga.html" class="btn btn-outline-dark btn-sm">Course Details</a>
-              <button class="btn btn-dark btn-sm enroll-btn" data-course="Parental Yoga Teacher Training" data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
+              <a href="/course-details/course-details-parental-yoga.html" class="btn btn-outline-dark btn-sm">Course
+                Details</a>
+              <button class="btn btn-dark btn-sm enroll-btn" data-course="Parental Yoga Teacher Training"
+                data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
             </div>
           </div>
         </div>
@@ -178,11 +356,17 @@
           <div class="p-4 border rounded shadow-sm h-100 bg-white position-relative course-card">
             <h5 class="fw-bold text-center mb-3" style="color:#a67c52;">Yoga Therapy Course</h5>
             <ul class="list-unstyled small mb-4">
-              <li>Age: 21+</li><li>Duration: 1 Year</li><li>Seats: 20</li><li>Eligibility: Graduation</li><li>Fees: ₹30,000</li>
+              <li>Age: 21+</li>
+              <li>Duration: 1 Year</li>
+              <li>Seats: 20</li>
+              <li>Eligibility: Graduation</li>
+              <li>Fees: ₹30,000</li>
             </ul>
             <div class="d-flex justify-content-center gap-2">
-              <a href="/course-details/course-details-yoga-therapy.html" class="btn btn-outline-dark btn-sm">Course Details</a>
-              <button class="btn btn-dark btn-sm enroll-btn" data-course="Yoga Therapy Course" data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
+              <a href="/course-details/course-details-yoga-therapy.html" class="btn btn-outline-dark btn-sm">Course
+                Details</a>
+              <button class="btn btn-dark btn-sm enroll-btn" data-course="Yoga Therapy Course" data-bs-toggle="modal"
+                data-bs-target="#enrollModal">Enroll Now</button>
             </div>
           </div>
         </div>
@@ -192,11 +376,17 @@
           <div class="p-4 border rounded shadow-sm h-100 bg-white position-relative course-card">
             <h5 class="fw-bold text-center mb-3" style="color:#a67c52;">Meditation Teacher Training</h5>
             <ul class="list-unstyled small mb-4">
-              <li>Age: 21+</li><li>Duration: 2 Months</li><li>Seats: 30</li><li>Eligibility: 12th</li><li>Fees: ₹10,000</li>
+              <li>Age: 21+</li>
+              <li>Duration: 2 Months</li>
+              <li>Seats: 30</li>
+              <li>Eligibility: 12th</li>
+              <li>Fees: ₹10,000</li>
             </ul>
             <div class="d-flex justify-content-center gap-2">
-              <a href="/course-details/course-details-meditation.html" class="btn btn-outline-dark btn-sm">Course Details</a>
-              <button class="btn btn-dark btn-sm enroll-btn" data-course="Meditation Teacher Training" data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
+              <a href="/course-details/course-details-meditation.html" class="btn btn-outline-dark btn-sm">Course
+                Details</a>
+              <button class="btn btn-dark btn-sm enroll-btn" data-course="Meditation Teacher Training"
+                data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
             </div>
           </div>
         </div>
@@ -206,11 +396,16 @@
           <div class="p-4 border rounded shadow-sm h-100 bg-white position-relative course-card">
             <h5 class="fw-bold text-center mb-3" style="color:#a67c52;">Yoga Nidra Specialist Course</h5>
             <ul class="list-unstyled small mb-4">
-              <li>Age: 21+</li><li>Duration: 1 Month</li><li>Seats: 30</li><li>Eligibility: 12th</li><li>Fees: ₹8,000</li>
+              <li>Age: 21+</li>
+              <li>Duration: 1 Month</li>
+              <li>Seats: 30</li>
+              <li>Eligibility: 12th</li>
+              <li>Fees: ₹8,000</li>
             </ul>
             <div class="d-flex justify-content-center gap-2">
               <a href="/course-details/course-details-nidra.html" class="btn btn-outline-dark btn-sm">Course Details</a>
-              <button class="btn btn-dark btn-sm enroll-btn" data-course="Yoga Nidra Specialist Course" data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
+              <button class="btn btn-dark btn-sm enroll-btn" data-course="Yoga Nidra Specialist Course"
+                data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
             </div>
           </div>
         </div>
@@ -220,11 +415,17 @@
           <div class="p-4 border rounded shadow-sm h-100 bg-white position-relative course-card">
             <h5 class="fw-bold text-center mb-3" style="color:#a67c52;">Corporate Yoga Training</h5>
             <ul class="list-unstyled small mb-4">
-              <li>Age: 21+</li><li>Duration: 3 Months</li><li>Seats: 30</li><li>Eligibility: 12th</li><li>Fees: ₹18,000</li>
+              <li>Age: 21+</li>
+              <li>Duration: 3 Months</li>
+              <li>Seats: 30</li>
+              <li>Eligibility: 12th</li>
+              <li>Fees: ₹18,000</li>
             </ul>
             <div class="d-flex justify-content-center gap-2">
-              <a href="/course-details/course-details-corporate.html" class="btn btn-outline-dark btn-sm">Course Details</a>
-              <button class="btn btn-dark btn-sm enroll-btn" data-course="Corporate Yoga Training" data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
+              <a href="/course-details/course-details-corporate.html" class="btn btn-outline-dark btn-sm">Course
+                Details</a>
+              <button class="btn btn-dark btn-sm enroll-btn" data-course="Corporate Yoga Training"
+                data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
             </div>
           </div>
         </div>
@@ -234,25 +435,59 @@
   </section>
 
   <!-- Content Section -->
-  <section class="content-section py-5" style="background-color:#fff; color:#3a2e25;">
-    <div class="container text-center mb-5">
-      <div><h2 class="section-title mb-4 fw-bold fade-up" style="color:#a67c52;">What is a Yoga Instructor Course?</h2></div>
-      <p class="fade-up">
-        A yoga instructor course provides structured training in yoga practices, philosophies, and teaching methodologies.<br/>
-        Whether you're a beginner or an advanced practitioner, these courses prepare you to become a certified yoga teacher.
+  <section class="content-section py-5 text-center" style="background-color:#fff; color:#3a2e25;">
+    <div class="container mb-5">
+
+      <!-- Heading always center -->
+      <div>
+        <h2 class="section-title mb-4 fw-bold fade-up" style="color:#a67c52;">
+          What is a Yoga Instructor Course?
+        </h2>
+      </div>
+
+      <!-- Text responsive alignment -->
+      <p class="fade-up responsive-text">
+        A yoga instructor course provides structured training in yoga practices, philosophies, and teaching
+        methodologies.<br />
+        Whether you're a beginner or an advanced practitioner, these courses prepare you to become a certified yoga
+        teacher.
       </p>
 
-      <div><h2 class="section-title mb-4 fw-bold fade-up" style="color:#a67c52;">Benefits of Becoming a Yoga Instructor</h2></div>
-      <ul class="list-unstyled">
-        <li>Gain deep knowledge of yoga practices</li>
-        <li>Opportunity to teach worldwide</li>
-        <li>Flexible career options</li>
-        <li>Personal growth and mindfulness</li>
-      </ul>
+      <div>
+        <h2 class="section-title mb-4 fw-bold fade-up" style="color:#a67c52;">
+          Benefits of Becoming a Yoga Instructor
+        </h2>
+      </div>
+<div class="text-center">
+  <ul class="benefits list-unstyled d-inline-block text-start">
+    <li>
+      <i class="bi bi-check-circle-fill me-2" style="color: #a67c52;"></i>
+      Gain deep knowledge of yoga practices
+    </li>
+    <li>
+      <i class="bi bi-check-circle-fill me-2" style="color: #a67c52;"></i>
+      Opportunity to teach worldwide
+    </li>
+    <li>
+      <i class="bi bi-check-circle-fill me-2" style="color: #a67c52;"></i>
+      Flexible career options
+    </li>
+    <li>
+      <i class="bi bi-check-circle-fill me-2" style="color: #a67c52;"></i>
+      Personal growth and mindfulness
+    </li>
+  </ul>
+</div>
 
-      <div><h2 class="section-title mb-4 fw-bold fade-up" style="color:#a67c52;">How to Join?</h2></div>
-      <p class="fade-up">
-        Choose your course, enroll online, and start learning with expert teachers. Certification will be provided after<br/>
+      <div>
+        <h2 class="section-title mb-4 fw-bold fade-up" style="color:#a67c52;">
+          How to Join?
+        </h2>
+      </div>
+
+      <p class="fade-up responsive-text">
+        Choose your course, enroll online, and start learning with expert teachers. Certification will be provided
+        after<br />
         successful completion.
       </p>
     </div>
@@ -312,7 +547,7 @@
   <script>
     // Enroll buttons -> put course name into modal
     document.querySelectorAll(".enroll-btn").forEach(btn => {
-      btn.addEventListener("click", function() {
+      btn.addEventListener("click", function () {
         const courseName = this.getAttribute("data-course") || "";
         const courseInput = document.getElementById("course");
         if (courseInput) courseInput.value = courseName;
@@ -320,7 +555,7 @@
     });
 
     // Submit -> open WhatsApp with prefilled message
-    document.getElementById("enrollForm").addEventListener("submit", function(e) {
+    document.getElementById("enrollForm").addEventListener("submit", function (e) {
       e.preventDefault();
 
       const name = document.getElementById("name").value.trim();
@@ -341,4 +576,5 @@
     });
   </script>
 </body>
+
 </html>
