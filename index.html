@@ -92,6 +92,33 @@ img {
   max-width: 100%;
   height: auto;
 }
+ .card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      padding: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .card i {
+      font-size: 2rem;
+      color: #a67c52;
+      margin-bottom: 15px;
+    }
+
+    .card h5 {
+      color: #a67c52;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+
 
   </style>
 </head>
@@ -243,14 +270,10 @@ img {
     <div class="container text-center">
       <h2 class="section-title">Affordable Plans</h2>
       <p class="mb-4">Start your wellness journey today at a minimal cost.</p>
-      <div class="card border-0 shadow-sm mx-auto" style="max-width:300px;" data-aos="zoom-in">
-        <div class="card-body">
-          <h5 class="fw-bold">Standard Plan</h5>
+      <h5 class="fw-bold">Standard Plan</h5>
           <p class="fs-4">₹999 / month</p>
           <p>Unlimited Yoga & Meditation Classes</p>
           <a href="pricing.html" class="btn text-white" style="background-color:#a67c52;">See Pricing</a>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -259,8 +282,8 @@ img {
     <div class="container text-center">
       <h2 class="section-title">What Our Members Say</h2>
       <blockquote class="blockquote" data-aos="fade-up" data-aos-delay="200">
-        <p>"Joining Kribuddha has been a life-changing experience. I feel calmer, healthier, and more focused."</p>
-        <footer class="blockquote-footer">Anita Sharma</footer>
+        <p>"Joining Kribuddha has been a life-changing experience. I feel calmer, healthier, and more focused."</p><br/>
+        <footer class="blockquote-footer" style="color: #8c6239;"><i>Anita Sharma</i></footer>
       </blockquote>
     </div>
   </section>
