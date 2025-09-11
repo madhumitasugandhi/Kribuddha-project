@@ -7,67 +7,99 @@
   <title>Pain Management Programs</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-  <style>
-    body {
-      background: #fdfbf7;
-      font-family: 'Segoe UI', sans-serif;
-      color: #333;
-    }
+ <style>
+  body {
+    background: #fdfbf7;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+  }
 
+  /* Section Title */
+  .section-title {
+    color: #a67c52;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+  }
+
+  .section-title::after {
+    content: "";
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(to right, #a67c52, #e0c097);
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    border-radius: 5px;
+  }
+
+  /* Card Animation */
+  .card {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s forwards;
+  }
+  .card:nth-child(1) { animation-delay: 0.2s; }
+  .card:nth-child(2) { animation-delay: 0.4s; }
+  .card:nth-child(3) { animation-delay: 0.6s; }
+  .card:nth-child(4) { animation-delay: 0.8s; }
+  .card:nth-child(5) { animation-delay: 1s; }
+  .card:nth-child(6) { animation-delay: 1.2s; }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .card-footer {
+    background-color: #faf7f3;
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .enroll-btn {
+    margin-top: auto;
+  }
+
+  .card-img-top {
+    height: 230px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  /* Responsive Image Heights */
+  @media (max-width: 991px) {
+    .card-img-top { height: 200px; }
+  }
+
+  @media (max-width: 767px) {
+    .card-img-top { height: 180px; }
+
+    /* Center Section Title & Line */
     .section-title {
-      color: #a67c52;
-      font-weight: bold;
-      position: relative;
-      display: inline-block;
+      display: inline-block; /* text centerable rahe */
+      text-align: center;
     }
 
     .section-title::after {
-      content: "";
-      width: 60%;
-      height: 3px;
-      background: linear-gradient(to right, #a67c52, #e0c097);
-      position: absolute;
-      bottom: -8px;
-      left: 0;
-      border-radius: 5px;
+      left: 50%;
+      transform: translateX(-50%);
     }
+  }
 
-    .card-footer {
-      background-color: #faf7f3;
-    }
+  @media (max-width: 575px) {
+    .card-img-top { height: 160px; }
+  }
+</style>
 
-    .card-body {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .enroll-btn {
-      margin-top: auto;
-    }
-
-    .card-img-top {
-      height: 230px;
-      object-fit: cover;
-    }
-
-    @media (max-width: 991px) {
-      .card-img-top {
-        height: 200px;
-      }
-    }
-
-    @media (max-width: 767px) {
-      .card-img-top {
-        height: 180px;
-      }
-    }
-
-    @media (max-width: 575px) {
-      .card-img-top {
-        height: 160px;
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -146,11 +178,11 @@
         <!-- Cervical Pain Relief Yoga -->
         <div class="col-md-3">
           <div class="card shadow h-100 text-center">
-            <img src="https://images.pexels.com/photos/4506109/pexels-photo-4506109.jpeg" class="card-img-top"
+            <img src="https://images.pexels.com/photos/8534267/pexels-photo-8534267.jpeg" class="card-img-top"
               style="height:230px; object-fit:cover;" alt="Cervical Pain Relief Yoga">
 
             <div class="card-body">
-              <h6>Cervical Pain Relief Yoga</h6>
+              <h5 class="fw-bold text-dark">Cervical Pain Relief Yoga</h5>
               <p class="small text-muted">Gentle yoga for neck & shoulder relief.</p>
               <p class="text-muted small mb-1"><b>Duration: 4 weeks</b></p>
               <p class="fw-bold mb-3" style="color:#a67c52;">₹ 66 / day</p>
