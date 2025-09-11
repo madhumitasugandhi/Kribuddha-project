@@ -4,261 +4,253 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Premium Yoga Sessions</title>
+  <title>Personalized Wellness Consultation</title>
+
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-  <!-- ✅ Animation Library -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <style>
-    body {
-      background: #fdfbf7;
-      font-family: 'Segoe UI', sans-serif;
-      color: #333;
-      overflow-x: hidden;
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<style>
+  body { 
+    background:#fdfbf7; 
+    font-family:'Segoe UI',sans-serif; 
+    color:#333; 
+  }
+
+  /* Section title with fade-in animation */
+  .section-title {
+    color:#a67c52; 
+    font-weight:bold; 
+    position:relative; 
+    display:inline-block; 
+    opacity:0;
+    transform:translateY(20px);
+    animation: fadeInUp 1s forwards;
+  }
+
+  .section-title::after {
+    content:""; 
+    width:60%; 
+    height:3px; 
+    background:linear-gradient(to right,#a67c52,#e0c097); 
+    position:absolute; 
+    bottom:-8px; 
+    left:0; 
+    border-radius:5px;
+  }
+
+  /* Card fade-in animation */
+  .card {
+    opacity:0;
+    transform:translateY(30px);
+    animation: fadeInUp 0.8s forwards;
+  }
+  .card:nth-child(1) { animation-delay:0.2s; }
+  .card:nth-child(2) { animation-delay:0.4s; }
+  .card:nth-child(3) { animation-delay:0.6s; }
+  .card:nth-child(4) { animation-delay:0.8s; }
+
+  @keyframes fadeInUp {
+    to {
+      opacity:1;
+      transform:translateY(0);
     }
+  }
 
-    .section-title {
-      color: #a67c52;
-      font-weight: bold;
-      position: relative;
-      display: inline-block;
+  .card-footer { background:#faf7f3; }
+  .card-body { display:flex; flex-direction:column; }
+  .enroll-btn { margin-top:auto; }
+
+  /* Card image hover effect */
+  .card-img-top {
+    height:230px; 
+    object-fit:cover; 
+    transition: transform 0.3s ease;
+  }
+
+  /* Responsive image heights */
+  @media (max-width:991px) { .card-img-top { height:200px; } }
+  @media (max-width:767px) { 
+    .card-img-top { height:180px; } 
+
+    /* Center section title and underline */
+    .section-title { 
+      display:inline-block; 
+      text-align:center; 
     }
+    .section-title::after { 
+      left:50%; 
+      transform:translateX(-50%); 
+    } 
+  }
+  @media (max-width:575px) { .card-img-top { height:160px; } }
+</style>
 
-    .section-title::after {
-      content: "";
-      width: 60%;
-      height: 3px;
-      background: linear-gradient(to right, #a67c52, #e0c097);
-      position: absolute;
-      bottom: -8px;
-      left: 0;
-      border-radius: 5px;
-    }
 
-    .card-footer {
-      background-color: #faf7f3;
-    }
-
-    .card-footer h6 {
-      color: #a67c52;
-    }
-
-    /* ✅ Ensure buttons align bottom */
-    .card-body {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .enroll-btn {
-      margin-top: auto;
-    }
-
-    /* ✅ Responsive images */
-    .card-img-top {
-      height: 230px;
-      object-fit: cover;
-      transition: transform 0.4s ease;
-    }
-
-    @media (max-width: 991px) {
-      .card-img-top {
-        height: 200px;
-      }
-    }
-
-    @media (max-width: 767px) {
-      .card-img-top {
-        height: 180px;
-      }
-
-      .section-title {
-        font-size: 1.5rem;
-      }
-
-      .card-body p,
-      .card-footer p,
-      .card-footer ul {
-        font-size: 0.9rem;
-      }
-    }
-
-    /* -------- Small screen (center underline) -------- */
-    @media (max-width: 767px) {
-      .section-title {
-        display: inline-block;
-        /* text bhi centerable rahe */
-      }
-
-      .section-title::after {
-        left: 50%;
-        transform: translateX(-50%);
-        /* line center me aa jayegi */
-      }
-    }
-
-    @media (max-width: 575px) {
-      .card-img-top {
-        height: 160px;
-      }
-
-      .section-title {
-        font-size: 1.3rem;
-      }
-
-      .lead {
-        font-size: 1rem;
-      }
-    }
-  </style>
 </head>
 
 <body>
   <div id="navbar"></div>
-
-  <section class="py-5">
+  <!-- Service Detail Page -->
+  <!-- Premium Yoga Sessions Section -->
+  <section class="py-5" style="background-color:#faf7f3;" data-aso="fade-up">
     <div class="container text-center">
-      <h2 class="section-title text-center mb-5" data-aos="fade-down">Premium Yoga Sessions</h2>
-      <p class="lead text-center mb-4" data-aos="fade-up">Explore deep Hatha, Power Yoga, and restorative practices
-        designed for balance and strength.</p>
+      <h2 class="section-title mb-5" data-aos="fade-down">Personalized Wellness Consultation</h2>
+      <p class="lead mb-4" data-aos="fade-up" data-aos-delay="200">Tailored solutions for stress, pain, and health concerns—crafted to restore balance and inner
+        peace.</p>
       <div class="row g-4">
 
-        <!-- Therapeutic Yoga -->
-        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+        <!-- Service Card -->
+         <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
           <div class="card shadow border-0 h-100 text-center">
-            <img src="https://images.pexels.com/photos/3823039/pexels-photo-3823039.jpeg"
-              class="card-img-top rounded-top" alt="Therapeutic Yoga">
+            <img src="https://images.pexels.com/photos/3759657/pexels-photo-3759657.jpeg"
+              class="card-img-top rounded-top" alt="Stress Relief Yoga" style="height:230px; object-fit:cover;">
+            <div class="card-body d-flex flex-column">
+              <h5 class="fw-bold text-dark">Stress Relief & Emotional Balance</h5>
+              <p class="text-muted small">Calming yoga practices for a peaceful mind.</p>
+              <p class="text-muted small mb-1"><b>Duration : 4 weeks</b></p>
+              <p class="fw-bold mb-3" style="color:#a67c52;">₹ 67 / day</p>
+              <button class="btn btn-dark btn-sm enroll-btn mx-auto w-50" data-course="Stress Relief & Emotional Balance"
+                data-bs-toggle="modal" data-bs-target="#enrollModal">
+                Enroll Now
+              </button>
+            </div>
+            <!-- About Section inside Card -->
+            <div class="card-footer bg-light text-start">
+              <h6 class="fw-bold text-center mb-3" style="color:#a67c52;">About this Program</h6>
+              <p class="small text-muted mb-3">
+                This 4-week program is specially designed to help you manage stress and bring emotional balance into
+                your daily life.
+                Through calming yoga practices, breathing techniques, and guided meditation, you will learn how to
+                restore inner peace naturally.
+              </p>
+              <p class="fw-bold mb-2"> What You’ll Get:</p>
+              <ul class="list-unstyled small mb-3">
+                <li><i class="bi bi-check-circle-fill  me-2" style="color: #a67c52;"></i>Daily yoga & pranayama
+                  practices (30–40 mins)</li>
+                <li><i class="bi bi-check-circle-fill  me-2" style="color: #a67c52;"></i>Guided meditation for
+                  relaxation</li>
+                <li><i class="bi bi-check-circle-fill  me-2" style="color: #a67c52;"></i>Practical tools to reduce
+                  anxiety & improve sleep</li>
+                <li><i class="bi bi-check-circle-fill  me-2" style="color: #a67c52;"></i>Lifestyle guidance for
+                  emotional well-being</li>
+              </ul>
+              <p class="fw-bold mb-2"> Who Can Join:</p>
+              <p class="small text-muted">
+                Anyone looking to reduce stress, improve focus, or find emotional balance.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Card -->
+       <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+          <div class="card shadow border-0 h-100 text-center">
+            <img src="https://images.pexels.com/photos/317155/pexels-photo-317155.jpeg" class="card-img-top rounded-top"
+              alt="Flexibility & Strength" style="height:230px; object-fit:cover;">
+            <div class="card-body d-flex flex-column">
+              <h5 class="fw-bold text-dark">Flexibility & Strength</h5>
+              <p class="text-muted small">Dynamic yoga sessions to energize body & mind.</p>
+              <p class="text-muted small mb-1"><b>Duration : 4 weeks</b></p>
+              <p class="fw-bold mb-3" style="color:#a67c52;">₹83 / day</p>
+              <button class="btn btn-dark btn-sm enroll-btn mx-auto w-50" data-course="Flexibility & Strength"
+                data-bs-toggle="modal" data-bs-target="#enrollModal">
+                Enroll Now
+              </button>
+            </div>
+
+            <!-- Card Footer (Details Section) -->
+            <div class="card-footer bg-light text-start">
+              <h6 class="fw-bold text-center mb-3" style="color:#a67c52;">About this Program</h6>
+              <p class="small text-muted mb-3">
+                This 4-week yoga journey is designed to build strength, flexibility, and stamina through dynamic yoga
+                sessions.
+                With a mix of powerful asanas, stretching flows, and core-strengthening practices, this program will
+                help you
+                feel stronger, more flexible, and full of energy.
+              </p>
+
+              <p class="fw-bold mb-2"> What You’ll Get</p>
+              <ul class="list-unstyled small mb-3">
+                <li><i class="bi bi-check-circle-fill me-2" style="color: #a67c52;"></i>Daily yoga sessions to improve
+                  muscle strength & flexibility</li>
+                <li><i class="bi bi-check-circle-fill me-2" style="color: #a67c52;"></i>Asanas to open joints and
+                  increase body mobility</li>
+                <li><i class="bi bi-check-circle-fill me-2" style="color: #a67c52;"></i>Core & balance-focused flows for
+                  stamina and posture</li>
+                <li><i class="bi bi-check-circle-fill me-2" style="color: #a67c52;"></i>Guided relaxation to restore
+                  energy after practice</li>
+              </ul>
+
+              <p class="fw-bold mb-2"> Who Can Join</p>
+              <p class="small text-muted">
+                Fitness enthusiasts who want strength + flexibility together.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Card -->
+       <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+          <div class="card shadow border-0 h-100 text-center">
+            <img src="https://images.pexels.com/photos/6246580/pexels-photo-6246580.jpeg"
+              class="card-img-top rounded-top" alt="Therapeutic Yoga" style="height:230px; object-fit:cover;">
             <div class="card-body d-flex flex-column">
               <h5 class="fw-bold text-dark">Therapeutic Yoga</h5>
               <p class="text-muted small">Targeted sessions for pain relief & recovery.</p>
               <p class="text-muted small mb-1"><b>Duration : 4 weeks</b></p>
               <p class="fw-bold mb-3" style="color:#a67c52;">₹100 / day</p>
               <button class="btn btn-dark btn-sm enroll-btn mx-auto w-50" data-course="Therapeutic Yoga"
-                data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
+                data-bs-toggle="modal" data-bs-target="#enrollModal">
+                Enroll Now
+              </button>
             </div>
-            <div class="card-footer text-start">
-              <h6 class="fw-bold text-center mb-3">About this Program</h6>
-              <p class="small text-muted">This 6-week program introduces you to the foundations of Hatha Yoga. Focus on
-                posture alignment and slow-paced flows to bring balance between body and mind.</p>
-              <p class="fw-bold mb-2">What You’ll Get:</p>
-              <ul class="list-unstyled small mb-3">
-                <li><i class="bi bi-check-circle-fill me-2" style="color:#a67c52;"></i>Step-by-step guidance on classic
-                  asanas</li>
-                <li><i class="bi bi-check-circle-fill me-2" style="color:#a67c52;"></i>Breathwork techniques</li>
-                <li><i class="bi bi-check-circle-fill me-2" style="color:#a67c52;"></i>Weekly progress tracking</li>
-                <li><i class="bi bi-check-circle-fill me-2" style="color:#a67c52;"></i>Meditation sessions</li>
-              </ul>
-              <p class="fw-bold mb-2">Who Can Join:</p>
-              <p class="small text-muted">Beginners and intermediates seeking a strong yoga foundation.</p>
-            </div>
-          </div>
-        </div>
+            <!-- Card Footer (Details Section) -->
+            <div class="card-footer bg-light text-start">
+              <h6 class="fw-bold text-center mb-3" style="color:#a67c52;">About this Program</h6>
+              <p class="small text-muted mb-3">
+                This 4-week program is specially designed to support pain relief, recovery, and holistic healing through
+                gentle yoga practices. With a focus on therapeutic postures, breathing techniques, and relaxation
+                methods, it helps improve mobility, reduce discomfort, and restore natural balance in the body.
+              </p>
 
-        <!-- Power Yoga -->
-        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-          <div class="card shadow border-0 h-100 text-center">
-            <img src="https://images.pexels.com/photos/6453399/pexels-photo-6453399.jpeg"
-              class="card-img-top rounded-top" alt="Power Yoga">
-            <div class="card-body d-flex flex-column">
-              <h6 class="fw-bold">Power Yoga for Weight Loss</h6>
-              <p class="small text-muted">Fast-paced, calorie burning yoga.</p>
-              <p class="text-muted small mb-1"><b>Duration : 6 weeks</b></p>
-              <p class="fw-bold mb-3" style="color:#a67c52;">₹78 / day</p>
-              <button class="btn btn-dark btn-sm enroll-btn mx-auto w-50" data-course="Power Yoga for Weight Loss"
-                data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
-            </div>
-            <div class="card-footer text-start">
-              <h6 class="fw-bold text-center mb-3">About this Program</h6>
-              <p class="small text-muted">This high-energy 6-week program focuses on dynamic flows to improve stamina,
-                burn calories, and promote weight loss while keeping your mind centered.</p>
-              <p class="fw-bold mb-2">What You’ll Get:</p>
+              <p class="fw-bold mb-2"> What You’ll Get</p>
               <ul class="list-unstyled small mb-3">
-                <li><i class="bi bi-check-circle-fill me-2" style="color:#a67c52;"></i>Daily power yoga sessions</li>
-                <li><i class="bi bi-check-circle-fill me-2" style="color:#a67c52;"></i>Fat-burning sequences</li>
-                <li><i class="bi bi-check-circle-fill me-2" style="color:#a67c52;"></i>Strength & stamina asanas</li>
-                <li><i class="bi bi-check-circle-fill me-2" style="color:#a67c52;"></i>Guided cool down</li>
+                <li><i class="bi bi-check-circle-fill  me-2" style="color: #a67c52;"></i>Targeted yoga sessions for back pain, joint
+                  pain, and stiffness</li>
+                <li><i class="bi bi-check-circle-fill  me-2" style="color: #a67c52;"></i>Gentle stretches to improve mobility &
+                  flexibility</li>
+                <li><i class="bi bi-check-circle-fill  me-2" style="color: #a67c52;"></i>Breathing practices for stress relief &
+                  healing support</li>
+                <li><i class="bi bi-check-circle-fill  me-2" style="color: #a67c52;"></i>Relaxation and mindfulness for overall
+                  well-being</li>
               </ul>
-              <p class="fw-bold mb-2">Who Can Join:</p>
-              <p class="small text-muted">People aiming for weight management, energy boost & fitness transformation.
+
+              <p class="fw-bold mb-2"> Who Can Join</p>
+              <p class="small text-muted">
+                People with chronic pain or stiffness (back, shoulders).
               </p>
             </div>
           </div>
         </div>
-
-        <!-- Restorative Yoga -->
-        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-          <div class="card shadow border-0 h-100 text-center">
-            <img src="https://images.pexels.com/photos/317157/pexels-photo-317157.jpeg" class="card-img-top rounded-top"
-              alt="Restorative Yoga">
-            <div class="card-body d-flex flex-column">
-              <h6 class="fw-bold">Restorative Yoga</h6>
-              <p class="small text-muted">Props, stretches & stress release.</p>
-              <p class="text-muted small mb-1"><b>Duration : 4 weeks</b></p>
-              <p class="fw-bold mb-3" style="color:#a67c52;">₹67 / day</p>
-              <button class="btn btn-dark btn-sm enroll-btn mx-auto w-50" data-course="Restorative Yoga"
-                data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
-            </div>
-            <div class="card-footer text-start">
-              <h6 class="fw-bold text-center mb-3">About this Program</h6>
-              <p class="small text-muted">A gentle 4-week program focused on deep relaxation and healing. Using props
-                and supported postures, it calms the nervous system and releases stored stress.</p>
-              <p class="fw-bold mb-2">What You’ll Get:</p>
-              <ul class="list-unstyled small mb-3">
-                <li><i class="bi bi-check-circle-fill me-2" style="color:#a67c52;"></i>Gentle supported postures</li>
-                <li><i class="bi bi-check-circle-fill me-2" style="color:#a67c52;"></i>Deep stretching</li>
-                <li><i class="bi bi-check-circle-fill me-2" style="color:#a67c52;"></i>Breath-led relaxation</li>
-                <li><i class="bi bi-check-circle-fill me-2" style="color:#a67c52;"></i>Stress release tools</li>
-              </ul>
-              <p class="fw-bold mb-2">Who Can Join:</p>
-              <p class="small text-muted">Anyone needing recovery, stress release, or gentle healing support.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Advanced Flexibility -->
-        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
-          <div class="card shadow border-0 h-100 text-center">
-            <img src="https://images.pexels.com/photos/3822621/pexels-photo-3822621.jpeg"
-              class="card-img-top rounded-top" alt="Advanced Flexibility">
-            <div class="card-body d-flex flex-column">
-              <h6 class="fw-bold">Advanced Flexibility</h6>
-              <p class="small text-muted">Safe progressions & inversions.</p>
-              <p class="text-muted small mb-1"><b>Duration : 8 weeks</b></p>
-              <p class="fw-bold mb-3" style="color:#a67c52;">₹73 / day</p>
-              <button class="btn btn-dark btn-sm enroll-btn mx-auto w-50" data-course="Advanced Flexibility"
-                data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
-            </div>
-            <div class="card-footer text-start">
-              <h6 class="fw-bold text-center mb-3">About this Program</h6>
-              <p class="small text-muted">An 8-week journey into deeper flexibility and mobility. Learn safe
-                progressions, backbends, hip-openers, and inversions to expand your practice confidently.</p>
-              <p class="fw-bold mb-2">What You’ll Get:</p>
-              <ul class="list-unstyled small mb-3">
-                <li><i class="bi bi-check-circle-fill me-2" style="color:#a67c52;"></i>Progressive flexibility training
-                </li>
-                <li><i class="bi bi-check-circle-fill me-2" style="color:#a67c52;"></i>Step-by-step inversion prep</li>
-                <li><i class="bi bi-check-circle-fill me-2" style="color:#a67c52;"></i>Posture correction</li>
-                <li><i class="bi bi-check-circle-fill me-2" style="color:#a67c52;"></i>Balance & mobility drills</li>
-              </ul>
-              <p class="fw-bold mb-2">Who Can Join:</p>
-              <p class="small text-muted">Intermediate to advanced practitioners pushing flexibility limits safely.</p>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
-
-  <div id="footer"></div>
-
-  <!-- Enroll Modal -->
+  <!-- Enroll Modal (Single) -->
   <div class="modal fade" id="enrollModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
+
         <div class="modal-header">
           <h5 class="modal-title" style="color:#a67c52;">Enroll Now</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
+
         <div class="modal-body">
           <form id="enrollForm">
             <div class="mb-3">
@@ -273,20 +265,18 @@
               <label class="form-label">Course</label>
               <input type="text" id="course" class="form-control" readonly />
             </div>
-            <button type="submit" class="btn w-100 text-white" style="background-color:#a67c52;">Submit</button>
+            <button type="submit" class="btn w-100 text-white" style="background-color:#a67c52;">
+              Submit
+            </button>
           </form>
         </div>
+
       </div>
     </div>
   </div>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <!-- JS for dynamic course name -->
   <script>
-    AOS.init({ duration: 900, once: true });
-
-    // ✅ dynamic course name in modal
     const enrollButtons = document.querySelectorAll(".enroll-btn");
     const courseInput = document.getElementById("course");
 
@@ -296,23 +286,53 @@
         courseInput.value = courseName;
       });
     });
-
-    // ✅ WhatsApp integration
+  </script>
+  <script>
     const form = document.getElementById("enrollForm");
+
     form.addEventListener("submit", function (e) {
       e.preventDefault();
+
       const name = document.getElementById("name").value;
       const email = document.getElementById("email").value;
       const course = document.getElementById("course").value;
+
+      // Replace with your WhatsApp number (with country code, no + or spaces)
       const phoneNumber = "917777001185";
+
+      // Message text
       const message = `Hello, I want to enroll.\n\nName: ${name}\nEmail: ${email}\nCourse: ${course}`;
+
+      // Encode for URL
       const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+      // Open WhatsApp
       window.open(url, "_blank");
     });
+  </script>
 
-    // ✅ navbar & footer load
-    fetch("../layout/navbar.html").then(r => r.text()).then(d => document.getElementById("navbar").innerHTML = d);
-    fetch("../layout/footer.html").then(r => r.text()).then(d => document.getElementById("footer").innerHTML = d);
+
+  <!-- Footer load -->
+  <div id="footer"></div>
+
+  <!-- Load navbar & footer -->
+  <script>
+    fetch("../layout/navbar.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("navbar").innerHTML = data);
+
+    fetch("../layout/footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer").innerHTML = data);
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+      once: true
+    });
   </script>
 </body>
 
