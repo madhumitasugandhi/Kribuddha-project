@@ -90,6 +90,17 @@
             color: #e0c097;
             text-decoration: underline;
         }
+        @media (max-width: 767px) {
+      .section-title {
+        display: inline-block;
+      }
+
+      .section-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
     </style>
 </head>
 
@@ -109,7 +120,7 @@
     <!-- Privacy Policy Content -->
     <section class="py-5">
         <div class="container">
-            <div class="policy-card">
+            <div class="policy-card text-center">
                 <h2 class="section-title text-center">Your Privacy Matters</h2>
 
                 <h5>1. Information We Collect</h5>

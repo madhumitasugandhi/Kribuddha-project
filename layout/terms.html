@@ -90,6 +90,18 @@
             color: #e0c097;
             text-decoration: underline;
         }
+
+        @media (max-width: 767px) {
+      .section-title {
+        display: inline-block;
+      }
+
+      .section-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
     </style>
 </head>
 
@@ -109,7 +121,7 @@
     <!-- Terms Content -->
     <section class="py-5">
         <div class="container">
-            <div class="terms-card">
+            <div class="terms-card text-center">
                 <h2 class="section-title text-center">Our Policies</h2>
 
                 <h5>1. Services</h5>
