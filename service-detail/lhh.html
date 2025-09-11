@@ -11,13 +11,14 @@
     .section-title { color:#a67c52; font-weight:bold; position:relative; display:inline-block; }
     .section-title::after { content:""; width:60%; height:3px; background:linear-gradient(to right,#a67c52,#e0c097); position:absolute; bottom:-8px; left:0; border-radius:5px; }
     .card h6 { color:#333; font-weight:600; }
+    .card-footer { background:#faf7f3; }
   </style>
 </head>
 <body>
 <div id="navbar"></div>
 
 <section class="py-5">
-  <div class="container">
+  <div class="container text-center">
     <h2 class="section-title text-center mb-5">Lifestyle & Holistic Healing</h2>
     <p class="lead text-center mb-4">Integrating yoga, nutrition, and inner practices to transform body, mind, and spirit—designed for long-term health & growth.</p>
     <div class="row g-4">
@@ -27,11 +28,28 @@
         <div class="card shadow h-100 text-center">
           <img src="https://images.pexels.com/photos/3822621/pexels-photo-3822621.jpeg" class="card-img-top" style="height:230px; object-fit:cover;" alt="Yoga + Nutrition Lifestyle Reset">
           <div class="card-body">
-            <h6>Yoga + Nutrition Lifestyle Reset</h6>
+            <h5 class="fw-bold text-dark">Yoga + Nutrition Lifestyle Reset</h5>
             <p class="small text-muted">Yoga + diet plans + accountability coaching.</p>
-            <p class="small fw-bold">8 weeks</p>
-            <p class="fw-bold" style="color:#a67c52;">₹4,500</p>
-            <a href="https://wa.me/917777001185" target="_blank" class="btn btn-sm text-white rounded-pill" style="background:#a67c52;">Join Now</a>
+            <p class="text-muted small mb-1"><b>Duration: 8 weeks</b></p>
+            <p class="fw-bold mb-3" style="color:#a67c52;">₹ 75 / day</p>
+            <button class="btn btn-dark btn-sm enroll-btn" data-course="Yoga + Nutrition Lifestyle Reset"
+              data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
+          </div>
+          <div class="card-footer text-start">
+             <h6 class="fw-bold mb-2 text-center" style="color: #a67c52;">About this Program</h6>
+            <p class="small text-muted">
+              A complete lifestyle reset program combining yoga sessions, personalized nutrition guidance, and weekly coaching to build lasting healthy habits.
+            </p>
+            <h6 class="fw-bold mb-2">What You’ll Get</h6>
+            <ul class="list-unstyled small mb-3">
+              <li><i class="bi bi-check-circle-fill me-2" style="color:#a67c52;"></i> Weekly yoga & nutrition plans</li>
+              <li><i class="bi bi-check-circle-fill me-2" style="color:#a67c52;"></i> Personalized diet adjustments</li>
+              <li><i class="bi bi-check-circle-fill me-2" style="color:#a67c52;"></i> 1-on-1 accountability support</li>
+            </ul>
+            <h6 class="fw-bold mb-2">Who Can Join</h6>
+            <p class="small text-muted">
+              Anyone looking to align body, mind, and food habits for long-term health.
+            </p>
           </div>
         </div>
       </div>
@@ -39,13 +57,30 @@
       <!-- Detox & Breathwork Healing -->
       <div class="col-md-3">
         <div class="card shadow h-100 text-center">
-          <img src="https://images.pexels.com/photos/3822653/pexels-photo-3822653.jpeg" class="card-img-top" style="height:230px; object-fit:cover;" alt="Detox & Breathwork Healing">
+          <img src="https://images.pexels.com/photos/6933132/pexels-photo-6933132.jpeg" class="card-img-top" style="height:230px; object-fit:cover;" alt="Detox & Breathwork Healing">
           <div class="card-body">
-            <h6>Detox & Breathwork Healing</h6>
+            <h5 class="fw-bold text-dark">Detox & Breathwork Healing</h5>
             <p class="small text-muted">Pranayama + cleansing techniques for renewal.</p>
-            <p class="small fw-bold">6 weeks</p>
-            <p class="fw-bold" style="color:#a67c52;">₹2,500</p>
-            <a href="https://wa.me/917777001185" target="_blank" class="btn btn-sm text-white rounded-pill" style="background:#a67c52;">Join Now</a>
+            <p class="text-muted small mb-1"><b>Duration: 6 weeks</b></p>
+            <p class="fw-bold mb-3" style="color:#a67c52;">₹ 40 / day</p>
+            <button class="btn btn-dark btn-sm enroll-btn" data-course="Detox & Breathwork Healing"
+              data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
+          </div>
+          <div class="card-footer text-start">
+             <h6 class="fw-bold mb-2 text-center" style="color: #a67c52;">About this Program</h6>
+            <p class="small text-muted">
+              A guided program using pranayama, cleansing kriyas, and detox practices to refresh body systems and clear energy blocks.
+            </p>
+            <h6 class="fw-bold mb-2">What You’ll Get</h6>
+            <ul class="list-unstyled small mb-3">
+              <li><i class="bi bi-check-circle-fill me-2" style="color:#a67c52;"></i> Step-by-step pranayama guidance</li>
+              <li><i class="bi bi-check-circle-fill me-2" style="color:#a67c52;"></i> Simple detox meal suggestions</li>
+              <li><i class="bi bi-check-circle-fill me-2" style="color:#a67c52;"></i> Stress & toxin release techniques</li>
+            </ul>
+            <h6 class="fw-bold mb-2">Who Can Join</h6>
+            <p class="small text-muted">
+              Those feeling fatigued, stressed, or seeking an inner-body cleanse.
+            </p>
           </div>
         </div>
       </div>
@@ -55,11 +90,28 @@
         <div class="card shadow h-100 text-center">
           <img src="https://images.pexels.com/photos/4056729/pexels-photo-4056729.jpeg" class="card-img-top" style="height:230px; object-fit:cover;" alt="Holistic Weight Management">
           <div class="card-body">
-            <h6>Holistic Weight Management</h6>
+            <h5 class="fw-bold text-dark">Holistic Weight Management</h5>
             <p class="small text-muted">Yoga, mindful eating & lifestyle transformation.</p>
-            <p class="small fw-bold">8 weeks</p>
-            <p class="fw-bold" style="color:#a67c52;">₹4,000</p>
-            <a href="https://wa.me/917777001185" target="_blank" class="btn btn-sm text-white rounded-pill" style="background:#a67c52;">Join Now</a>
+            <p class="text-muted small mb-1"><b>Duration: 6 weeks</b></p>
+            <p class="fw-bold mb-3" style="color:#a67c52;">₹ 55 / day</p>
+            <button class="btn btn-dark btn-sm enroll-btn" data-course="Holistic Weight Management"
+              data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
+          </div>
+          <div class="card-footer text-start">
+             <h6 class="fw-bold mb-2 text-center" style="color: #a67c52;">About this Program</h6>
+            <p class="small text-muted">
+              This program helps you shed weight naturally with yoga, mindful eating, and lifestyle changes that bring balance and vitality.
+            </p>
+            <h6 class="fw-bold mb-2">What You’ll Get</h6>
+            <ul class="list-unstyled small mb-3">
+              <li><i class="bi bi-check-circle-fill me-2" style="color:#a67c52;"></i> Fat-burning yoga flows</li>
+              <li><i class="bi bi-check-circle-fill me-2" style="color:#a67c52;"></i> Mindful eating practices</li>
+              <li><i class="bi bi-check-circle-fill me-2" style="color:#a67c52;"></i> Lifestyle coaching for results</li>
+            </ul>
+            <h6 class="fw-bold mb-2">Who Can Join</h6>
+            <p class="small text-muted">
+              Anyone struggling with weight and seeking a holistic, non-restrictive path.
+            </p>
           </div>
         </div>
       </div>
@@ -69,11 +121,28 @@
         <div class="card shadow h-100 text-center">
           <img src="https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg" class="card-img-top" style="height:230px; object-fit:cover;" alt="Spiritual Growth & Self-Healing">
           <div class="card-body">
-            <h6>Spiritual Growth & Self-Healing</h6>
+            <h5 class="fw-bold text-dark">Spiritual Growth & Self-Healing</h5>
             <p class="small text-muted">Meditation, yoga philosophy & inner journey.</p>
-            <p class="small fw-bold">12 weeks</p>
-            <p class="fw-bold" style="color:#a67c52;">₹6,000</p>
-            <a href="https://wa.me/917777001185" target="_blank" class="btn btn-sm text-white rounded-pill" style="background:#a67c52;">Join Now</a>
+            <p class="text-muted small mb-1"><b>Duration: 14 weeks</b></p>
+            <p class="fw-bold mb-3" style="color:#a67c52;">₹ 1000 / week</p>
+            <button class="btn btn-dark btn-sm enroll-btn" data-course="Spiritual Growth & Self-Healing"
+              data-bs-toggle="modal" data-bs-target="#enrollModal">Enroll Now</button>
+          </div>
+          <div class="card-footer text-start">
+            <h6 class="fw-bold mb-2 text-center" style="color: #a67c52;">About this Program</h6>
+            <p class="small text-muted">
+              A deep journey into meditation, yogic wisdom, and self-healing practices to awaken inner strength and awareness.
+            </p>
+            <h6 class="fw-bold mb-2">What You’ll Get</h6>
+            <ul class="list-unstyled small mb-3">
+              <li><i class="bi bi-check-circle-fill me-2" style="color:#a67c52;"></i> Guided meditation practices</li>
+              <li><i class="bi bi-check-circle-fill me-2" style="color:#a67c52;"></i> Yoga philosophy insights</li>
+              <li><i class="bi bi-check-circle-fill me-2" style="color:#a67c52;"></i> Tools for self-healing & balance</li>
+            </ul>
+            <h6 class="fw-bold mb-2">Who Can Join</h6>
+            <p class="small text-muted">
+              Anyone seeking spiritual growth and deeper connection with self.
+            </p>
           </div>
         </div>
       </div>
@@ -83,6 +152,76 @@
 </section>
 
 <div id="footer"></div>
+
+<!-- Enroll Modal (Single) -->
+<div class="modal fade" id="enrollModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title" style="color:#a67c52;">Enroll Now</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <form id="enrollForm">
+          <div class="mb-3">
+            <label class="form-label">Full Name</label>
+            <input type="text" id="name" class="form-control" required />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" id="email" class="form-control" required />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Course</label>
+            <input type="text" id="course" class="form-control" readonly />
+          </div>
+          <button type="submit" class="btn w-100 text-white" style="background-color:#a67c52;">
+            Submit
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- JS for dynamic course name -->
+<script>
+  const enrollButtons = document.querySelectorAll(".enroll-btn");
+  const courseInput = document.getElementById("course");
+
+  enrollButtons.forEach(btn => {
+    btn.addEventListener("click", function () {
+      const courseName = this.getAttribute("data-course");
+      courseInput.value = courseName;
+    });
+  });
+</script>
+<script>
+  const form = document.getElementById("enrollForm");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const course = document.getElementById("course").value;
+
+    // Replace with your WhatsApp number (with country code, no + or spaces)
+    const phoneNumber = "917777001185";
+
+    // Message text
+    const message = `Hello, I want to enroll.\n\nName: ${name}\nEmail: ${email}\nCourse: ${course}`;
+
+    // Encode for URL
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+    // Open WhatsApp
+    window.open(url, "_blank");
+  });
+</script>
 
 <script>
 fetch("../layout/navbar.html").then(r=>r.text()).then(d=>document.getElementById("navbar").innerHTML=d);
