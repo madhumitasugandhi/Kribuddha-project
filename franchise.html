@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,6 +29,7 @@
       position: relative;
       display: inline-block;
     }
+
     .section-title::after {
       content: "";
       width: 60%;
@@ -40,142 +42,162 @@
     }
 
     /* Hero Section */
-        .hero-section {
-            position: relative;
-            min-height: 70vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            overflow: hidden;
-        }
+    .hero-section {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
 
-        /* Hero Background Image */
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: brightness(0.5);
-            /* dark overlay for text contrast */
-            z-index: 0;
-        }
+    /* Hero Background Image */
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.5);
+      /* dark overlay for text contrast */
+      z-index: 0;
+    }
 
-        /* Hero Text Content */
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            color: #fff;
-        }
+    /* Hero Text Content */
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+    }
 
-        /* Big Watermark */
-        @keyframes verticalFloat {
-            0% {
-                transform: translate(-50%, -55%);
-            }
+    /* Big Watermark */
+    @keyframes verticalFloat {
+      0% {
+        transform: translate(-50%, -55%);
+      }
 
-            50% {
-                transform: translate(-50%, -45%);
-            }
+      50% {
+        transform: translate(-50%, -45%);
+      }
 
-            100% {
-                transform: translate(-50%, -55%);
-            }
-        }
+      100% {
+        transform: translate(-50%, -55%);
+      }
+    }
 
-        .hero-watermark {
-            position: absolute;
-            top: 40%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 15vw;
-            font-weight: 900;
-            font-family: 'Times New Roman', Times, serif;
-            color: transparent;
-            -webkit-text-stroke: 2px rgba(49, 15, 15, 0.25);
-            text-transform: uppercase;
-            white-space: nowrap;
-            z-index: 1;
-            pointer-events: none;
-            animation: verticalFloat 5s ease-in-out infinite;
-        }
+    .hero-watermark {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 15vw;
+      font-weight: 900;
+      font-family: 'Times New Roman', Times, serif;
+      color: transparent;
+      -webkit-text-stroke: 2px rgba(49, 15, 15, 0.25);
+      text-transform: uppercase;
+      white-space: nowrap;
+      z-index: 1;
+      pointer-events: none;
+      animation: verticalFloat 5s ease-in-out infinite;
+    }
 
-        /* Wave Bottom Shape */
-        .custom-shape-divider-bottom {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            overflow: hidden;
-            line-height: 0;
-            z-index: 3;
-        }
+    /* Wave Bottom Shape */
+    .custom-shape-divider-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      z-index: 3;
+    }
 
-        .custom-shape-divider-bottom svg {
-            display: block;
-            width: 100%;
-            height: 100px;
-        }
+    .custom-shape-divider-bottom svg {
+      display: block;
+      width: 100%;
+      height: 100px;
+    }
 
-         .enquiry-card {
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-  padding: 30px;
-  margin-top: -60px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.enquiry-card input,
-.enquiry-card textarea {
-  border: 1px solid #ddd;
-}
-.enquiry-card input:focus,
-.enquiry-card textarea:focus {
-  border-color: #a67c52;
-  box-shadow: 0 0 0 0.2rem rgba(166,124,82,0.25);
-}
+    .enquiry-card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+      padding: 30px;
+      margin-top: -60px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .enquiry-card input,
+    .enquiry-card textarea {
+      border: 1px solid #ddd;
+    }
+
+    .enquiry-card input:focus,
+    .enquiry-card textarea:focus {
+      border-color: #a67c52;
+      box-shadow: 0 0 0 0.2rem rgba(166, 124, 82, 0.25);
+    }
 
 
     /* Cards */
-    .feature-card, .philosophy-card {
+    .feature-card,
+    .philosophy-card {
       background: #fff;
       border-radius: 15px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
       padding: 30px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       text-align: center;
       height: 100%;
     }
-    .feature-card:hover, .philosophy-card:hover {
+
+    .feature-card:hover,
+    .philosophy-card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     }
-    .feature-card i, .philosophy-card i {
+
+    .feature-card i,
+    .philosophy-card i {
       font-size: 2rem;
       color: #a67c52;
       margin-bottom: 15px;
     }
-    html, body {
-  overflow-x: hidden;
-}
 
-.waves {
-  width: 100% !important;
-  height: auto;
-  display: block;
-}
+    html,
+    body {
+      overflow-x: hidden;
+    }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
+    .waves {
+      width: 100% !important;
+      height: auto;
+      display: block;
+    }
 
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 767px) {
+      .section-title {
+        display: inline-block;
+      }
+
+      .section-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
   </style>
 </head>
+
 <body>
 
   <!-- Navbar load -->
@@ -183,72 +205,84 @@ img {
 
   <!-- Hero Section -->
   <section class="hero-section">
-        <img src="public/about.jpg" alt="background" class="hero-bg">
+    <img src="public/about.jpg" alt="background" class="hero-bg">
 
-        <div class="hero-content">
-            <h1 class="fw-bold display-4" data-aos="zoom-in">Kribuddha Franchise</h1>
-            <p class="lead fst-italic" data-aos="fade-up" data-aos-delay="200">
-               Be a part of holistic wellness growth
-            </p>
-        </div>
+    <div class="hero-content">
+      <h1 class="fw-bold display-4" data-aos="zoom-in">Kribuddha Franchise</h1>
+      <p class="lead fst-italic" data-aos="fade-up" data-aos-delay="200">
+        Be a part of holistic wellness growth
+      </p>
+    </div>
 
-        <!-- Watermark -->
-        <div class="hero-watermark">Franchise</div>
+    <!-- Watermark -->
+    <div class="hero-watermark">Franchise</div>
 
-        <!-- Bottom Wave -->
-        <div class="custom-shape-divider-bottom">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.13-30.13,172-41.86,
+    <!-- Bottom Wave -->
+    <div class="custom-shape-divider-bottom">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.13-30.13,172-41.86,
         82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,
         985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C86.29,
         45.71,231.77,67.23,321.39,56.44Z" fill="#fff"></path>
-            </svg>
-        </div>
-    </section>
-
-     <!-- Small Enquiry Form -->
-<section class="enquiry-card text-center mt-4">
-  <h3 class="fw-bold my-2">Franchise Enquiry Form</h3>
-  <p class="text-muted">Take Charge of <strong>Your Future</strong> with an Affordable Kribuddha Yoga Franchise</p>
-
-  <form class="row g-3 mt-3">
-    <!-- Name -->
-    <div class="col-12">
-      <input type="text" class="form-control form-control-lg rounded-3" placeholder="Your Name" required>
+      </svg>
     </div>
+  </section>
 
-    <!-- Email -->
-    <div class="col-12">
-      <input type="email" class="form-control form-control-lg rounded-3" placeholder="Email" required>
-    </div>
-
-    <!-- Phone -->
-    <div class="col-12">
-      <div class="input-group input-group-lg">
-        <span class="input-group-text bg-white">
-          🇮🇳
-        </span>
-        <input type="text" class="form-control rounded-3" placeholder="+91 Phone" required>
+  <!-- Small Enquiry Form -->
+  <section class="enquiry-card text-center mt-4">
+    <h3 class="fw-bold my-2">Franchise Enquiry Form</h3>
+    <p class="text-muted">Take Charge of <strong>Your Future</strong> with an Affordable Kribuddha Yoga Franchise</p>
+    <form id="whatsappForm">
+      <div class="mb-3">
+        <input type="text" id="name" class="form-control" placeholder="Your Name" required>
       </div>
-    </div>
+      <div class="mb-3">
+        <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+      </div>
+      <div class="mb-3">
+        <input type="text" id="phone" class="form-control" placeholder="Phone">
+      </div>
+      <div class="mb-3">
+        <textarea id="message" class="form-control" rows="5" placeholder="Your Message"></textarea>
+      </div>
+      <div class="d-flex gap-2">
+        <button type="submit" class="btn text-light" style="background-color: #a67c52;">
+          <i class="bi bi-whatsapp"></i> Send via WhatsApp
+        </button>
+        <button type="reset" class="btn btn-outline-dark">Reset</button>
+      </div>
+    </form>
 
-    <!-- Message -->
-    <div class="col-12">
-      <textarea class="form-control form-control-lg rounded-3" rows="3" placeholder="Message"></textarea>
-    </div>
 
-    <!-- Submit -->
-    <div class="col-12">
-      <button type="submit" class="btn w-100 py-2 text-white rounded-3" style="background-color:#a67c52;">Submit</button>
-    </div>
-  </form>
+    <script>
+      document.getElementById("whatsappForm").addEventListener("submit", function (e) {
+        e.preventDefault();
 
-  <small class="text-muted d-block mt-3" style="font-size: 0.8rem;">
-    By signing up, you agree to receive updates and communication. Msg and data rates may apply.
-  </small>
-</section>
+        // form values
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let phone = document.getElementById("phone").value;
+        let message = document.getElementById("message").value;
 
-<!-- Features -->
+        // WhatsApp number
+        let whatsappNumber = "7777001185"; // +91 ke bina likh tu (country code ke saath)
+
+        // encode text
+        let whatsappMessage = `Hello, I am ${name}.%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
+
+        // open WhatsApp link
+        window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, "_blank");
+      });
+    </script>
+
+
+
+    <small class="text-muted d-block mt-3" style="font-size: 0.8rem;">
+      By signing up, you agree to receive updates and communication. Msg and data rates may apply.
+    </small>
+  </section>
+
+  <!-- Features -->
   <section class="py-5">
     <div class="container text-center">
       <h2 class="section-title">Franchise Benefits</h2>
@@ -293,10 +327,13 @@ img {
         <div class="col-md-6">
           <img src="public/about.jpg" class="img-fluid rounded shadow" alt="About Kribuddha">
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 text-center">
           <h2 class="section-title">Our Philosophy</h2>
-          <p>At Kribuddha Wellness, we blend traditional yoga practices with modern wellness approaches to create holistic healing experiences. Our mission is to make yoga, meditation, and mindfulness accessible to every individual, guiding them toward inner balance and overall well-being.</p>
-          <p>With years of expertise and a community-driven model, we have created a sustainable approach to wellness that transforms both individuals and societies.</p>
+          <p>At Kribuddha Wellness, we blend traditional yoga practices with modern wellness approaches to create
+            holistic healing experiences. Our mission is to make yoga, meditation, and mindfulness accessible to every
+            individual, guiding them toward inner balance and overall well-being.</p>
+          <p>With years of expertise and a community-driven model, we have created a sustainable approach to wellness
+            that transforms both individuals and societies.</p>
         </div>
       </div>
     </div>
@@ -383,7 +420,7 @@ img {
     </div>
   </section>
 
-  
+
 
   <!-- Footer load -->
   <div id="footer"></div>
@@ -411,4 +448,5 @@ img {
     });
   </script>
 </body>
+
 </html>

@@ -92,7 +92,7 @@
             margin-bottom: 20px;
             position: relative;
             display: inline-block;
-            
+
         }
 
         .section-title::after {
@@ -149,6 +149,17 @@
         .read-more:hover {
             text-decoration: underline;
         }
+
+        @media (max-width: 767px) {
+            .section-title {
+                display: inline-block;
+            }
+
+            .section-title::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
     </style>
 </head>
 
@@ -184,7 +195,7 @@
 
     <!-- Blog Section -->
     <section class="py-5">
-        <div class="container">
+        <div class="container text-center">
             <h3 class="section-title text-center mb-5">Latest Articles</h3>
 
             <div class="row g-4">
@@ -281,7 +292,8 @@
                             <div class="blog-card-body">
                                 <h5 class="fw-bold" style="color:#3a2e25;">Yoga for Back Pain Relief</h5>
                                 <p class="text-muted">
-                                    Learn simple yet powerful yoga postures to relieve chronic back pain and strengthen your spine naturally.
+                                    Learn simple yet powerful yoga postures to relieve chronic back pain and strengthen
+                                    your spine naturally.
                                 </p>
                                 <span class="read-more">Read More →</span>
                             </div>

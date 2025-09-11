@@ -188,6 +188,17 @@
       max-width: 100%;
       height: auto;
     }
+    @media (max-width: 767px) {
+      .section-title {
+        display: inline-block;
+      }
+
+      .section-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
   </style>
 </head>
 

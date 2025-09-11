@@ -284,6 +284,17 @@
       transform: translateY(-6px) scale(1.02);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
+
+    @media (max-width: 767px) {
+      .section-title {
+        display: inline-block;
+      }
+
+      .section-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
   </style>
 </head>
 
@@ -503,7 +514,7 @@
 
           <blockquote class="fst-italic mt-3 px-4 py-3 shadow-sm"
             style="border-left: solid 5px #a67c52; border-radius: 6px; background-color: #fdf6ef;">
-             “Healing is a journey, not a quick fix. My mission is to help people live pain-free, balanced, and
+            “Healing is a journey, not a quick fix. My mission is to help people live pain-free, balanced, and
             fulfilled lives.”
             – <strong>Reetu Varma</strong>
           </blockquote>

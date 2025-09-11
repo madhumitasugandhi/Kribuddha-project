@@ -143,16 +143,30 @@
       color: #a67c52;
     }
 
-    .btn-primary {
+    /* Buttons */
+    .start-btn {
       background-color: #a67c52;
-      border: none;
+      color: #fff;
+      margin: 10px auto 0 auto;
+      display: block;
+      width: 25%;
+      text-align: center;
       border-radius: 10px;
+      padding: 10px 0;
       font-weight: 500;
-      padding: 10px 20px;
+      text-decoration: none;
     }
 
-    .btn-primary:hover {
+    .start-btn:hover {
       background-color: #8b623e;
+      color: #fff;
+    }
+
+    /* Mobile responsive buttons */
+    @media (max-width: 767px) {
+      .start-btn {
+        width: 100%;
+      }
     }
 
     /* CTA Section */
@@ -223,34 +237,30 @@
   </section>
 
   <!-- Free Trial Options -->
-  <section class=" py-5 bg-light" data-aos="fade-up">
+  <section class="py-5 bg-light" data-aos="fade-up">
     <div class="container text-center">
       <h2 class="section-title mb-4">Choose Your Trial Plan</h2>
       <p class="mb-5">Pick a plan below and begin your wellness journey with Kribuddha Wellness.</p>
 
       <div class="row g-4 justify-content-center">
 
-        <!-- Option 2 -->
+        <!-- 7-Day Trial -->
         <div class="col-md-5">
           <div class="card p-5 h-100 shadow-lg border-0" style="border-radius: 15px;">
             <h5 class="fw-bold text-dark">7-Day Trial</h5>
             <p>Enjoy one full week of guided yoga & mindfulness practices.</p>
             <p class="price fs-4 fw-bold text-golden">Free</p>
-            <a href="/contact.html" class="btn text-white w-25" style="background-color:#a67c52; margin: 2px auto;">
-              Start Now
-            </a>
+            <a href="/contact.html" class="start-btn">Start Now</a>
           </div>
         </div>
 
-        <!-- Option 3 -->
-        <div class="col-md-5 ">
+        <!-- 14-Day Trial -->
+        <div class="col-md-5">
           <div class="card p-5 h-100 shadow-lg border-0" style="border-radius: 15px;">
             <h5 class="fw-bold text-dark">14-Day Trial</h5>
             <p>Two weeks of premium yoga sessions & wellness guidance.</p>
             <p class="price fs-4 fw-bold text-golden">₹299</p>
-            <a href="/contact.html" class="btn text-white w-25" style="background-color:#a67c52; margin: 2px auto;">
-              Start Now
-            </a>
+            <a href="/contact.html" class="start-btn">Start Now</a>
           </div>
         </div>
 
@@ -258,16 +268,14 @@
     </div>
   </section>
 
-
   <!-- Call to Action -->
-  <section class=" text-center my-5" data-aos="fade-up">
+  <section class="text-center my-5" data-aos="fade-up">
     <h2 class="section-title">Why Choose Kribuddha Wellness?</h2>
     <div class="d-flex flex-column flex-md-row gap-3 justify-content-md-center text-start text-md-center">
       <p class="mb-0 ms-4 ms-md-0">✅ Certified Yoga Instructors</p>
       <p class="mb-0 ms-4 ms-md-0">✅ Flexible Online Sessions</p>
       <p class="mb-0 ms-4 ms-md-0">✅ Personal Guidance</p>
     </div>
-
 
     <p class="m-2">Join thousands of members transforming their lives through Yoga, Meditation, and Mindful Living.</p>
     <a href="contact.html" class="btn text-white" style="background-color:#a67c52;">Contact Us</a>

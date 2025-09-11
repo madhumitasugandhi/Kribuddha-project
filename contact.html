@@ -182,22 +182,34 @@
       .qr-img {
         max-width: 250px;
       }
-    }  
-    html, body {
-  overflow-x: hidden;
-}
+    }
 
-.waves {
-  width: 100% !important;
-  height: auto;
-  display: block;
-}
+    html,
+    body {
+      overflow-x: hidden;
+    }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
+    .waves {
+      width: 100% !important;
+      height: auto;
+      display: block;
+    }
 
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 767px) {
+      .section-title {
+        display: inline-block;
+      }
+
+      .section-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
   </style>
 </head>
 
@@ -237,76 +249,79 @@ img {
       <div class="row g-4 align-items-start">
 
         <!-- Contact Form -->
-<div class="col-lg-4" data-aos="fade-right">
-  <h5>Send us WhatsApp</h5>
-  <h3 class="section-title mb-4">Feel Free to Write</h3>
-  <form id="whatsappForm">
-    <div class="mb-3">
-      <input type="text" id="name" class="form-control" placeholder="Your Name" required>
-    </div>
-    <div class="mb-3">
-      <input type="email" id="email" class="form-control" placeholder="Your Email" required>
-    </div>
-    <div class="mb-3">
-      <input type="text" id="phone" class="form-control" placeholder="Phone">
-    </div>
-    <div class="mb-3">
-      <textarea id="message" class="form-control" rows="5" placeholder="Your Message"></textarea>
-    </div>
-    <div class="d-flex gap-2">
-      <button type="submit" class="btn text-light" style="background-color: #a67c52;">
-        <i class="bi bi-whatsapp"></i> Send via WhatsApp
-      </button>
-      <button type="reset" class="btn btn-outline-dark">Reset</button>
-    </div>
-  </form>
-</div>
+        <div class="col-lg-4 text-center" data-aos="fade-right">
+          <h5>Send us WhatsApp</h5>
+          <h3 class="section-title mb-4">Feel Free to Write</h3>
+          <form id="whatsappForm">
+            <div class="mb-3">
+              <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="mb-3">
+              <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+            </div>
+            <div class="mb-3">
+              <input type="text" id="phone" class="form-control" placeholder="Phone">
+            </div>
+            <div class="mb-3">
+              <textarea id="message" class="form-control" rows="5" placeholder="Your Message"></textarea>
+            </div>
+            <div class="d-flex gap-2">
+              <button type="submit" class="btn text-light" style="background-color: #a67c52;">
+                <i class="bi bi-whatsapp"></i> Send via WhatsApp
+              </button>
+              <button type="reset" class="btn btn-outline-dark">Reset</button>
+            </div>
+          </form>
+        </div>
 
-<script>
-  document.getElementById("whatsappForm").addEventListener("submit", function(e) {
-    e.preventDefault();
+        <script>
+          document.getElementById("whatsappForm").addEventListener("submit", function (e) {
+            e.preventDefault();
 
-    // form values
-    let name = document.getElementById("name").value;
-    let email = document.getElementById("email").value;
-    let phone = document.getElementById("phone").value;
-    let message = document.getElementById("message").value;
+            // form values
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let phone = document.getElementById("phone").value;
+            let message = document.getElementById("message").value;
 
-    // WhatsApp number
-    let whatsappNumber = "919823432448"; // +91 ke bina likh tu (country code ke saath)
+            // WhatsApp number
+            let whatsappNumber = "7777001185"; // +91 ke bina likh tu (country code ke saath)
 
-    // encode text
-    let whatsappMessage = `Hello, I am ${name}.%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
+            // encode text
+            let whatsappMessage = `Hello, I am ${name}.%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
 
-    // open WhatsApp link
-    window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, "_blank");
-  });
-</script>
+            // open WhatsApp link
+            window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, "_blank");
+          });
+        </script>
 
 
         <!-- Contact Info -->
-        <div class="col-lg-4" data-aos="fade-up">
+        <div class="col-lg-4 text-center" data-aos="fade-up">
           <h5>Need any help?</h5>
           <h3 class="section-title mb-4">Get in Touch</h3>
           <p>Have questions? Reach out anytime, we’d love to hear from you.</p>
           <div class="mb-3">
-            <i class="bi bi-telephone-fill me-2" ></i> <strong>Phone:</strong><br/>
+            <i class="bi bi-telephone-fill me-2"></i> <strong>Phone:</strong><br />
             <a href="tel:+917777001185" class=" text-decoration-none" style="color: #a67c52;">7777001185</a>
           </div>
           <div class="mb-3">
-            <i class="bi bi-envelope-fill me-2"></i> <strong>Email:</strong><br/>
-            <a href="mailto:kribuddhawellnesscenter@gmail.com" style="color: #a67c52;" target="_blank">kribuddhawellnesscenter@gmail.com</a>
+            <i class="bi bi-envelope-fill me-2"></i> <strong>Email:</strong><br />
+            <a href="mailto:kribuddhawellnesscenter@gmail.com" style="color: #a67c52;"
+              target="_blank">kribuddhawellnesscenter@gmail.com</a>
           </div>
           <div class="mb-3">
-            <i class="bi bi-instagram me-2"></i> <strong>Instagram:</strong><br/>
-            <a href="https://www.instagram.com/kribuddhawellnesscenter" style="color: #a67c52;" target="_blank">@kribuddhawellnesscenter</a>
+            <i class="bi bi-instagram me-2"></i> <strong>Instagram:</strong><br />
+            <a href="https://www.instagram.com/kribuddhawellnesscenter" style="color: #a67c52;"
+              target="_blank">@kribuddhawellnesscenter</a>
           </div>
           <div class="mb-3">
-            <i class="bi bi-whatsapp me-2"></i> <strong>WhatsApp Community:</strong><br/>
-            <a href=" https://chat.whatsapp.com/DiY5fSKlKOW8OfJleCvWm8?mode=ems_wa_c " style="color: #a67c52;" target="_blank">Community</a>
+            <i class="bi bi-whatsapp me-2"></i> <strong>WhatsApp Community:</strong><br />
+            <a href=" https://chat.whatsapp.com/DiY5fSKlKOW8OfJleCvWm8?mode=ems_wa_c " style="color: #a67c52;"
+              target="_blank">Community</a>
           </div>
           <div class="mb-3">
-            <i class="bi bi-geo-alt-fill me-2"></i> <strong>Address:</strong><br/>
+            <i class="bi bi-geo-alt-fill me-2"></i> <strong>Address:</strong><br />
             <span style="color: #a67c52;">Room No:308, Aishwarya Heaven,<br>Usarli Khurd, Navi Mumbai – 410221</span>
           </div>
         </div>
@@ -325,8 +340,7 @@ img {
 
   <!-- Map Section -->
   <section class="map-container" data-aos="zoom-in">
-    <iframe
-      src="https://www.google.com/maps?q=Aishwarya+Heaven,+Usarli+Khurd,+Navi+Mumbai+410221&output=embed"
+    <iframe src="https://www.google.com/maps?q=Aishwarya+Heaven,+Usarli+Khurd,+Navi+Mumbai+410221&output=embed"
       width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   </section>
 

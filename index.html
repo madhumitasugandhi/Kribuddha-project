@@ -52,7 +52,7 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
 
-     .hero-section {
+    .hero-section {
       background: url('https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg') center/cover no-repeat;
       color: #333;
       position: relative;
@@ -65,7 +65,8 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(253, 251, 247, 0.7); /* soft overlay for readability */
+      background: rgba(253, 251, 247, 0.7);
+      /* soft overlay for readability */
       z-index: 1;
     }
 
@@ -78,21 +79,24 @@
       background-color: #8c6239 !important;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
-    html, body {
-  overflow-x: hidden;
-}
 
-.waves {
-  width: 100% !important;
-  height: auto;
-  display: block;
-}
+    html,
+    body {
+      overflow-x: hidden;
+    }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
- .card {
+    .waves {
+      width: 100% !important;
+      height: auto;
+      display: block;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .card {
       background: #fff;
       border-radius: 15px;
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
@@ -118,8 +122,84 @@ img {
       margin-bottom: 10px;
     }
 
+    html,
+    body {
+      overflow-x: hidden;
+    }
 
+    /* ✅ Images auto adjust */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
 
+    /* ✅ Hero section responsive */
+    .hero-section {
+      padding: 60px 15px;
+      text-align: center;
+    }
+
+    .hero-section h1 {
+      font-size: 2rem;
+    }
+
+    .hero-section h4 {
+      font-size: 1.2rem;
+    }
+
+    @media (min-width: 768px) {
+      .hero-section {
+        padding: 100px 20px;
+      }
+
+      .hero-section h1 {
+        font-size: 2.8rem;
+      }
+
+      .hero-section h4 {
+        font-size: 1.6rem;
+      }
+    }
+
+    /* ✅ About section */
+    .about-img {
+      max-height: 400px;
+      object-fit: cover;
+    }
+
+    /* ✅ Cards responsive (Services) */
+    .card {
+      height: 100%;
+    }
+
+    /* ✅ Newsletter form responsive */
+    #subscribeForm .form-control {
+      width: 100%;
+    }
+
+    #subscribeForm button {
+      width: 100%;
+    }
+
+    @media (max-width: 576px) {
+
+      #subscribeForm .col-md-3,
+      #subscribeForm .col-md-2 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .section-title {
+        display: inline-block;
+      }
+
+      .section-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
   </style>
 </head>
 
@@ -155,8 +235,7 @@ img {
 
       <!-- CTA -->
       <a href="about.html" class="btn btn-lg text-white rounded-pill shadow px-4 py-2"
-        style="background-color:#a67c52; transition: all 0.3s ease;" 
-        data-aos="zoom-in" data-aos-delay="700">
+        style="background-color:#a67c52; transition: all 0.3s ease;" data-aos="zoom-in" data-aos-delay="700">
         Discover More
       </a>
     </div>
@@ -192,7 +271,7 @@ img {
 
 
   <!-- About Preview -->
-  <section class="py-5 bg-light" >
+  <section class="py-5 bg-light">
     <div class="container" data-aos="fade-up">
       <div class="row align-items-center">
 
@@ -271,9 +350,9 @@ img {
       <h2 class="section-title">Affordable Plans</h2>
       <p class="mb-4">Start your wellness journey today at a minimal cost.</p>
       <h5 class="fw-bold">Standard Plan</h5>
-          <p class="fs-4">₹999 / month</p>
-          <p>Unlimited Yoga & Meditation Classes</p>
-          <a href="pricing.html" class="btn text-white" style="background-color:#a67c52;">See Pricing</a>
+      <p class="fs-4">₹999 / month</p>
+      <p>Unlimited Yoga & Meditation Classes</p>
+      <a href="pricing.html" class="btn text-white" style="background-color:#a67c52;">See Pricing</a>
     </div>
   </section>
 
@@ -282,14 +361,15 @@ img {
     <div class="container text-center">
       <h2 class="section-title">What Our Members Say</h2>
       <blockquote class="blockquote" data-aos="fade-up" data-aos-delay="200">
-        <p>"Joining Kribuddha has been a life-changing experience. I feel calmer, healthier, and more focused."</p><br/>
+        <p>"Joining Kribuddha has been a life-changing experience. I feel calmer, healthier, and more focused."</p>
+        <br />
         <footer class="blockquote-footer" style="color: #8c6239;"><i>Anita Sharma</i></footer>
       </blockquote>
     </div>
   </section>
 
   <!-- Newsletter -->
-  <section class="py-5 text-center" style="background:#f9f7f3;">
+  <section class="py-5 text-center">
     <div class="container" data-aos="fade-up">
       <h2 class="section-title fw-bold mb-3" style="color:#a67c52;">Join Our Wellness Insider</h2>
       <p class="text-muted mb-4">Get tips, updates & offers directly in your WhatsApp.</p>
@@ -310,7 +390,7 @@ img {
       e.preventDefault();
 
       let name = document.getElementById("nameInput").value;
-      let phone = "9823432448"; // WhatsApp number
+      let phone = "7777001185"; // WhatsApp number
 
       let message = `New Subscription Request:\nName: ${name}`;
       let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
