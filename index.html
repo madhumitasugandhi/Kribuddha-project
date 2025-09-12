@@ -137,6 +137,7 @@
     .hero-section {
       padding: 60px 15px;
       text-align: center;
+      
     }
 
     .hero-section h1 {
@@ -161,11 +162,36 @@
       }
     }
 
+    .about-section .row {
+  --bs-gutter-x: 0.5;  /* remove horizontal gutter */
+}
     /* ✅ About section */
     .about-img {
-      max-height: 400px;
-      object-fit: cover;
+  max-height: 550px;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  margin: 0 auto;  
+  display: block;  
+  border: #333 solid 1px;
+}
+
+    .about-img:hover{
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     }
+    @media (max-width: 768px) {
+  .about-img {
+    max-height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-img {
+    max-height: 250px;
+  }
+}
 
     /* ✅ Cards responsive (Services) */
     .card {
@@ -271,13 +297,13 @@
 
 
   <!-- About Preview -->
-  <section class="py-5 bg-light">
+  <section class="py-5 bg-light about-section">
     <div class="container" data-aos="fade-up">
-      <div class="row align-items-center">
+      <div class="row align-items-center my-4">
 
         <!-- Left side: Image -->
-        <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-right">
-          <img src="/public/about.jpg" alt="Kribuddha Wellness" class="img-fluid rounded-3 shadow">
+        <div class="col-md-6 my-4 mb-md-0" data-aos="fade-right">
+          <img src="/public/about-info.jpg" alt="Kribuddha Wellness" class="about-img rounded-3 shadow">
         </div>
 
         <!-- Right side: Text -->
