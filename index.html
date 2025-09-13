@@ -166,21 +166,58 @@
   --bs-gutter-x: 0.5;  /* remove horizontal gutter */
 }
     /* ✅ About section */
-    .about-img {
-  max-height: 550px;
-  max-width: 100%;
-  width: auto;
-  height: auto;
-  object-fit: cover;
-  margin: 0 auto;  
-  display: block;  
-  border: #333 solid 1px;
+  
+.about-img-wrapper {
+  overflow: hidden;
+  border-radius: 20px;
 }
 
-    .about-img:hover{
-      transform: translateY(-8px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+.about-img {
+  transition: transform 0.5s ease;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.about-img:hover {
+  transform: scale(1.04);
+}
+
+.about-content {
+  background: #ffffffcc; /* soft translucent box */
+  backdrop-filter: blur(6px);
+}
+
+ .section-title {
+      color: #a67c52;
+      font-weight: bold;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
     }
+
+    .section-title::after {
+      content: "";
+      width: 60%;
+      height: 3px;
+      background: linear-gradient(to right, #a67c52, #e0c097);
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      border-radius: 5px;
+    }
+
+.btn-gradient {
+  background: linear-gradient(45deg, #c49b66, #8b5e3c);
+  color: #fff;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(45deg, #8b5e3c, #c49b66);
+}
+
     @media (max-width: 768px) {
   .about-img {
     max-height: 350px;
@@ -297,32 +334,53 @@
 
 
   <!-- About Preview -->
-  <section class="py-5 bg-light about-section">
-    <div class="container" data-aos="fade-up">
-      <div class="row align-items-center my-4">
+ <section class="py-5 about-section">
+  <div class="container" data-aos="fade-up">
+    <div class="row align-items-center">
 
-        <!-- Left side: Image -->
-        <div class="col-md-6 my-4 mb-md-0" data-aos="fade-right">
-          <img src="/public/about-info.jpg" alt="Kribuddha Wellness" class="about-img rounded-3 shadow">
+      <!-- Left side: Image -->
+      <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-right">
+        <div class="about-img-wrapper">
+          <img src="/public/about-info.jpg" alt="Kribuddha Wellness"
+               class="about-img rounded-4 shadow-lg">
         </div>
-
-        <!-- Right side: Text -->
-        <div class="col-md-6 text-center text-md-start" data-aos="fade-left">
-          <h2 class="section-title mb-4">About Us</h2>
-          <ul class="text-start">
-            <li>A premium sanctuary of wellness, balance & strength</li>
-            <li>At Kribuddha Wellness Center, we believe true luxury is a life free from stress, pain & imbalance.
-              Our approach blends Yoga, Meditation & Mindfulness with a premium holistic touch.</li>
-            <li>Personalized consultations</li>
-            <li>Group & team yoga sessions</li>
-            <li>Healing retreats & workshops</li>
-          </ul>
-          <a href="about.html" class="btn btn-dark rounded-pill px-4 py-2 mt-3 shadow" data-aos="zoom-in">Read More</a>
-        </div>
-
       </div>
+
+      <!-- Right side: Text -->
+      <div class="col-md-6" data-aos="fade-left">
+        <div class="about-content p-4 p-md-5">
+          <h2 class="section-title mb-4">About Us</h2>
+          <p class="lead text-muted mb-4">
+            At <strong>Kribuddha Wellness Center</strong>, we believe true luxury is a 
+            life free from stress, pain & imbalance. Our philosophy blends 
+            <em>Yoga, Meditation & Mindfulness</em> with a premium holistic touch.
+          </p>
+
+          <ul class="list-unstyled">
+            <li class="mb-3">
+              <i class="bi bi-leaf me-2" style="color:#a67c52;" ></i> A premium sanctuary of wellness, balance & strength
+            </li>
+            <li class="mb-3">
+              <i class="bi bi-person-heart me-2" style="color:#a67c52;"></i> Personalized consultations
+            </li>
+            <li class="mb-3">
+              <i class="bi bi-people me-2" style="color:#a67c52;"></i> Group & team yoga sessions
+            </li>
+            <li class="mb-3">
+              <i class="bi bi-sunrise me-2" style="color:#a67c52;"></i> Healing retreats & workshops
+            </li>
+          </ul>
+
+          <a href="about.html" 
+             class="btn btn-gradient rounded-pill px-4 py-2 mt-2 shadow-sm text-white" 
+             data-aos="zoom-in">Read More</a>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Services Highlights -->
   <section class="py-5" style="background-color:#f8f4ef;" data-aos="fade-up">
